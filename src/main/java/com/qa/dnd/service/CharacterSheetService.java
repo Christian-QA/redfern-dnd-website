@@ -22,16 +22,16 @@ public class CharacterSheetService {
         return this.repo.findAll();
     }
 
-    public CharacterSheet createCharacter(CharacterSheet character) {
+    public CharacterSheet createCharacterSheet(CharacterSheet character) {
         return this.repo.save(character);
     }
 
-    public CharacterSheet findCharacterById(Long id) {
+    public CharacterSheet findCharacterSheetById(Long id) {
         return this.repo.findById(id).orElseThrow(CharacterNotFoundException::new);
     }
 
-    public CharacterSheet updateCharacter(Long id, CharacterSheet character) {
-        CharacterSheet update = findCharacterById(id);
+    public CharacterSheet updateCharacterSheet(Long id, CharacterSheet character) {
+        CharacterSheet update = findCharacterSheetById(id);
         update.setClass_name(character.getClass_name());
         update.setMax_hp(character.getMax_hp());
         update.setCurrent_hp(character.getCurrent_hp());
@@ -44,7 +44,7 @@ public class CharacterSheetService {
         return this.repo.save(update);
     }
 
-    public boolean deleteCharacter(Long id) {
+    public boolean deleteCharacterSheet(Long id) {
         if (!this.repo.existsById(id)) {
             throw new CharacterNotFoundException ();
         }
