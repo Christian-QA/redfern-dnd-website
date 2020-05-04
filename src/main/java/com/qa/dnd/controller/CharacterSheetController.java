@@ -18,32 +18,32 @@ public class CharacterSheetController {
         this.service = service;
     }
 
-    @GetMapping("/getAllCharacters")
-    public List<CharacterSheet> getAllCharacters(){
+    @GetMapping("/getAllCharacterSheet")
+    public List<CharacterSheet> getAllCharacterSheet(){
         return this.service.readCharacterSheet();
     }
 
-    @PostMapping("/createCharacter")
+    @PostMapping("/createCharacterSheet")
     public CharacterSheet createCharacterSheet(@RequestBody CharacterSheet character){
         return this.service.createCharacterSheet(character);
     }
 
-    @DeleteMapping("/deleteCharacter/{id}")
+    @DeleteMapping("/deleteCharacterSheet/{id}")
     public boolean deleteCharacterSheet(@PathVariable Long id){
         return this.service.deleteCharacterSheet(id);
     }
 
-    @GetMapping("/getCharacterById/{id}")
+    @GetMapping("/getCharacterSheetById/{id}")
     public CharacterSheet getCharacterSheetById(@PathVariable Long id){
         return this.service.findCharacterSheetById(id);
     }
 
-    @PutMapping("/updateCharacter/{id}")
+    @PutMapping("/updateCharacterSheet/{id}")
     public CharacterSheet updateCharacterSheet(@PathVariable Long id, @RequestBody CharacterSheet character){
         return this.service.updateCharacterSheet(id, character);
     }
 
-    @PutMapping("/updateCharacter2")
+    @PutMapping("/updateCharacterSheet2")
     public CharacterSheet updateCharacterSheet2(@PathParam("id") Long id, @RequestBody CharacterSheet character){
         return this.service.updateCharacterSheet(id, character);
     }

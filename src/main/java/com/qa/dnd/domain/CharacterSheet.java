@@ -12,18 +12,22 @@ public class CharacterSheet {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String character_name;
     private String class_name;
     private Long max_hp;
     private Long current_hp;
     private int hit_dice;
     private int level;
     private int speed;
-    private int initiative;
     private String weapon_training;
     private String armour_training;
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setCharacter_name(String character_name) {
+        this.character_name = character_name;
     }
 
     public void setClass_name(String class_name) {
@@ -50,10 +54,6 @@ public class CharacterSheet {
         this.speed = speed;
     }
 
-    public void setInitiative(int initiative) {
-        this.initiative = initiative;
-    }
-
     public void setWeapon_training(String weapon_training) {
         this.weapon_training = weapon_training;
     }
@@ -64,6 +64,10 @@ public class CharacterSheet {
 
     public Long getId() {
         return id;
+    }
+
+    public String getCharacter_name() {
+        return character_name;
     }
 
     public String getClass_name() {
@@ -89,11 +93,6 @@ public class CharacterSheet {
     public int getSpeed() {
         return speed;
     }
-
-    public int getInitiative() {
-        return initiative;
-    }
-
     public String getWeapon_training() {
         return weapon_training;
     }
@@ -108,9 +107,9 @@ public class CharacterSheet {
         if (!(o instanceof CharacterSheet)) return false;
         CharacterSheet that = (CharacterSheet) o;
         return getHit_dice () == that.getHit_dice () &&
+                getCharacter_name () == that.getCharacter_name () &&
                 getLevel () == that.getLevel () &&
                 getSpeed () == that.getSpeed () &&
-                getInitiative () == that.getInitiative () &&
                 getId ().equals (that.getId ()) &&
                 getClass_name ().equals (that.getClass_name ()) &&
                 getMax_hp ().equals (that.getMax_hp ()) &&
@@ -121,6 +120,6 @@ public class CharacterSheet {
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getClass_name (), getMax_hp (), getCurrent_hp (), getHit_dice (), getLevel (), getSpeed (), getInitiative (), getWeapon_training (), getArmour_training ());
+        return Objects.hash (getId (), getCharacter_name(), getClass_name (), getMax_hp (), getCurrent_hp (), getHit_dice (), getLevel (), getSpeed (), getWeapon_training (), getArmour_training ());
     }
 }
