@@ -18,7 +18,7 @@ public class CharacterSheetController {
         this.service = service;
     }
 
-    @GetMapping("/getAllCharacterSheet")
+    @GetMapping("/getAllCharacterSheets")
     public List<CharacterSheet> getAllCharacterSheet(){
         return this.service.readCharacterSheet();
     }
