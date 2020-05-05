@@ -54,7 +54,7 @@ public class ProficiencySheetService {
         return this.repo.save(update);
     }
 
-    public boolean deleteProficiency(Long id) {
+    public boolean deleteProficiencySheet(Long id) {
         if (!this.repo.existsById(id)) {
             throw new ProficienciesNotFoundException ();
         }

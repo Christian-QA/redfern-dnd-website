@@ -24,8 +24,8 @@ public class ProficiencySheetController {
     }
 
     @PostMapping("/createProficiencySheet")
-    public ProficiencySheet createProficiencySheet(@RequestBody ProficiencySheet character){
-        return this.service.createProficiencySheet(character);
+    public ProficiencySheet createProficiencySheet(@RequestBody ProficiencySheet proficiencies){
+        return this.service.createProficiencySheet(proficiencies);
     }
 
     @DeleteMapping("/deleteProficiencySheet/{id}")
@@ -39,12 +39,12 @@ public class ProficiencySheetController {
     }
 
     @PutMapping("/updateProficiencySheet/{id}")
-    public ProficiencySheet updateProficiencySheet(@PathVariable Long id, @RequestBody ProficiencySheet character){
-        return this.service.updateProficiencySheet(id, character);
+    public ProficiencySheet updateProficiencySheet(@PathVariable Long id, @RequestBody ProficiencySheet proficiencies){
+        return this.service.updateProficiencySheet(id, proficiencies);
     }
 
     @PutMapping("/updateProficiencySheet2")
-    public ProficiencySheet updateProficiencySheet2(@PathParam("id") Long id, @RequestBody ProficiencySheet character){
-        return this.service.updateProficiencySheet(id, character);
+    public ProficiencySheet updateProficiencySheet2(@PathParam("id") Long id, @RequestBody ProficiencySheet proficiencies){
+        return this.service.updateProficiencySheet(id, proficiencies);
     }
 }
