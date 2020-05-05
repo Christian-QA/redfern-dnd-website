@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public class Proficiency {
+public class ProficiencySheet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -187,9 +187,9 @@ public class Proficiency {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof Proficiency))
+        if (!(o instanceof ProficiencySheet))
             return false;
-        Proficiency that = (Proficiency) o;
+        ProficiencySheet that = (ProficiencySheet) o;
         return isAcrobatics () == that.isAcrobatics () &&
                 isAnimal_handling () == that.isAnimal_handling () &&
                 isArcana () == that.isArcana () &&
