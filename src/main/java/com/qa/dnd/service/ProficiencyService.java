@@ -31,16 +31,26 @@ public class ProficiencyService {
     }
 
     public ProficiencySheet updateProficiencySheet(Long id, ProficiencySheet proficiencies) {
-        ProficiencySheet update = findCharacterSheetById(id);
-        update.setCharacter_name(character.getCharacter_name());
-        update.setClass_name(character.getClass_name());
-        update.setMax_hp(character.getMax_hp());
-        update.setCurrent_hp(character.getCurrent_hp());
-        update.setHit_dice(character.getHit_dice());
-        update.setLevel(character.getLevel());
-        update.setSpeed(character.getSpeed());
-        update.setWeapon_training(character.getWeapon_training());
-        update.setArmour_training(character.getArmour_training());
+        ProficiencySheet update = findProficiencySheetById(id);
+        update.setAcrobatics(proficiencies.isAcrobatics());
+        update.setAnimal_handling(proficiencies.isAnimal_handling());
+        update.setArcana(proficiencies.isArcana());
+        update.setAthletics(proficiencies.isAthletics());
+        update.setDeception(proficiencies.isDeception());
+        update.setHistory(proficiencies.isHistory());
+        update.setInsight(proficiencies.isInsight());
+        update.setIntimidation(proficiencies.isIntimidation());
+        update.setInvestigation(proficiencies.isInvestigation());
+        update.setMedicine(proficiencies.isMedicine());
+        update.setNature(proficiencies.isNature());
+        update.setPerception(proficiencies.isPerception());
+        update.setPerformance(proficiencies.isPerformance());
+        update.setPersuasion(proficiencies.isPersuasion());
+        update.setReligion(proficiencies.isReligion());
+        update.setSleight_of_hand(proficiencies.isSleight_of_hand());
+        update.setStealth(proficiencies.isStealth());
+        update.setSurvival(proficiencies.isSurvival());
+
         return this.repo.save(update);
     }
 
