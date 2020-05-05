@@ -2,19 +2,19 @@ package com.qa.dnd.service;
 
 import com.qa.dnd.domain.ProficiencySheet;
 import com.qa.dnd.exceptions.ProficienciesNotFoundException;
-import com.qa.dnd.repo.ProficiencyRepository;
+import com.qa.dnd.repo.ProficiencySheetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ProficiencyService {
+public class ProficiencySheetService {
 
-    private final ProficiencyRepository repo;
+    private final ProficiencySheetRepository repo;
 
     @Autowired
-    public ProficiencyService(ProficiencyRepository repo) {
+    public ProficiencySheetService(ProficiencySheetRepository repo) {
         this.repo = repo;
     }
 
