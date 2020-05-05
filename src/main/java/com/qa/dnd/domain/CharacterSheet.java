@@ -1,9 +1,8 @@
 package com.qa.dnd.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -21,6 +20,12 @@ public class CharacterSheet {
     private int speed;
     private String weapon_training;
     private String armour_training;
+
+    @OneToMany(mappedBy = "characterSheet", fetch = FetchType.LAZY)
+    private final List<ProficiencySheet> proficiencySheets = new ArrayList<> ();
+
+    public CharacterSheet() {
+    }
 
     public void setId(Long id) {
         this.id = id;
