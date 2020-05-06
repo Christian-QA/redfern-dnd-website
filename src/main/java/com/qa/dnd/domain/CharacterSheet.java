@@ -34,6 +34,10 @@ public class CharacterSheet {
         this.current_hp = current_hp;
     }
 
+    public void setExp(Long exp) {
+        this.exp = exp;
+    }
+
     public Long getId() {
         return id;
     }
@@ -48,6 +52,10 @@ public class CharacterSheet {
 
     public Long getCurrent_hp() {
         return current_hp;
+    }
+
+    public Long getExp() {
+        return exp;
     }
 
     @Override

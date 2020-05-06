@@ -33,14 +33,9 @@ public class CharacterSheetService {
     public CharacterSheet updateCharacterSheet(Long id, CharacterSheet character) {
         CharacterSheet update = findCharacterSheetById(id);
         update.setCharacter_name(character.getCharacter_name());
-        update.setClass_name(character.getClass_name());
         update.setMax_hp(character.getMax_hp());
         update.setCurrent_hp(character.getCurrent_hp());
-        update.setHit_dice(character.getHit_dice());
-        update.setLevel(character.getLevel());
-        update.setSpeed(character.getSpeed());
-        update.setWeapon_training(character.getWeapon_training());
-        update.setArmour_training(character.getArmour_training());
+        update.setExp(character.getCurrent_hp());
         return this.repo.save(update);
     }
 
