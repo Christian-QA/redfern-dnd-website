@@ -18,6 +18,13 @@ public class CharacterSheet {
     public CharacterSheet() {
     }
 
+    public CharacterSheet(String character_name, Long max_hp, Long current_hp, Long exp) {
+        this.character_name = character_name;
+        this.max_hp = max_hp;
+        this.current_hp = current_hp;
+        this.exp = exp;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
