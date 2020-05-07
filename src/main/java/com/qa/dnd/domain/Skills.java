@@ -7,11 +7,16 @@ import javax.persistence.*;
 public class Skills {
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long sid;
 
     private String SkillName;
 
-    @OneToOne
+    @Id
+    private Long cid;
+
+
+    @ManyToOne
     @MapsId
     private CharacterSheet characterSheet;
 
@@ -23,8 +28,12 @@ public class Skills {
         this.characterSheet = characterSheet;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setSid(Long sid) {
+        this.sid = sid;
+    }
+
+    public void setCid(Long cid) {
+        this.cid = cid;
     }
 
     public void setSkillName(String skillName) {
@@ -35,8 +44,12 @@ public class Skills {
         this.characterSheet = characterSheet;
     }
 
-    public Long getId() {
-        return id;
+    public Long getSid() {
+        return sid;
+    }
+
+    public Long getCid() {
+        return cid;
     }
 
     public String getSkillName() {

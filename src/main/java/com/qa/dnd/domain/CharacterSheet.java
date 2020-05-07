@@ -1,6 +1,8 @@
 package com.qa.dnd.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -25,8 +27,8 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
-    @OneToOne(mappedBy = "charactersheet", cascade = CascadeType.ALL)
-    private Skills skills;
+    @OneToMany(mappedBy = "charactersheet", fetch = FetchType.LAZY)
+    private final List<Skills> skills = new ArrayList<>();
 
 
     public void setId(Long id) {
