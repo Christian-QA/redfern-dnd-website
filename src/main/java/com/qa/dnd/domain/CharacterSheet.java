@@ -10,18 +10,18 @@ public class CharacterSheet {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String character_name;
-    private Long max_hp;
-    private Long current_hp;
+    private String characterName;
+    private Long maxHp;
+    private Long currentHp;
     private Long exp;
 
     public CharacterSheet() {
     }
 
-    public CharacterSheet(String character_name, Long max_hp, Long current_hp, Long exp) {
-        this.character_name = character_name;
-        this.max_hp = max_hp;
-        this.current_hp = current_hp;
+    public CharacterSheet(String characterName, Long maxHp, Long currentHp, Long exp) {
+        this.characterName = characterName;
+        this.maxHp = maxHp;
+        this.currentHp = currentHp;
         this.exp = exp;
     }
 
@@ -29,16 +29,16 @@ public class CharacterSheet {
         this.id = id;
     }
 
-    public void setCharacter_name(String character_name) {
-        this.character_name = character_name;
+    public void setCharacterName(String characterName) {
+        this.characterName = characterName;
     }
 
-    public void setMax_hp(Long max_hp) {
-        this.max_hp = max_hp;
+    public void setMaxHp(Long maxHp) {
+        this.maxHp = maxHp;
     }
 
-    public void setCurrent_hp(Long current_hp) {
-        this.current_hp = current_hp;
+    public void setCurrentHp(Long currentHp) {
+        this.currentHp = currentHp;
     }
 
     public void setExp(Long exp) {
@@ -49,16 +49,16 @@ public class CharacterSheet {
         return id;
     }
 
-    public String getCharacter_name() {
-        return character_name;
+    public String getCharacterName() {
+        return characterName;
     }
 
-    public Long getMax_hp() {
-        return max_hp;
+    public Long getMaxHp() {
+        return maxHp;
     }
 
-    public Long getCurrent_hp() {
-        return current_hp;
+    public Long getCurrentHp() {
+        return currentHp;
     }
 
     public Long getExp() {
@@ -73,14 +73,14 @@ public class CharacterSheet {
             return false;
         CharacterSheet that = (CharacterSheet) o;
         return getId ().equals (that.getId ()) &&
-                getCharacter_name ().equals (that.getCharacter_name ()) &&
-                getMax_hp ().equals (that.getMax_hp ()) &&
-                getCurrent_hp ().equals (that.getCurrent_hp ()) &&
+                getCharacterName ().equals (that.getCharacterName ()) &&
+                getMaxHp ().equals (that.getMaxHp ()) &&
+                getCurrentHp ().equals (that.getCurrentHp ()) &&
                 getExp().equals (that.exp);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getCharacter_name (), getMax_hp (), getCurrent_hp (), getExp());
+        return Objects.hash (getId (), getCharacterName (), getMaxHp (), getCurrentHp (), getExp());
     }
 }

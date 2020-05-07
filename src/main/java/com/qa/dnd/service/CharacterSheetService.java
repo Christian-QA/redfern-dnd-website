@@ -45,9 +45,9 @@ public class CharacterSheetService {
 
     public CharacterSheetDTO updateCharacterSheet(Long id, CharacterSheet character){
         CharacterSheet update = this.repo.findById(id).orElseThrow(CharacterNotFoundException::new);
-        update.setCharacter_name(character.getCharacter_name());
-        update.setMax_hp (character.getMax_hp());
-        update.setCurrent_hp (character.getCurrent_hp());
+        update.setCharacterName (character.getCharacterName ());
+        update.setMaxHp (character.getMaxHp ());
+        update.setCurrentHp (character.getCurrentHp ());
         update.setExp (character.getExp());
         CharacterSheet tempNote = this.repo.save(character);
         return this.mapToDTO(tempNote);

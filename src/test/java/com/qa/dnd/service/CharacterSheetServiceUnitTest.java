@@ -45,7 +45,7 @@ public class CharacterSheetServiceUnitTest {
         this.characterSheetList = new ArrayList<>();
         this.testCharacterSheet = new CharacterSheet();
         this.characterSheetList.add(testCharacterSheet);
-        this.testCharacterSheetWithID = new CharacterSheet(testCharacterSheet.getCharacter_name(), testCharacterSheet.getMax_hp(), testCharacterSheet.getCurrent_hp(), testCharacterSheet.getExp());
+        this.testCharacterSheetWithID = new CharacterSheet(testCharacterSheet.getCharacterName (), testCharacterSheet.getMaxHp (), testCharacterSheet.getCurrentHp (), testCharacterSheet.getExp());
         this.testCharacterSheetWithID.setId(id);
         this.characterSheetDTO = this.mapToDTO(testCharacterSheetWithID);
     }

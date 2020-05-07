@@ -46,7 +46,7 @@ public class CharacterSheetControllerUnitTest {
         this.characterSheets = new ArrayList<>();
         this.testCharacterSheet = new CharacterSheet("Corvus", 14L, 14L, 3000L);
         this.characterSheets.add(testCharacterSheet);
-        this.testCharacterWithID = new CharacterSheet(testCharacterSheet.getCharacter_name(), testCharacterSheet.getMax_hp(), testCharacterSheet.getCurrent_hp(), testCharacterSheet.getExp());
+        this.testCharacterWithID = new CharacterSheet(testCharacterSheet.getCharacterName (), testCharacterSheet.getMaxHp (), testCharacterSheet.getCurrentHp (), testCharacterSheet.getExp());
         this.testCharacterWithID.setId(this.id);
         this.characterSheetDTO = this.mapToDTO(testCharacterWithID);
     }
