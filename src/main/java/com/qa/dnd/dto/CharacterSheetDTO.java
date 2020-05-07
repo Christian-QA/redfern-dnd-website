@@ -1,21 +1,23 @@
-package com.qa.dnd.domain;
+package com.qa.dnd.dto;
 
-import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
-@Table(name = "CHARACTERSHEET")
-public class CharacterSheet {
+public class CharacterSheetDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String character_name;
     private Long max_hp;
     private Long current_hp;
     private Long exp;
 
-    public CharacterSheet() {
+    public CharacterSheetDTO() {
+    }
+
+    public CharacterSheetDTO(String character_name, Long max_hp, Long current_hp, Long exp) {
+        this.character_name = character_name;
+        this.max_hp = max_hp;
+        this.current_hp = current_hp;
+        this.exp = exp;
     }
 
     public void setId(Long id) {
@@ -62,18 +64,18 @@ public class CharacterSheet {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof CharacterSheet))
+        if (!(o instanceof CharacterSheetDTO))
             return false;
-        CharacterSheet that = (CharacterSheet) o;
+        CharacterSheetDTO that = (CharacterSheetDTO) o;
         return getId ().equals (that.getId ()) &&
                 getCharacter_name ().equals (that.getCharacter_name ()) &&
                 getMax_hp ().equals (that.getMax_hp ()) &&
                 getCurrent_hp ().equals (that.getCurrent_hp ()) &&
-                getExp().equals (that.exp);
+                getExp ().equals (that.getExp ());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getCharacter_name (), getMax_hp (), getCurrent_hp (), getExp());
+        return Objects.hash (getId (), getCharacter_name (), getMax_hp (), getCurrent_hp (), getExp ());
     }
 }

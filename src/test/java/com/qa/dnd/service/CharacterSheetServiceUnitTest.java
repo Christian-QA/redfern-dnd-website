@@ -29,15 +29,21 @@ public class CharacterSheetServiceUnitTest {
     private ModelMapper mapper;
 
     private List<CharacterSheet> characterSheetList;
-    private CharacterSheet testCharacter;
+    private CharacterSheet testCharacterSheet;
     private final long id = 1L;
     private CharacterSheet testCharacterSheetWithID;
+
+    ///private CharacterSheetDTO characterSheetDTO;
+
+    ///private CharacterSheetDTO mapToDTO(CharacterSheet characterSheet){
+   ///     return this.mapper.map(note, CharacterSheetDTO.class);
+    ///}
 
     @Before
     public void setUp() {
         this.characterSheetList = new ArrayList<>();
-        this.testCharacter = new CharacterSheet();
-        this.characterSheetList.add(testCharacter);
+        this.testCharacterSheet = new CharacterSheet();
+        this.characterSheetList.add(testCharacterSheet);
         this.testCharacterSheetWithID = new CharacterSheet();
         this.testCharacterSheetWithID.setId(id);
     }
@@ -50,4 +56,11 @@ public class CharacterSheetServiceUnitTest {
         verify(repository, times(1)).findAll();
     }
 
+    @Test
+    public void createCharacterSheetTest() {
+        when(repository.save(testCharacterSheet)).thenReturn(testCharacterSheetWithID);
+        ///when(this.mapper.map(testCharacterSheetWithID, characterSheetDTO.class)).thenReturn(characterSheetDTO);
+        ///assertEquals(this.service.createCharacterSheet (testCharacterSheet), this.characterSheetDTO);
+        verify(repository, times(1)).save(this.testCharacterSheet);
+    }
 }
