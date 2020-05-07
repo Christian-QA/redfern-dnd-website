@@ -8,7 +8,7 @@ public class Skills {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long sid;
+    private Long id;
     private String SkillName;
 
 
@@ -24,8 +24,8 @@ public class Skills {
         this.characterSheet = characterSheet;
     }
 
-    public void setSid(Long sid) {
-        this.sid = sid;
+    public void setId(Long sid) {
+        this.id = sid;
     }
 
     public void setSkillName(String skillName) {
@@ -36,8 +36,8 @@ public class Skills {
         this.characterSheet = characterSheet;
     }
 
-    public Long getSid() {
-        return sid;
+    public Long getId() {
+        return id;
     }
 
 
