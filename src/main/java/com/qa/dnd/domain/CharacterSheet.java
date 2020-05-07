@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "CHARACTERSHEET")//
+@Table(name = "CHARACTERSHEET")
 public class CharacterSheet {
 
     @Id
