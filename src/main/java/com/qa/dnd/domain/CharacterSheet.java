@@ -9,12 +9,15 @@ import java.util.List;
 public class CharacterSheet {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
     private String characterName;
     private Long maxHp;
     private Long currentHp;
     private Long exp;
+
+    @OneToMany(mappedBy = "charactersheet", fetch = FetchType.LAZY)
+    private List<Skills> skills = new ArrayList<>();
 
     public CharacterSheet() {
     }
@@ -25,10 +28,6 @@ public class CharacterSheet {
         this.currentHp = currentHp;
         this.exp = exp;
     }
-
-    @OneToMany(mappedBy = "charactersheet", fetch = FetchType.LAZY)
-    private List<Skills> skills = new ArrayList<>();
-
 
     public void setId(Long id) {
         this.id = id;

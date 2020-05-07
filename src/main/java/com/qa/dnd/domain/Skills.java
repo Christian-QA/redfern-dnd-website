@@ -12,8 +12,7 @@ public class Skills {
     private String SkillName;
 
 
-    @ManyToOne
-    @MapsId
+    @ManyToOne(targetEntity = CharacterSheet.class)
     private CharacterSheet characterSheet;
 
     public Skills() {
