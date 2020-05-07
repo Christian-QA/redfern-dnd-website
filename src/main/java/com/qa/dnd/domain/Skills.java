@@ -9,11 +9,7 @@ public class Skills {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long sid;
-
     private String SkillName;
-
-    @Id
-    private Long cid;
 
 
     @ManyToOne
@@ -32,10 +28,6 @@ public class Skills {
         this.sid = sid;
     }
 
-    public void setCid(Long cid) {
-        this.cid = cid;
-    }
-
     public void setSkillName(String skillName) {
         SkillName = skillName;
     }
@@ -48,9 +40,6 @@ public class Skills {
         return sid;
     }
 
-    public Long getCid() {
-        return cid;
-    }
 
     public String getSkillName() {
         return SkillName;

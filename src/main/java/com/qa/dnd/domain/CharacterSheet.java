@@ -3,7 +3,6 @@ package com.qa.dnd.domain;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "charactersheets")
@@ -28,7 +27,7 @@ public class CharacterSheet {
     }
 
     @OneToMany(mappedBy = "charactersheet", fetch = FetchType.LAZY)
-    private final List<Skills> skills = new ArrayList<>();
+    private List<Skills> skills = new ArrayList<>();
 
 
     public void setId(Long id) {
@@ -51,6 +50,10 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
+    public void setSkills(List<Skills> skills) {
+        this.skills = skills;
+    }
+
     public Long getId() {
         return id;
     }
@@ -71,22 +74,7 @@ public class CharacterSheet {
         return exp;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof CharacterSheet))
-            return false;
-        CharacterSheet that = (CharacterSheet) o;
-        return getId ().equals (that.getId ()) &&
-                getCharacterName ().equals (that.getCharacterName ()) &&
-                getMaxHp ().equals (that.getMaxHp ()) &&
-                getCurrentHp ().equals (that.getCurrentHp ()) &&
-                getExp().equals (that.exp);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash (getId (), getCharacterName (), getMaxHp (), getCurrentHp (), getExp());
+    public List<Skills> getSkills() {
+        return skills;
     }
 }
