@@ -31,7 +31,6 @@ public class CharacterSheetServiceIntegrationTest {
     private ModelMapper mapper;
 
     private CharacterSheet testCharacterSheet;
-
     private CharacterSheet testCharacterSheetWithID;
 
     private CharacterSheetDTO mapToDTO(CharacterSheet characterSheet) {
@@ -60,6 +59,15 @@ public class CharacterSheetServiceIntegrationTest {
     public void findCharacterSheetByIdTest(){
         assertThat(this.service.findCharacterSheetById(this.testCharacterSheetWithID.getId())).isEqualTo(this.mapToDTO(this.testCharacterSheetWithID));
     }
+
+    //    @Test
+//    public void updateCharacterSheetTest(){
+//        Note newCharacterSheet = new CharacterSheet("Corvus", 14L, 14L, 3000L);
+//        Note updateCharacterSheet = new CharacterSheet(newCharacterSheet.getCharacterName(), newCharacterSheet.getMaxLevel(), newCharacterSheet.getCurrentLevel(), newCharacterSheet.getExp);
+//        updateNote.setId(this.testCharacterSheetWithID.getId());
+//        assertThat(this.service.updateCharacterSheet(this.testCharacterSheetWithID.getId() ,newCharacterSheet))
+//                .isEqualTo(this.mapToDTO(updateCharacterSheet));
+//    }
 
     @Test
     public void deleteCharacterSheetTest(){

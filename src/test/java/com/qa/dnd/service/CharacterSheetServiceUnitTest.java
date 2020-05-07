@@ -30,15 +30,10 @@ public class CharacterSheetServiceUnitTest {
 
     @Mock
     private ModelMapper mapper;
-
     private List<CharacterSheet> characterSheetList;
-
     private CharacterSheet testCharacterSheet;
-
     private final long id = 1L;
-
     private CharacterSheet testCharacterSheetWithID;
-
     private CharacterSheetDTO characterSheetDTO;
 
     private CharacterSheetDTO mapToDTO(CharacterSheet characterSheet){
