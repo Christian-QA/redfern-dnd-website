@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "CHARACTERSHEET")
+@Table(name = "charactersheets")
 public class CharacterSheet {
 
     @Id
@@ -24,6 +24,10 @@ public class CharacterSheet {
         this.currentHp = currentHp;
         this.exp = exp;
     }
+
+    @OneToOne(mappedBy = "charactersheet", cascade = CascadeType.ALL)
+    private Skills skills;
+
 
     public void setId(Long id) {
         this.id = id;
