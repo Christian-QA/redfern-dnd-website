@@ -52,7 +52,7 @@ public class SkillsService {
         if (!this.repo.existsById(id)) {
             throw new SkillsNotFoundException ();
         }
-        this.repo.deleteById (id);
+        this.repo.deleteById(id);
         return this.repo.existsById(id);
     }
 
