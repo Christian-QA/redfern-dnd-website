@@ -48,9 +48,9 @@ public class SkillsServiceUnitTest {
     @Before
     public void setUp(){
         this.skillsList = new ArrayList<>();
-        this.testSkills = new Skills ("Shopping list", "Beer and even more beer");
+        this.testSkills = new Skills ("Arcana", "Intelligence", Boolean.TRUE);
         this.skillsList.add(testSkills);
-        this.testSkillsWithID = new Skills (testSkills.getTitle(), testSkills.getDescription());
+        this.testSkillsWithID = new Skills (testSkills.getSkillName(), testSkills.getStatModifier(), testSkills.getFullProficiency());
         this.testSkillsWithID.setId(id);
         this.skillsDTO = this.mapToDTO(testSkillsWithID);
     }

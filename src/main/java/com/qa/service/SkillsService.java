@@ -45,8 +45,8 @@ public class SkillsService {
 
     public SkillsDTO updateSkills(Long id, Skills skills){
         Skills update = this.repo.findById(id).orElseThrow(SkillNotFoundException::new);
-        update.setTitle(skills.getTitle());
-        update.setDescription(skills.getDescription());
+        update.setSkillName (skills.getSkillName ());
+        update.setStatModifier(skills.getStatModifier());
         Skills tempSkills = this.repo.save(skills);
         return this.mapToDTO(tempSkills);
     }

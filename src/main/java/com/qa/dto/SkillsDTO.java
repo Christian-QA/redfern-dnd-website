@@ -1,17 +1,21 @@
 package com.qa.dto;
 
+import java.util.Objects;
+
 public class SkillsDTO {
 
     private Long id;
-    private String title;
-    private String description;
+    private String skillName;
+    private String statModifier;
+    private Boolean fullProficiency;
 
     public SkillsDTO() {
     }
 
     public SkillsDTO(String title, String description) {
-        this.title = title;
-        this.description = description;
+        this.skillName = skillName;
+        this.statModifier = statModifier;
+        this.fullProficiency = fullProficiency;
     }
 
     public Long getId() {
@@ -22,45 +26,45 @@ public class SkillsDTO {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getSkillName() {
+        return skillName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setSkillName(String skillName) {
+        this.skillName = skillName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getStatModifier() {
+        return statModifier;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setStatModifier(String statModifier) {
+        this.statModifier = statModifier;
+    }
+
+    public Boolean getFullProficiency() {
+        return fullProficiency;
+    }
+
+    public void setFullProficiency(Boolean fullProficiency) {
+        this.fullProficiency = fullProficiency;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
+    public boolean equals(Object o) {
+        if (this == o)
             return true;
-        if (obj == null)
+        if (!(o instanceof SkillsDTO))
             return false;
-        if (getClass() != obj.getClass())
-            return false;
-        SkillsDTO other = (SkillsDTO) obj;
-        if (description == null) {
-            if (other.description != null)
-                return false;
-        } else if (!description.equals(other.description))
-            return false;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        if (title == null) {
-            return other.title == null;
-        } else
-            return title.equals (other.title);
+        SkillsDTO skillsDTO = (SkillsDTO) o;
+        return getId ().equals (skillsDTO.getId ()) &&
+                getSkillName ().equals (skillsDTO.getSkillName ()) &&
+                getStatModifier ().equals (skillsDTO.getStatModifier ()) &&
+                getFullProficiency ().equals (skillsDTO.getFullProficiency ());
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash (getId (), getSkillName (), getStatModifier (), getFullProficiency ());
+    }
 }
