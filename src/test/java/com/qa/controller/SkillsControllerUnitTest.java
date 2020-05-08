@@ -90,5 +90,4 @@ public class SkillsControllerUnitTest {
         assertEquals(this.skillsController.getSkillsById (id), new ResponseEntity<SkillsDTO>(this.skillsDTO, HttpStatus.OK));
         verify(service, times(1)).findSkillsById (id);
     }
-
 }
