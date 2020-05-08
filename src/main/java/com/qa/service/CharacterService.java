@@ -48,6 +48,9 @@ public class CharacterService {
     public CharacterDTO updateCharacter(Long id, Character character){
         Character update = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
         update.setName(character.getName());
+        update.setMaxHp(character.getMaxHp());
+        update.setCurrentHp(character.getCurrentHp());
+        update.setExp(character.getExp());
         Character tempCharacter = this.characterRepo.save(update);
         return this.mapToDTO(tempCharacter);
     }
