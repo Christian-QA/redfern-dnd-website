@@ -2,6 +2,7 @@ package com.qa.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class CharacterDTO {
 
@@ -71,4 +72,23 @@ public class CharacterDTO {
         this.notes = notes;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof CharacterDTO))
+            return false;
+        CharacterDTO that = (CharacterDTO) o;
+        return getId ().equals (that.getId ()) &&
+                getName ().equals (that.getName ()) &&
+                getMaxHp ().equals (that.getMaxHp ()) &&
+                getCurrentHp ().equals (that.getCurrentHp ()) &&
+                getExp ().equals (that.getExp ()) &&
+                getNotes ().equals (that.getNotes ());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getNotes ());
+    }
 }
