@@ -22,7 +22,7 @@ public class Character {
     public Character() {
     }
 
-    public Character(String name) {
+    public Character(String name, Long maxHp, Long currentHp, Long exp) {
         this.name = name;
         this.maxHp = maxHp;
         this.currentHp = currentHp;
