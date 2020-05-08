@@ -1,4 +1,4 @@
-package com.qa.dnd.configuration;
+package com.qa.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
