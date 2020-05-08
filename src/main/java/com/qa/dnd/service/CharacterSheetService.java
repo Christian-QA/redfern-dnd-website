@@ -48,15 +48,15 @@ public class CharacterSheetService {
                 .orElseThrow(CharacterNotFoundException::new));
     }
 
-    public CharacterSheetDTO updateCharacterSheet(Long id, CharacterSheet character){
-        CharacterSheet update = this.characterSheetRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
-        update.setCharacterName (character.getCharacterName ());
-        update.setMaxHp (character.getMaxHp ());
-        update.setCurrentHp (character.getCurrentHp ());
-        update.setExp (character.getExp());
-        CharacterSheet tempNote = this.characterSheetRepo.save(character);
-        return this.mapToDTO(tempNote);
-    }
+//    public CharacterSheetDTO updateCharacterSheet(Long id, CharacterSheet character){
+//        CharacterSheet update = this.characterSheetRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
+//        update.setCharacterName (character.getCharacterName ());
+//        update.setMaxHp (character.getMaxHp ());
+//        update.setCurrentHp (character.getCurrentHp ());
+//        update.setExp (character.getExp());
+//        CharacterSheet tempNote = this.characterSheetRepo.save(character);
+//        return this.mapToDTO(tempNote);
+//    }
 
     public boolean deleteCharacterSheet(Long id){
         if(!this.characterSheetRepo.existsById(id)){

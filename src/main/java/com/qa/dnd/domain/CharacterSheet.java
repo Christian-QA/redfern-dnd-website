@@ -16,7 +16,7 @@ public class CharacterSheet {
     private Long currentHp;
     private Long exp;
 
-    @OneToMany(mappedBy = "charactersheet", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "charactersheet", fetch = FetchType.EAGER)
     private List<Skills> skills = new ArrayList<>();
 
     public CharacterSheet() {
