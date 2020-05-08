@@ -27,7 +27,7 @@ public class SkillsController {
 
     @PostMapping("/createSkills")
     public ResponseEntity<SkillsDTO> createSkills(@RequestBody Skills skills){
-        return new ResponseEntity<SkillsDTO>(this.service.createSkills (skills), HttpStatus.CREATED);
+        return new ResponseEntity<>(this.service.createSkills (skills), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteSkills/{id}")

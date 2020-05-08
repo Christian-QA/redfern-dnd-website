@@ -29,7 +29,7 @@ public class CharacterController {
 
     @PostMapping("/createCharacter")
     public ResponseEntity<CharacterDTO> createCharacter(@RequestBody Character character){
-        return new ResponseEntity<CharacterDTO>(this.service.createCharacter (character), HttpStatus.CREATED);
+        return new ResponseEntity<>(this.service.createCharacter (character), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteCharacter/{id}")
@@ -56,7 +56,7 @@ public class CharacterController {
 
     @PatchMapping("/addNoteToCharacter/{id}")
     public ResponseEntity<CharacterDTO> addNoteToCharacter(@PathVariable Long id, @RequestBody Skills skills){
-        return new ResponseEntity<CharacterDTO>(this.service.addSkillsToCharacter (id, skills), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(this.service.addSkillsToCharacter (id, skills), HttpStatus.ACCEPTED);
     }
 
 }

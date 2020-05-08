@@ -16,7 +16,7 @@ public class CharacterDTO {
     public CharacterDTO() {
     }
 
-    public CharacterDTO(String name) {
+    public CharacterDTO(String name, Long maxHp, Long currentHp, Long exp) {
         super();
         this.name = name;
         this.maxHp = maxHp;
