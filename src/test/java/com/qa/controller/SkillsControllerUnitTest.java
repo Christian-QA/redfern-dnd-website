@@ -22,7 +22,7 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class NotesControllerUnitTest {
+public class SkillsControllerUnitTest {
 
     @InjectMocks
     private SkillsController skillsController;
