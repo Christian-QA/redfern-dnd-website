@@ -1,6 +1,6 @@
 package com.qa.controller;
 
-import com.qa.domain.Character;
+import com.qa.domain.CharacterSheet;
 import com.qa.dto.CharacterDTO;
 import com.qa.service.CharacterService;
 import org.junit.Before;
@@ -22,7 +22,7 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CharacterControllerUnitTest {
+public class CharacterSheetControllerUnitTest {
 
     @InjectMocks
     private CharacterController characterController;
@@ -30,11 +30,11 @@ public class CharacterControllerUnitTest {
     @Mock
     private CharacterService service;
 
-    private List<Character> character;
+    private List<CharacterSheet> characterSheet;
 
-    private Character testCharacter;
+    private CharacterSheet testCharacterSheet;
 
-    private Character testCharacterWithId;
+    private CharacterSheet testCharacterSheetWithId;
 
     private final long id = 1L;
 
@@ -42,32 +42,32 @@ public class CharacterControllerUnitTest {
 
     private final ModelMapper mapper = new ModelMapper();
 
-    private CharacterDTO mapToDTO(Character character){
-        return this.mapper.map(character, CharacterDTO.class);
+    private CharacterDTO mapToDTO(CharacterSheet characterSheet){
+        return this.mapper.map(characterSheet, CharacterDTO.class);
     }
 
     @Before
     public void setUp(){
-        this.character = new ArrayList<> ();
-        this.testCharacter = new Character ("Sinnis", 21L, 21L, 3000L);
-        this.character.add(testCharacter);
-        this.testCharacterWithId = new Character (testCharacter.getName(), testCharacter.getMaxHp(), testCharacter.getCurrentHp(), testCharacter.getExp());
-        this.testCharacterWithId.setId(this.id);
-        this.characterDTO = this.mapToDTO(testCharacterWithId);
+        this.characterSheet = new ArrayList<> ();
+        this.testCharacterSheet = new CharacterSheet ("Sinnis", 21L, 21L, 3000L);
+        this.characterSheet.add(testCharacterSheet);
+        this.testCharacterSheetWithId = new CharacterSheet (testCharacterSheet.getName(), testCharacterSheet.getMaxHp(), testCharacterSheet.getCurrentHp(), testCharacterSheet.getExp());
+        this.testCharacterSheetWithId.setId(this.id);
+        this.characterDTO = this.mapToDTO(testCharacterSheetWithId);
     }
 
     @Test
     public void getAllCharacterTest(){
-        when(service.readCharacter ()).thenReturn(this.character.stream().map(this::mapToDTO).collect(Collectors.toList()));
+        when(service.readCharacter ()).thenReturn(this.characterSheet.stream().map(this::mapToDTO).collect(Collectors.toList()));
         assertFalse("No notes found", this.characterController.getAllCharacters().getBody().isEmpty());
         verify(service, times(1)).readCharacter ();
     }
 
     @Test
     public void createCharacterTest(){
-        when(this.service.createCharacter(testCharacter)).thenReturn(this.characterDTO);
-        assertEquals(this.characterController.createCharacter(testCharacter), new ResponseEntity<CharacterDTO> (this.characterDTO, HttpStatus.CREATED));
-        verify(this.service, times(1)).createCharacter(testCharacter);
+        when(this.service.createCharacter(testCharacterSheet)).thenReturn(this.characterDTO);
+        assertEquals(this.characterController.createCharacter(testCharacterSheet), new ResponseEntity<CharacterDTO> (this.characterDTO, HttpStatus.CREATED));
+        verify(this.service, times(1)).createCharacter(testCharacterSheet);
     }
 
     @Test

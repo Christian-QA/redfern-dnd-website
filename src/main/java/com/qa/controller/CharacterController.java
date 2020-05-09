@@ -1,6 +1,6 @@
 package com.qa.controller;
 
-import com.qa.domain.Character;
+import com.qa.domain.CharacterSheet;
 import com.qa.domain.Skills;
 import com.qa.dto.CharacterDTO;
 import com.qa.service.CharacterService;
@@ -28,8 +28,8 @@ public class CharacterController {
     }
 
     @PostMapping("/createCharacter")
-    public ResponseEntity<CharacterDTO> createCharacter(@RequestBody Character character){
-        return new ResponseEntity<CharacterDTO>(this.service.createCharacter (character), HttpStatus.CREATED);
+    public ResponseEntity<CharacterDTO> createCharacter(@RequestBody CharacterSheet characterSheet){
+        return new ResponseEntity<>(this.service.createCharacter (characterSheet), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteCharacter/{id}")
@@ -45,18 +45,18 @@ public class CharacterController {
     }
 
     @PutMapping("/updateCharacter/{id}")
-    public ResponseEntity<CharacterDTO> updateCharacter(@PathVariable Long id, @RequestBody Character character){
-        return ResponseEntity.ok(this.service.updateCharacter (id, character));
+    public ResponseEntity<CharacterDTO> updateCharacter(@PathVariable Long id, @RequestBody CharacterSheet characterSheet){
+        return ResponseEntity.ok(this.service.updateCharacter (id, characterSheet));
     }
 
     @PutMapping("/updateCharacter2")
-    public ResponseEntity<CharacterDTO> updateCharacter2(@PathParam("id") Long id, @RequestBody Character character){
-        return ResponseEntity.ok(this.service.updateCharacter (id, character));
+    public ResponseEntity<CharacterDTO> updateCharacter2(@PathParam("id") Long id, @RequestBody CharacterSheet characterSheet){
+        return ResponseEntity.ok(this.service.updateCharacter (id, characterSheet));
     }
 
-    @PatchMapping("/addNoteToCharacter/{id}")
-    public ResponseEntity<CharacterDTO> addNoteToCharacter(@PathVariable Long id, @RequestBody Skills skills){
-        return new ResponseEntity<CharacterDTO>(this.service.addSkillsToCharacter (id, skills), HttpStatus.ACCEPTED);
+    @PatchMapping("/addSkillsToCharacter/{id}")
+    public ResponseEntity<CharacterDTO> addSkillsToCharacter(@PathVariable Long id, @RequestBody Skills skills){
+        return new ResponseEntity<>(this.service.addSkillsToCharacter (id, skills), HttpStatus.ACCEPTED);
     }
 
 }

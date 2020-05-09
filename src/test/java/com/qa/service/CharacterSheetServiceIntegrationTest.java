@@ -1,6 +1,6 @@
 package com.qa.service;
 
-import com.qa.domain.Character;
+import com.qa.domain.CharacterSheet;
 import com.qa.dto.CharacterDTO;
 import com.qa.repo.CharacterRepo;
 import org.junit.Before;
@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CharacterServiceIntegrationTest {
+public class CharacterSheetServiceIntegrationTest {
 
     @Autowired
     private CharacterService service;
@@ -30,44 +30,44 @@ public class CharacterServiceIntegrationTest {
     @Autowired
     private ModelMapper mapper;
 
-    private Character testCharacter;
+    private CharacterSheet testCharacterSheet;
 
-    private Character testCharacterWithID;
+    private CharacterSheet testCharacterSheetWithID;
 
-    private CharacterDTO mapToDTO(Character character){
-        return this.mapper.map(character, CharacterDTO.class);
+    private CharacterDTO mapToDTO(CharacterSheet characterSheet){
+        return this.mapper.map(characterSheet, CharacterDTO.class);
     }
 
     @Before
     public void setUp(){
-        this.testCharacter = new Character("Sinnis", 21L, 21L, 3000L);
+        this.testCharacterSheet = new CharacterSheet ("Sinnis", 21L, 21L, 3000L);
         this.repository.deleteAll();
-        this.testCharacterWithID = this.repository.save(this.testCharacter);
+        this.testCharacterSheetWithID = this.repository.save(this.testCharacterSheet);
     }
 
     @Test
     public void readCharacterTest(){
         assertThat(this.service.readCharacter())
                 .isEqualTo(
-                        Stream.of(this.mapToDTO(testCharacterWithID)).collect(Collectors.toList())
+                        Stream.of(this.mapToDTO(testCharacterSheetWithID)).collect(Collectors.toList())
                 );
     }
 
     @Test
     public void createSkillsTest(){
-        assertEquals(this.mapToDTO(this.testCharacterWithID), this.service.createCharacter (testCharacter));
+        assertEquals(this.mapToDTO(this.testCharacterSheetWithID), this.service.createCharacter (testCharacterSheet));
     }
 
     @Test
     public void findCharacterByIdTest(){
-        assertThat(this.service.findCharacterById (this.testCharacterWithID.getId())).isEqualTo(this.mapToDTO(this.testCharacterWithID));
+        assertThat(this.service.findCharacterById (this.testCharacterSheetWithID.getId())).isEqualTo(this.mapToDTO(this.testCharacterSheetWithID));
     }
 
     /// Need Update Test
 
     @Test
     public void deleteSkillsTest(){
-        assertThat(this.service.deleteCharacter(this.testCharacterWithID.getId())).isFalse();
+        assertThat(this.service.deleteCharacter(this.testCharacterSheetWithID.getId())).isFalse();
     }
 
 }
