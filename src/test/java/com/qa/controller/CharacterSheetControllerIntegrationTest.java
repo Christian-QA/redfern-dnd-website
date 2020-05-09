@@ -1,7 +1,7 @@
 package com.qa.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.domain.Character;
+import com.qa.domain.CharacterSheet;
 import com.qa.dto.CharacterDTO;
 import com.qa.repo.CharacterRepo;
 import org.junit.Before;
@@ -26,7 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class CharacterControllerIntegrationTest {
+public class CharacterSheetControllerIntegrationTest {
 
     @Autowired
     private MockMvc mock;
@@ -39,25 +39,25 @@ public class CharacterControllerIntegrationTest {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    private Character testCharacter;
+    private CharacterSheet testCharacterSheet;
 
-    private Character testCharacterWithID;
+    private CharacterSheet testCharacterSheetWithID;
 
     private long id;
 
     private CharacterDTO characterDTO;
 
-    private CharacterDTO mapToDTO(Character character){
-        return this.mapper.map(character, CharacterDTO.class);
+    private CharacterDTO mapToDTO(CharacterSheet characterSheet){
+        return this.mapper.map(characterSheet, CharacterDTO.class);
     }
 
     @Before
     public void setUp(){
         this.repository.deleteAll();
-        this.testCharacter = new Character ("Sinnis", 21L, 21L, 3000L);
-        this.testCharacterWithID = this.repository.save(testCharacter);
-        this.id = testCharacterWithID.getId();
-        this.characterDTO = this.mapToDTO(testCharacterWithID);
+        this.testCharacterSheet = new CharacterSheet ("Sinnis", 21L, 21L, 3000L);
+        this.testCharacterSheetWithID = this.repository.save(testCharacterSheet);
+        this.id = testCharacterSheetWithID.getId();
+        this.characterDTO = this.mapToDTO(testCharacterSheetWithID);
     }
 
     @Test
@@ -93,7 +93,7 @@ public class CharacterControllerIntegrationTest {
         String result = this.mock.perform(
                 request(HttpMethod.POST, "/createCharacter")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(this.objectMapper.writeValueAsString(testCharacter))
+                        .content(this.objectMapper.writeValueAsString(testCharacterSheet))
                         .accept(MediaType.APPLICATION_JSON)
         )
                 .andExpect(status().isCreated())

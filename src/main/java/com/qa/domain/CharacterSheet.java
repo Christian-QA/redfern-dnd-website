@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "character")
-public class Character {
+@Table(name = "characterSheet")
+public class CharacterSheet {
 
     @Id
     @GeneratedValue
@@ -17,13 +17,13 @@ public class Character {
     private Long currentHp;
     private Long exp;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "character", fetch = FetchType.EAGER)
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.EAGER)
     private List<Skills> skills = new ArrayList<>();
 
-    public Character() {
+    public CharacterSheet() {
     }
 
-    public Character(String name, Long maxHp, Long currentHp, Long exp) {
+    public CharacterSheet(String name, Long maxHp, Long currentHp, Long exp) {
         this.name = name;
         this.maxHp = maxHp;
         this.currentHp = currentHp;

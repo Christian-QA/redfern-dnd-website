@@ -1,6 +1,6 @@
 package com.qa.service;
 
-import com.qa.domain.Character;
+import com.qa.domain.CharacterSheet;
 import com.qa.domain.Skills;
 import com.qa.dto.CharacterDTO;
 import com.qa.exceptions.CharacterNotFoundException;
@@ -29,30 +29,30 @@ public class CharacterService {
         this.mapper = mapper;
     }
 
-    private CharacterDTO mapToDTO(Character character){
-        return this.mapper.map(character, CharacterDTO.class);
+    private CharacterDTO mapToDTO(CharacterSheet characterSheet){
+        return this.mapper.map(characterSheet, CharacterDTO.class);
     }
 
     public List<CharacterDTO> readCharacter(){
         return this.characterRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public CharacterDTO createCharacter(Character character){
-        return this.mapToDTO(this.characterRepo.save(character));
+    public CharacterDTO createCharacter(CharacterSheet characterSheet){
+        return this.mapToDTO(this.characterRepo.save(characterSheet));
     }
 
     public CharacterDTO findCharacterById(Long id){
         return this.mapToDTO(this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new));
     }
 
-    public CharacterDTO updateCharacter(Long id, Character character){
-        Character update = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
-        update.setName(character.getName());
-        update.setMaxHp(character.getMaxHp());
-        update.setCurrentHp(character.getCurrentHp());
-        update.setExp(character.getExp());
-        Character tempCharacter = this.characterRepo.save(update);
-        return this.mapToDTO(tempCharacter);
+    public CharacterDTO updateCharacter(Long id, CharacterSheet characterSheet){
+        CharacterSheet update = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
+        update.setName(characterSheet.getName());
+        update.setMaxHp(characterSheet.getMaxHp());
+        update.setCurrentHp(characterSheet.getCurrentHp());
+        update.setExp(characterSheet.getExp());
+        CharacterSheet tempCharacterSheet = this.characterRepo.save(update);
+        return this.mapToDTO(tempCharacterSheet);
     }
 
     public boolean deleteCharacter(Long id){
@@ -64,10 +64,10 @@ public class CharacterService {
     }
 
     public CharacterDTO addSkillsToCharacter(Long id, Skills skills){
-        Character character = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
+        CharacterSheet characterSheet = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
         Skills tmp = this.skillsRepo.saveAndFlush(skills);
-        character.getSkills ().add(tmp);
-        return this.mapToDTO(this.characterRepo.saveAndFlush(character));
+        characterSheet.getSkills ().add(tmp);
+        return this.mapToDTO(this.characterRepo.saveAndFlush(characterSheet));
     }
 
 }

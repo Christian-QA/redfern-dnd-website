@@ -15,8 +15,9 @@ public class Skills {
     private String statModifier;
     private Boolean fullProficiency;
 
-    @ManyToOne(targetEntity = Character.class)
-    private Character character;
+    @ManyToOne(targetEntity = CharacterSheet.class)
+    @JoinColumn(name="characterSheet", nullable=false)
+    private CharacterSheet characterSheet;
 
     public Skills() {
     }
@@ -59,12 +60,12 @@ public class Skills {
         this.fullProficiency = fullProficiency;
     }
 
-    public Character getCharacter() {
-        return character;
+    public CharacterSheet getCharacterSheet() {
+        return characterSheet;
     }
 
-    public void setCharacter(Character character) {
-        this.character = character;
+    public void setCharacterSheet(CharacterSheet characterSheet) {
+        this.characterSheet = characterSheet;
     }
 
     @Override
@@ -78,11 +79,11 @@ public class Skills {
                 getSkillName ().equals (skills.getSkillName ()) &&
                 getStatModifier ().equals (skills.getStatModifier ()) &&
                 getFullProficiency ().equals (skills.getFullProficiency ()) &&
-                getCharacter ().equals (skills.getCharacter ());
+                getCharacterSheet ().equals (skills.getCharacterSheet ());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId(), getSkillName(), getStatModifier(), getFullProficiency(), getCharacter());
+        return Objects.hash (getId(), getSkillName(), getStatModifier(), getFullProficiency(), getCharacterSheet ());
     }
 }
