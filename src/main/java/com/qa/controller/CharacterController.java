@@ -54,8 +54,8 @@ public class CharacterController {
         return ResponseEntity.ok(this.service.updateCharacter (id, character));
     }
 
-    @PatchMapping("/addNoteToCharacter/{id}")
-    public ResponseEntity<CharacterDTO> addNoteToCharacter(@PathVariable Long id, @RequestBody Skills skills){
+    @PatchMapping("/addSkillsToCharacter/{id}")
+    public ResponseEntity<CharacterDTO> addSkillsToCharacter(@PathVariable Long id, @RequestBody Skills skills){
         return new ResponseEntity<>(this.service.addSkillsToCharacter (id, skills), HttpStatus.ACCEPTED);
     }
 

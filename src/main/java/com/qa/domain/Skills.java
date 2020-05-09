@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "skills")
 public class Skills {
 
     @Id
@@ -82,6 +83,6 @@ public class Skills {
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getSkillName (), getStatModifier (), getFullProficiency (), getCharacter ());
+        return Objects.hash (getId(), getSkillName(), getStatModifier(), getFullProficiency(), getCharacter());
     }
 }

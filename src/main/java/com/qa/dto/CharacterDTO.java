@@ -11,7 +11,7 @@ public class CharacterDTO {
     private Long maxHp;
     private Long currentHp;
     private Long exp;
-    private List<SkillsDTO> notes = new ArrayList<>();
+    private List<SkillsDTO> skills = new ArrayList<>();
 
     public CharacterDTO() {
     }
@@ -64,12 +64,12 @@ public class CharacterDTO {
         this.exp = exp;
     }
 
-    public List<SkillsDTO> getNotes() {
-        return notes;
+    public List<SkillsDTO> getSkills() {
+        return skills;
     }
 
-    public void setNotes(List<SkillsDTO> notes) {
-        this.notes = notes;
+    public void setSkills(List<SkillsDTO> skills) {
+        this.skills = skills;
     }
 
     @Override
@@ -84,11 +84,11 @@ public class CharacterDTO {
                 getMaxHp ().equals (that.getMaxHp ()) &&
                 getCurrentHp ().equals (that.getCurrentHp ()) &&
                 getExp ().equals (that.getExp ()) &&
-                getNotes ().equals (that.getNotes ());
+                getSkills ().equals (that.getSkills ());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getNotes ());
+        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills ());
     }
 }
