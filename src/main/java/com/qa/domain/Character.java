@@ -17,7 +17,7 @@ public class Character {
     private Long currentHp;
     private Long exp;
 
-    @OneToMany(mappedBy = "character", fetch = FetchType.EAGER)
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "character", fetch = FetchType.EAGER)
     private List<Skills> skills = new ArrayList<>();
 
     public Character() {
