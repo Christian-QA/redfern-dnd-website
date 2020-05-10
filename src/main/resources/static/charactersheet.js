@@ -1,23 +1,22 @@
-var XMLHttpRequest = require('xhr2');
 var REQ = new XMLHttpRequest();
+
+let characterTestButton = document.querySelector("#butt1");
 
 function getAllCharacters() {
     REQ.onload = () => {
         if (REQ.status === 200) {
-            // console.log(REQ);
-            console.log(REQ.response);
-            console.log(REQ.response.name);
-            document.querySelector('#charactername').innerHTML = REQ.response[0].name;
+            console.dir(REQ);
+            let responseObject = REQ.response;
+            console.log(responseObject);
         } else {
             console.log(`Handle Error!`);
         }
     }
-    REQ.open('GET', 'localhost:8181/getAllCharacters');
+    REQ.open('GET', 'http://localhost:8181/getAllCharacters', true);
     REQ.setRequestHeader('Content-Type', 'Application/json');
-    REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
+    REQ.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8181/html/character.html');
     REQ.responseType = 'json';
     REQ.send();
 }
 
-let butt1 = document.querySelector('#butt1');
-butt1.addEventListener('click', getAllCharacters);
+characterTestButton.addEventListener("click", getAllCharacters);
