@@ -22,7 +22,7 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class NotesControllerUnitTest {
+public class SkillsControllerUnitTest {
 
     @InjectMocks
     private SkillsController skillsController;
@@ -90,5 +90,4 @@ public class NotesControllerUnitTest {
         assertEquals(this.skillsController.getSkillsById (id), new ResponseEntity<SkillsDTO>(this.skillsDTO, HttpStatus.OK));
         verify(service, times(1)).findSkillsById (id);
     }
-
 }

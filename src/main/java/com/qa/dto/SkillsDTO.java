@@ -12,7 +12,7 @@ public class SkillsDTO {
     public SkillsDTO() {
     }
 
-    public SkillsDTO(String title, String description) {
+    public SkillsDTO(String skillName, String statModifier, Boolean fullProficiency) {
         this.skillName = skillName;
         this.statModifier = statModifier;
         this.fullProficiency = fullProficiency;

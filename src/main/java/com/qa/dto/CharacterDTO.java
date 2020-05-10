@@ -2,6 +2,7 @@ package com.qa.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class CharacterDTO {
 
@@ -10,12 +11,12 @@ public class CharacterDTO {
     private Long maxHp;
     private Long currentHp;
     private Long exp;
-    private List<SkillsDTO> notes = new ArrayList<>();
+    private List<SkillsDTO> skills = new ArrayList<>();
 
     public CharacterDTO() {
     }
 
-    public CharacterDTO(String name) {
+    public CharacterDTO(String name, Long maxHp, Long currentHp, Long exp) {
         super();
         this.name = name;
         this.maxHp = maxHp;
@@ -63,12 +64,31 @@ public class CharacterDTO {
         this.exp = exp;
     }
 
-    public List<SkillsDTO> getNotes() {
-        return notes;
+    public List<SkillsDTO> getSkills() {
+        return skills;
     }
 
-    public void setNotes(List<SkillsDTO> notes) {
-        this.notes = notes;
+    public void setSkills(List<SkillsDTO> skills) {
+        this.skills = skills;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof CharacterDTO))
+            return false;
+        CharacterDTO that = (CharacterDTO) o;
+        return getId ().equals (that.getId ()) &&
+                getName ().equals (that.getName ()) &&
+                getMaxHp ().equals (that.getMaxHp ()) &&
+                getCurrentHp ().equals (that.getCurrentHp ()) &&
+                getExp ().equals (that.getExp ()) &&
+                getSkills ().equals (that.getSkills ());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills ());
+    }
 }
