@@ -1,0 +1,12 @@
+header {
+    background-color: rgb(77, 14, 101);
+}
+
+header h1 {
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
