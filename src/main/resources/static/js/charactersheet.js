@@ -1,7 +1,5 @@
 let REQ = new XMLHttpRequest();
 
-let characterTestButton = document.querySelector("#butt1");
-
 function getAllCharacters() {
     REQ.onload = () => {
         if (REQ.status === 200) {
@@ -19,4 +17,4 @@ function getAllCharacters() {
     REQ.send();
 }
 
-characterTestButton.addEventListener("click", getAllCharacters);
+window.addEventListener("load", getAllCharacters);
