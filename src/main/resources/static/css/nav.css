@@ -4,13 +4,15 @@ ul.topnav {
     padding: 0;
     overflow: hidden;
     background-color: rgb(123, 33, 158);
+    border-width: thick;
+    border-bottom-color: rgb(77, 14, 101);
   }
   
   ul.topnav li {float: left;}
   
   ul.topnav li a {
     display: block;
-    color: white;
+    color: aliceblue;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
