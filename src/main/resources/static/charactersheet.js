@@ -1,13 +1,13 @@
-var REQ = new XMLHttpRequest();
+let REQ = new XMLHttpRequest();
 
 let characterTestButton = document.querySelector("#butt1");
 
 function getAllCharacters() {
     REQ.onload = () => {
         if (REQ.status === 200) {
-            console.dir(REQ);
             let responseObject = REQ.response;
-            console.log(responseObject);
+            console.log(REQ.response);
+            document.querySelector('#charactername').innerHTML = REQ.response[0].name;
         } else {
             console.log(`Handle Error!`);
         }
