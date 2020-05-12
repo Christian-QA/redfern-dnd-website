@@ -64,6 +64,14 @@ public class AbilitiesServiceUnitTest {
         verify(repository, times(1)).findAll();
     }
 
+    @Test
+    public void createAbilitiesTest(){
+        when(repository.save(testAbilities)).thenReturn(testAbilitiesWithID);
+        when(this.mapper.map(testAbilitiesWithID, AbilitiesDTO.class)).thenReturn(abilitiesDTO);
+        assertEquals(this.service.createAbilities (testAbilities), this.abilitiesDTO);
+        verify(repository, times(1)).save(this.testAbilities);
+    }
+
 
 
 
