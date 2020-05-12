@@ -29,7 +29,7 @@ public class AbilitiesService {
     }
 
 
-    public List<AbilitiesDTO> readSkills(){
+    public List<AbilitiesDTO> readAbilities(){
         return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
