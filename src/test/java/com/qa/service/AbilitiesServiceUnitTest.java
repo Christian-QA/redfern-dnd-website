@@ -3,6 +3,7 @@ package com.qa.service;
 import com.qa.domain.Abilities;
 import com.qa.dto.AbilitiesDTO;
 import com.qa.dto.SkillsDTO;
+import com.qa.exceptions.AbilityNotFoundException;
 import com.qa.exceptions.SkillNotFoundException;
 import com.qa.repo.AbilitiesRepo;
 import org.junit.Before;
@@ -72,6 +73,28 @@ public class AbilitiesServiceUnitTest {
         verify(repository, times(1)).save(this.testAbilities);
     }
 
+    @Test
+    public void findAbilitiesByIdTest(){
+        when(this.repository.findById(id)).thenReturn(java.util.Optional.ofNullable(testAbilitiesWithID));
+        when(this.mapper.map(testAbilitiesWithID, AbilitiesDTO.class)).thenReturn(abilitiesDTO);
+        assertEquals(this.service.findAbilitiesById (this.id), abilitiesDTO);
+        verify(repository, times(1)).findById(id);
+    }
+
+    @Test
+    public void deleteAbilitiesByExistingId(){
+        when(this.repository.existsById(id)).thenReturn(true, false);
+        assertFalse(service.deleteAbilities (id));
+        verify(repository, times(1)).deleteById(id);
+        verify(repository, times(2)).existsById(id);
+    }
+
+    @Test(expected = AbilityNotFoundException.class)
+    public void deleteAbilitiesByNonExistingId(){
+        when(this.repository.existsById(id)).thenReturn(false);
+        service.deleteAbilities (id);
+        verify(repository, times(1)).existsById(id);
+    }
 
 
 
