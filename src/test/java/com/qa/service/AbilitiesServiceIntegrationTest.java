@@ -56,7 +56,18 @@ public class AbilitiesServiceIntegrationTest {
         );
     }
 
+    @Test
+    public void createAbilitiesTest(){
+        assertEquals(this.mapToDTO(this.testAbilitiesWithID), this.service.createAbilities (testAbilities));
+    }
 
+    @Test
+    public void findAbilitiesByIdTest(){
+        assertThat(this.service.findAbilitiesById (this.testAbilitiesWithID.getAbilitiesId ())).isEqualTo(this.mapToDTO(this.testAbilitiesWithID));
+    }
 
-
+    @Test
+    public void deleteAbilitiesTest(){
+        assertThat(this.service.deleteAbilities (this.testAbilitiesWithID.getAbilitiesId ())).isFalse();
+    }
 }
