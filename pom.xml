@@ -78,7 +78,6 @@
   </dependencies>
 
   <repositories>
-    <!-- Use Spring Milestone Repository -->
     <repository>
       <id>repository.spring.milestone</id>
       <name>Spring Milestones Repository</name>
