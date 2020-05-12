@@ -59,7 +59,7 @@ public class SkillsServiceUnitTest {
     public void getAllSkillsTest(){
         when(repository.findAll()).thenReturn(this.skillsList);
         when(this.mapper.map(testSkillsWithID, SkillsDTO.class)).thenReturn(skillsDTO);
-        assertFalse("Service returned no Notes", this.service.readSkills ().isEmpty());
+        assertFalse("Service returned no skills", this.service.readSkills ().isEmpty());
         verify(repository, times(1)).findAll();
     }
 
