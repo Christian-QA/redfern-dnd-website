@@ -8,15 +8,18 @@ import java.util.Objects;
 public class Skills {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "skill_name")
     private String skillName;
+    @Column(name = "stat_modifier")
     private String statModifier;
+    @Column(name = "full_proficiency")
     private Boolean fullProficiency;
 
     @ManyToOne(targetEntity = CharacterSheet.class)
-    @JoinColumn(name="characterSheet", nullable=false)
+    @JoinColumn(name="character_sheet")
     private CharacterSheet characterSheet;
 
     public Skills() {
