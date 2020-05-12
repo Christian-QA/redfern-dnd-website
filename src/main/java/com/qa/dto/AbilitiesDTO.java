@@ -5,17 +5,17 @@ import java.util.Objects;
 public class AbilitiesDTO {
 
     private Long abilitiesId;
-    private String strength;
-    private String dexterity;
-    private String constitution;
-    private String intelligence;
-    private String wisdom;
-    private String charisma;
+    private Long strength;
+    private Long dexterity;
+    private Long constitution;
+    private Long intelligence;
+    private Long wisdom;
+    private Long charisma;
 
     public AbilitiesDTO() {
     }
 
-    public AbilitiesDTO(String strength, String dexterity,  String constitution,  String intelligence,  String wisdom,  String charisma) {
+    public AbilitiesDTO(Long strength, Long dexterity,  Long constitution,  Long intelligence,  Long wisdom,  Long charisma) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -32,51 +32,51 @@ public class AbilitiesDTO {
         this.abilitiesId = abilitiesId;
     }
 
-    public String getStrength() {
+    public Long getStrength() {
         return strength;
     }
 
-    public void setStrength(String strength) {
+    public void setStrength(Long strength) {
         this.strength = strength;
     }
 
-    public String getDexterity() {
+    public Long getDexterity() {
         return dexterity;
     }
 
-    public void setDexterity(String dexterity) {
+    public void setDexterity(Long dexterity) {
         this.dexterity = dexterity;
     }
 
-    public String getConstitution() {
+    public Long getConstitution() {
         return constitution;
     }
 
-    public void setConstitution(String constitution) {
+    public void setConstitution(Long constitution) {
         this.constitution = constitution;
     }
 
-    public String getIntelligence() {
+    public Long getIntelligence() {
         return intelligence;
     }
 
-    public void setIntelligence(String intelligence) {
+    public void setIntelligence(Long intelligence) {
         this.intelligence = intelligence;
     }
 
-    public String getWisdom() {
+    public Long getWisdom() {
         return wisdom;
     }
 
-    public void setWisdom(String wisdom) {
+    public void setWisdom(Long wisdom) {
         this.wisdom = wisdom;
     }
 
-    public String getCharisma() {
+    public Long getCharisma() {
         return charisma;
     }
 
-    public void setCharisma(String charisma) {
+    public void setCharisma(Long charisma) {
         this.charisma = charisma;
     }
 
