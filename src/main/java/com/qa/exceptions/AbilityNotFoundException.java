@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import javax.persistence.EntityNotFoundException;
 
 @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "This ability doesn't exist")
-public class AbilitiesNotFoundException extends EntityNotFoundException {
+public class AbilityNotFoundException extends EntityNotFoundException {
 }

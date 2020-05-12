@@ -1,13 +1,9 @@
 package com.qa.service;
 
 import com.qa.domain.Abilities;
-import com.qa.domain.Skills;
 import com.qa.dto.AbilitiesDTO;
-import com.qa.dto.SkillsDTO;
-import com.qa.exceptions.AbilitiesNotFoundException;
-import com.qa.exceptions.SkillNotFoundException;
+import com.qa.exceptions.AbilityNotFoundException;
 import com.qa.repo.AbilitiesRepo;
-import com.qa.repo.SkillsRepo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,11 +40,11 @@ public class AbilitiesService {
 
     public AbilitiesDTO findAbilitiesById(Long id){
         return this.mapToDTO(this.repo.findById(id)
-                .orElseThrow(AbilitiesNotFoundException::new));
+                .orElseThrow(AbilityNotFoundException::new));
     }
 
     public AbilitiesDTO updateAbilities(Long id, Abilities abilities){
-        Abilities update = this.repo.findById(id).orElseThrow(AbilitiesNotFoundException::new);
+        Abilities update = this.repo.findById(id).orElseThrow(AbilityNotFoundException::new);
         update.setStrength (abilities.getStrength ());
         update.setDexterity (abilities.getDexterity ());
         update.setConstitution (abilities.getConstitution ());
@@ -61,7 +57,7 @@ public class AbilitiesService {
 
     public boolean deleteAbilities(Long id){
         if(!this.repo.existsById(id)){
-            throw new AbilitiesNotFoundException ();
+            throw new AbilityNotFoundException ();
         }
         this.repo.deleteById(id);
         return this.repo.existsById(id);
