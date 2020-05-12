@@ -49,7 +49,7 @@ public class CharacterSheetServiceIntegrationTest {
     public void readCharacterTest(){
         assertThat(this.service.readCharacter())
                 .isEqualTo(
-                        Stream.of(this.mapToDTO(testCharacterSheetWithID)).collect(Collectors.toList())
+                        Stream.of(this.mapToDTO(testCharacterSheetWithID)).collect(Collectors.toSet())
                 );
     }
 

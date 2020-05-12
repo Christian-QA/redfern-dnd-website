@@ -1,8 +1,6 @@
 package com.qa.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class CharacterDTO {
 
@@ -11,8 +9,8 @@ public class CharacterDTO {
     private Long maxHp;
     private Long currentHp;
     private Long exp;
-    private List<SkillsDTO> skills = new ArrayList<>();
-    private List<AbilitiesDTO> abilities = new ArrayList<>();
+    private Set<SkillsDTO> skills = new HashSet<>();
+    private Set<AbilitiesDTO> abilities = new HashSet<>();
 
     public CharacterDTO() {
     }
@@ -65,19 +63,19 @@ public class CharacterDTO {
         this.exp = exp;
     }
 
-    public List<SkillsDTO> getSkills() {
+    public Set<SkillsDTO> getSkills() {
         return skills;
     }
 
-    public void setSkills(List<SkillsDTO> skills) {
+    public void setSkills(Set<SkillsDTO> skills) {
         this.skills = skills;
     }
 
-    public List<AbilitiesDTO> getAbilities() {
+    public Set<AbilitiesDTO> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(List<AbilitiesDTO> abilities) {
+    public void setAbilities(Set<AbilitiesDTO> abilities) {
         this.abilities = abilities;
     }
 

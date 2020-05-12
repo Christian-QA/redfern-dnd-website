@@ -2,7 +2,9 @@ package com.qa.domain;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "character_sheet")
@@ -22,10 +24,10 @@ public class CharacterSheet {
     private Long exp;
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.LAZY)
-    private List<Skills> skills = new ArrayList<>();
+    private Set<Skills> skills = new HashSet<>();
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.LAZY) /// Problem, causes bean exception
-    private List<Abilities> abilities = new ArrayList<>();
+    private Set<Abilities> abilities = new HashSet<>();
 
     public CharacterSheet() {
     }
@@ -77,19 +79,19 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
-    public List<Skills> getSkills() {
+    public Set<Skills> getSkills() {
         return skills;
     }
 
-    public void setSkills(List<Skills> skills) {
+    public void setSkills(Set<Skills> skills) {
         this.skills = skills;
     }
 
-    public List<Abilities> getAbilities() {
+    public Set<Abilities> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(List<Abilities> abilities) {
+    public void setAbilities(Set<Abilities> abilities) {
         this.abilities = abilities;
     }
 }
