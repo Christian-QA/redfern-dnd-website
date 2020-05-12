@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 public class AbilitiesController {
@@ -21,7 +22,7 @@ public class AbilitiesController {
     }
 
     @GetMapping("/getAllAbilities")
-    public ResponseEntity<List<AbilitiesDTO>> getAllAbilities(){
+    public ResponseEntity<Set<AbilitiesDTO>> getAllAbilities(){
         return ResponseEntity.ok(this.service.readAbilities ());
     }
 

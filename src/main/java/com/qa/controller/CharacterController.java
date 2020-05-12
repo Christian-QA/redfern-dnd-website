@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 public class CharacterController {
@@ -24,7 +25,7 @@ public class CharacterController {
     }
 
     @GetMapping("/getAllCharacters")
-    public ResponseEntity<List<CharacterDTO>> getAllCharacters(){
+    public ResponseEntity<Set<CharacterDTO>> getAllCharacters(){
         return ResponseEntity.ok(this.service.readCharacter ());
     }
 

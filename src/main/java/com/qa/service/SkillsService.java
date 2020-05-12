@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,8 +30,8 @@ public class SkillsService {
     }
 
 
-    public List<SkillsDTO> readSkills(){
-        return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
+    public Set<SkillsDTO> readSkills(){
+        return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toSet());
     }
 
     public SkillsDTO createSkills(Skills skills){

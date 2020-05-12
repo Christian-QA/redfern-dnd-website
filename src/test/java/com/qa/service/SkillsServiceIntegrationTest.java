@@ -49,7 +49,7 @@ public class SkillsServiceIntegrationTest {
     public void readSkillsTest(){
         assertThat(this.service.readSkills ())
         .isEqualTo(
-                Stream.of(this.mapToDTO(testSkillsWithID)).collect(Collectors.toList())
+                Stream.of(this.mapToDTO(testSkillsWithID)).collect(Collectors.toSet())
         );
     }
 

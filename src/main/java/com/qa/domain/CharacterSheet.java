@@ -1,9 +1,7 @@
 package com.qa.domain;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,10 +21,10 @@ public class CharacterSheet {
     @Column(name = "exp")
     private Long exp;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.LAZY)
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
     private Set<Skills> skills = new HashSet<>();
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.LAZY) /// Problem, causes bean exception
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
     private Set<Abilities> abilities = new HashSet<>();
 
     public CharacterSheet() {

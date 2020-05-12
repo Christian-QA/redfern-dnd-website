@@ -58,7 +58,7 @@ public class SkillsControllerUnitTest {
 
     @Test
     public void getAllSkillsTest(){
-        when(service.readSkills ()).thenReturn(this.skills.stream().map(this::mapToDTO).collect(Collectors.toList()));
+        when(service.readSkills ()).thenReturn(this.skills.stream().map(this::mapToDTO).collect(Collectors.toSet()));
         assertFalse("No skills found", this.skillsController.getAllSkills ().getBody().isEmpty());
         verify(service, times(1)).readSkills ();
     }

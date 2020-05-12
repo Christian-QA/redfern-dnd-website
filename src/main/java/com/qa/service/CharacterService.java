@@ -8,11 +8,14 @@ import com.qa.exceptions.CharacterNotFoundException;
 import com.qa.repo.AbilitiesRepo;
 import com.qa.repo.CharacterRepo;
 import com.qa.repo.SkillsRepo;
+import org.hibernate.collection.spi.PersistentCollection;
+import org.modelmapper.Condition;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -38,8 +41,8 @@ public class CharacterService {
         return this.mapper.map(characterSheet, CharacterDTO.class);
     }
 
-    public List<CharacterDTO> readCharacter(){
-        return this.characterRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
+    public Set<CharacterDTO> readCharacter(){
+        return this.characterRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toSet());
     }
 
     public CharacterDTO createCharacter(CharacterSheet characterSheet){

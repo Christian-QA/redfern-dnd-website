@@ -61,7 +61,7 @@ public class AbilitiesControllerUnitTest {
 
     @Test
     public void getAllAbilitiesTest(){
-        when(service.readAbilities ()).thenReturn(this.abilities.stream().map(this::mapToDTO).collect(Collectors.toList()));
+        when(service.readAbilities ()).thenReturn(this.abilities.stream().map(this::mapToDTO).collect(Collectors.toSet ()));
         assertFalse("No abilities found", this.abilitiesController.getAllAbilities ().getBody().isEmpty());
         verify(service, times(1)).readAbilities ();
     }

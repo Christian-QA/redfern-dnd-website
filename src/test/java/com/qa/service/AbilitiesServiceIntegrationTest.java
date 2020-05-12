@@ -52,7 +52,7 @@ public class AbilitiesServiceIntegrationTest {
     public void readAbilitiesTest(){
         assertThat(this.service.readAbilities ())
         .isEqualTo(
-                Stream.of(this.mapToDTO(testAbilitiesWithID)).collect(Collectors.toList())
+                Stream.of(this.mapToDTO(testAbilitiesWithID)).collect(Collectors.toSet())
         );
     }
 

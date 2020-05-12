@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,8 +29,8 @@ public class AbilitiesService {
     }
 
 
-    public List<AbilitiesDTO> readAbilities(){
-        return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
+    public Set<AbilitiesDTO> readAbilities(){
+        return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toSet());
     }
 
     public AbilitiesDTO createAbilities(Abilities abilities){
