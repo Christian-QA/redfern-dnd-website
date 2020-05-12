@@ -12,6 +12,7 @@ public class CharacterDTO {
     private Long currentHp;
     private Long exp;
     private List<SkillsDTO> skills = new ArrayList<>();
+    private List<AbilitiesDTO> abilities = new ArrayList<>();
 
     public CharacterDTO() {
     }
@@ -70,6 +71,14 @@ public class CharacterDTO {
 
     public void setSkills(List<SkillsDTO> skills) {
         this.skills = skills;
+    }
+
+    public List<AbilitiesDTO> getAbilities() {
+        return abilities;
+    }
+
+    public void setAbilities(List<AbilitiesDTO> abilities) {
+        this.abilities = abilities;
     }
 
     @Override

@@ -1,9 +1,11 @@
 package com.qa.service;
 
+import com.qa.domain.Abilities;
 import com.qa.domain.CharacterSheet;
 import com.qa.domain.Skills;
 import com.qa.dto.CharacterDTO;
 import com.qa.exceptions.CharacterNotFoundException;
+import com.qa.repo.AbilitiesRepo;
 import com.qa.repo.CharacterRepo;
 import com.qa.repo.SkillsRepo;
 import org.modelmapper.ModelMapper;
@@ -20,12 +22,15 @@ public class CharacterService {
 
     private final SkillsRepo skillsRepo;
 
+    private final AbilitiesRepo abilitiesRepo;
+
     private final ModelMapper mapper;
 
     @Autowired
-    public CharacterService(CharacterRepo characterRepo, SkillsRepo skillsRepo, ModelMapper mapper) {
+    public CharacterService(CharacterRepo characterRepo, SkillsRepo skillsRepo, AbilitiesRepo abilitiesRepo, ModelMapper mapper) {
         this.characterRepo = characterRepo;
         this.skillsRepo = skillsRepo;
+        this.abilitiesRepo = abilitiesRepo;
         this.mapper = mapper;
     }
 
@@ -67,6 +72,13 @@ public class CharacterService {
         CharacterSheet characterSheet = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
         Skills tmp = this.skillsRepo.saveAndFlush(skills);
         characterSheet.getSkills ().add(tmp);
+        return this.mapToDTO(this.characterRepo.saveAndFlush(characterSheet));
+    }
+
+    public CharacterDTO addAbilitiesToCharacter(Long id, Abilities abilities){
+        CharacterSheet characterSheet = this.characterRepo.findById(id).orElseThrow(CharacterNotFoundException::new);
+        Abilities tmp = this.abilitiesRepo.saveAndFlush(abilities);
+        characterSheet.getAbilities ().add(tmp);
         return this.mapToDTO(this.characterRepo.saveAndFlush(characterSheet));
     }
 
