@@ -21,15 +21,13 @@ public class CharacterSheet {
     @Column(name = "exp")
     private Long exp;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.EAGER)
-    private List<Skills> skills;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.LAZY)
+    private List<Skills> skills = new ArrayList<>();
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.EAGER)
-    private List<Abilities> abilities;
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet", fetch = FetchType.LAZY) /// Problem, causes bean exception
+    private List<Abilities> abilities = new ArrayList<>();
 
     public CharacterSheet() {
-        skills = new ArrayList<>();
-        abilities = new ArrayList<>();
     }
 
     public CharacterSheet(String name, Long maxHp, Long currentHp, Long exp) {
@@ -37,8 +35,6 @@ public class CharacterSheet {
         this.maxHp = maxHp;
         this.currentHp = currentHp;
         this.exp = exp;
-        skills = new ArrayList<>();
-        abilities = new ArrayList<>();
     }
 
     public Long getCharacterId() {
@@ -96,6 +92,4 @@ public class CharacterSheet {
     public void setAbilities(List<Abilities> abilities) {
         this.abilities = abilities;
     }
-
-
 }

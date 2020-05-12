@@ -93,11 +93,12 @@ public class CharacterDTO {
                 getMaxHp ().equals (that.getMaxHp ()) &&
                 getCurrentHp ().equals (that.getCurrentHp ()) &&
                 getExp ().equals (that.getExp ()) &&
-                getSkills ().equals (that.getSkills ());
+                getSkills ().equals (that.getSkills ()) &&
+                getAbilities ().equals (that.getAbilities ());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills ());
+        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
     }
 }
