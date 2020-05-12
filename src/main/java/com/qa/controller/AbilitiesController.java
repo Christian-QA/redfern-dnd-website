@@ -2,7 +2,6 @@ package com.qa.controller;
 
 import com.qa.domain.Abilities;
 import com.qa.dto.AbilitiesDTO;
-import com.qa.dto.SkillsDTO;
 import com.qa.service.AbilitiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

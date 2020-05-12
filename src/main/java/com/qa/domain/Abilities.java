@@ -1,7 +1,5 @@
 package com.qa.domain;
 
-import com.google.gson.internal.$Gson$Preconditions;
-
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -14,17 +12,17 @@ public class Abilities {
     private Long abilitiesId;
 
     @Column(name = "strength")
-    private String strength;
+    private Long strength;
     @Column(name = "dexterity")
-    private String dexterity;
+    private Long dexterity;
     @Column(name = "constitution")
-    private String constitution;
+    private Long constitution;
     @Column(name = "intelligence")
-    private String intelligence;
+    private Long intelligence;
     @Column(name = "wisdom")
-    private String wisdom;
+    private Long wisdom;
     @Column(name = "charisma")
-    private String charisma;
+    private Long charisma;
 
     @ManyToOne(targetEntity = CharacterSheet.class)
     @JoinColumn(name="character_id")
@@ -33,7 +31,7 @@ public class Abilities {
     public Abilities() {
     }
 
-    public Abilities(String strength, String dexterity,  String constitution,  String intelligence,  String wisdom,  String charisma) {
+    public Abilities(Long strength, Long dexterity,  Long constitution,  Long intelligence,  Long wisdom,  Long charisma) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -50,51 +48,51 @@ public class Abilities {
         this.abilitiesId = abilitiesId;
     }
 
-    public String getStrength() {
+    public Long getStrength() {
         return strength;
     }
 
-    public void setStrength(String strength) {
+    public void setStrength(Long strength) {
         this.strength = strength;
     }
 
-    public String getDexterity() {
+    public Long getDexterity() {
         return dexterity;
     }
 
-    public void setDexterity(String dexterity) {
+    public void setDexterity(Long dexterity) {
         this.dexterity = dexterity;
     }
 
-    public String getConstitution() {
+    public Long getConstitution() {
         return constitution;
     }
 
-    public void setConstitution(String constitution) {
+    public void setConstitution(Long constitution) {
         this.constitution = constitution;
     }
 
-    public String getIntelligence() {
+    public Long getIntelligence() {
         return intelligence;
     }
 
-    public void setIntelligence(String intelligence) {
+    public void setIntelligence(Long intelligence) {
         this.intelligence = intelligence;
     }
 
-    public String getWisdom() {
+    public Long getWisdom() {
         return wisdom;
     }
 
-    public void setWisdom(String wisdom) {
+    public void setWisdom(Long wisdom) {
         this.wisdom = wisdom;
     }
 
-    public String getCharisma() {
+    public Long getCharisma() {
         return charisma;
     }
 
-    public void setCharisma(String charisma) {
+    public void setCharisma(Long charisma) {
         this.charisma = charisma;
     }
 
