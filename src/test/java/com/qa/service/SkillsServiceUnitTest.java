@@ -51,7 +51,7 @@ public class SkillsServiceUnitTest {
         this.testSkills = new Skills ("Arcana", "Intelligence", Boolean.TRUE);
         this.skillsList.add(testSkills);
         this.testSkillsWithID = new Skills (testSkills.getSkillName(), testSkills.getStatModifier(), testSkills.getFullProficiency());
-        this.testSkillsWithID.setId(id);
+        this.testSkillsWithID.setSkillsId (id);
         this.skillsDTO = this.mapToDTO(testSkillsWithID);
     }
 

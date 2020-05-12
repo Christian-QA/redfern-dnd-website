@@ -60,7 +60,7 @@ public class SkillsServiceIntegrationTest {
 
     @Test
     public void findSkillsByIdTest(){
-        assertThat(this.service.findSkillsById (this.testSkillsWithID.getId())).isEqualTo(this.mapToDTO(this.testSkillsWithID));
+        assertThat(this.service.findSkillsById (this.testSkillsWithID.getSkillsId ())).isEqualTo(this.mapToDTO(this.testSkillsWithID));
     }
 
 
@@ -75,7 +75,7 @@ public class SkillsServiceIntegrationTest {
 
     @Test
     public void deleteSkillsTest(){
-        assertThat(this.service.deleteSkills (this.testSkillsWithID.getId())).isFalse();
+        assertThat(this.service.deleteSkills (this.testSkillsWithID.getSkillsId ())).isFalse();
     }
 
 

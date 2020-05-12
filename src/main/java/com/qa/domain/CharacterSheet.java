@@ -3,7 +3,6 @@ package com.qa.domain;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "character_sheet")
@@ -11,7 +10,7 @@ public class CharacterSheet {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Long characterId;
 
     @Column(name = "name")
     private String name;
@@ -42,12 +41,12 @@ public class CharacterSheet {
         abilities = new ArrayList<>();
     }
 
-    public Long getId() {
-        return id;
+    public Long getCharacterId() {
+        return characterId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setCharacterId(Long id) {
+        this.characterId = id;
     }
 
     public String getName() {
@@ -98,24 +97,5 @@ public class CharacterSheet {
         this.abilities = abilities;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof CharacterSheet))
-            return false;
-        CharacterSheet that = (CharacterSheet) o;
-        return getId ().equals (that.getId ()) &&
-                getName ().equals (that.getName ()) &&
-                getMaxHp ().equals (that.getMaxHp ()) &&
-                getCurrentHp ().equals (that.getCurrentHp ()) &&
-                getExp ().equals (that.getExp ()) &&
-                getSkills ().equals (that.getSkills ()) &&
-                getAbilities ().equals (that.getAbilities ());
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
-    }
 }

@@ -56,7 +56,7 @@ public class CharacterSheetControllerIntegrationTest {
         this.repository.deleteAll();
         this.testCharacterSheet = new CharacterSheet ("Sinnis", 21L, 21L, 3000L);
         this.testCharacterSheetWithID = this.repository.save(testCharacterSheet);
-        this.id = testCharacterSheetWithID.getId();
+        this.id = testCharacterSheetWithID.getCharacterId ();
         this.characterDTO = this.mapToDTO(testCharacterSheetWithID);
     }
 

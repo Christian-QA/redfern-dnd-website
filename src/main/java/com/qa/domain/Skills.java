@@ -9,7 +9,7 @@ public class Skills {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long skillsId;
 
     @Column(name = "skill_name")
     private String skillName;
@@ -19,7 +19,7 @@ public class Skills {
     private Boolean fullProficiency;
 
     @ManyToOne(targetEntity = CharacterSheet.class)
-    @JoinColumn(name="character_sheet")
+    @JoinColumn(name="character_id")
     private CharacterSheet characterSheet;
 
     public Skills() {
@@ -31,12 +31,12 @@ public class Skills {
         this.fullProficiency = fullProficiency;
     }
 
-    public Long getId() {
-        return id;
+    public Long getSkillsId() {
+        return skillsId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setSkillsId(Long id) {
+        this.skillsId = id;
     }
 
     public String getSkillName() {
@@ -78,7 +78,7 @@ public class Skills {
         if (!(o instanceof Skills))
             return false;
         Skills skills = (Skills) o;
-        return getId ().equals (skills.getId ()) &&
+        return getSkillsId ().equals (skills.getSkillsId ()) &&
                 getSkillName ().equals (skills.getSkillName ()) &&
                 getStatModifier ().equals (skills.getStatModifier ()) &&
                 getFullProficiency ().equals (skills.getFullProficiency ()) &&
@@ -87,6 +87,6 @@ public class Skills {
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId(), getSkillName(), getStatModifier(), getFullProficiency(), getCharacterSheet ());
+        return Objects.hash (getSkillsId (), getSkillName(), getStatModifier(), getFullProficiency(), getCharacterSheet ());
     }
 }

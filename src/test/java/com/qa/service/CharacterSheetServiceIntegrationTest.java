@@ -60,14 +60,14 @@ public class CharacterSheetServiceIntegrationTest {
 
     @Test
     public void findCharacterByIdTest(){
-        assertThat(this.service.findCharacterById (this.testCharacterSheetWithID.getId())).isEqualTo(this.mapToDTO(this.testCharacterSheetWithID));
+        assertThat(this.service.findCharacterById (this.testCharacterSheetWithID.getCharacterId ())).isEqualTo(this.mapToDTO(this.testCharacterSheetWithID));
     }
 
     /// Need Update Test
 
     @Test
     public void deleteSkillsTest(){
-        assertThat(this.service.deleteCharacter(this.testCharacterSheetWithID.getId())).isFalse();
+        assertThat(this.service.deleteCharacter(this.testCharacterSheetWithID.getCharacterId ())).isFalse();
     }
 
 }

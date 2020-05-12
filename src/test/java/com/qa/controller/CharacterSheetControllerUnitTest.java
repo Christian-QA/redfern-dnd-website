@@ -52,7 +52,7 @@ public class CharacterSheetControllerUnitTest {
         this.testCharacterSheet = new CharacterSheet ("Sinnis", 21L, 21L, 3000L);
         this.characterSheet.add(testCharacterSheet);
         this.testCharacterSheetWithId = new CharacterSheet (testCharacterSheet.getName(), testCharacterSheet.getMaxHp(), testCharacterSheet.getCurrentHp(), testCharacterSheet.getExp());
-        this.testCharacterSheetWithId.setId(this.id);
+        this.testCharacterSheetWithId.setCharacterId (this.id);
         this.characterDTO = this.mapToDTO(testCharacterSheetWithId);
     }
 

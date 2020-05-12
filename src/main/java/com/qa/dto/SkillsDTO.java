@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class SkillsDTO {
 
-    private Long id;
+    private Long skillsId;
     private String skillName;
     private String statModifier;
     private Boolean fullProficiency;
@@ -18,12 +18,12 @@ public class SkillsDTO {
         this.fullProficiency = fullProficiency;
     }
 
-    public Long getId() {
-        return id;
+    public Long getSkillsId() {
+        return skillsId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setSkillsId(Long skillsId) {
+        this.skillsId = skillsId;
     }
 
     public String getSkillName() {
@@ -57,7 +57,7 @@ public class SkillsDTO {
         if (!(o instanceof SkillsDTO))
             return false;
         SkillsDTO skillsDTO = (SkillsDTO) o;
-        return getId ().equals (skillsDTO.getId ()) &&
+        return getSkillsId ().equals (skillsDTO.getSkillsId ()) &&
                 getSkillName ().equals (skillsDTO.getSkillName ()) &&
                 getStatModifier ().equals (skillsDTO.getStatModifier ()) &&
                 getFullProficiency ().equals (skillsDTO.getFullProficiency ());
@@ -65,6 +65,6 @@ public class SkillsDTO {
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getSkillName (), getStatModifier (), getFullProficiency ());
+        return Objects.hash (getSkillsId (), getSkillName (), getStatModifier (), getFullProficiency ());
     }
 }
