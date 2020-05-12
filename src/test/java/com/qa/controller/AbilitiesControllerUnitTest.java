@@ -66,5 +66,31 @@ public class AbilitiesControllerUnitTest {
         verify(service, times(1)).readAbilities ();
     }
 
+    @Test
+    public void createAbilitiesTest(){
+        when(this.service.createAbilities (testAbilities)).thenReturn(this.abilitiesDTO);
+        assertEquals(this.abilitiesController.createAbilities (testAbilities), new ResponseEntity<AbilitiesDTO>(this.abilitiesDTO, HttpStatus.CREATED));
+        verify(this.service, times(1)).createAbilities (testAbilities);
+    }
 
+    @Test
+    public void deleteAbilitiesTestFalse(){
+        this.abilitiesController.deleteAbilities (id);
+        verify(service, times(1)).deleteAbilities (id);
+    }
+
+
+    @Test
+    public void deleteSkillsTestTrue(){
+        when(service.deleteAbilities (3L)).thenReturn(true);
+        this.abilitiesController.deleteAbilities (3L);
+        verify(service, times(1)).deleteAbilities (3L);
+    }
+
+    @Test
+    public void getAbilitiesByIDTest(){
+        when(this.service.findAbilitiesById (id)).thenReturn(this.abilitiesDTO);
+        assertEquals(this.abilitiesController.getAbilitiesById (id), new ResponseEntity<AbilitiesDTO>(this.abilitiesDTO, HttpStatus.OK));
+        verify(service, times(1)).findAbilitiesById (id);
+    }
 }
