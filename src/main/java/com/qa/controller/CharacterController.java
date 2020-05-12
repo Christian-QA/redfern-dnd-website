@@ -1,5 +1,6 @@
 package com.qa.controller;
 
+import com.qa.domain.Abilities;
 import com.qa.domain.CharacterSheet;
 import com.qa.domain.Skills;
 import com.qa.dto.CharacterDTO;
@@ -57,6 +58,11 @@ public class CharacterController {
     @PatchMapping("/addSkillsToCharacter/{id}")
     public ResponseEntity<CharacterDTO> addSkillsToCharacter(@PathVariable Long id, @RequestBody Skills skills){
         return new ResponseEntity<>(this.service.addSkillsToCharacter (id, skills), HttpStatus.ACCEPTED);
+    }
+
+    @PatchMapping("/addAbilitiesToCharacter/{id}")
+    public ResponseEntity<CharacterDTO> addAbilitiesToCharacter(@PathVariable Long id, @RequestBody Abilities abilities){
+        return new ResponseEntity<>(this.service.addAbilitiesToCharacter (id, abilities), HttpStatus.ACCEPTED);
     }
 
 }
