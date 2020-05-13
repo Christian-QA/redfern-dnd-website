@@ -87,61 +87,33 @@ public class SkillsTest {
 
     @Test
     public void skillsFullProficiencyNullButOtherFullProficiencyNotNull() {
-        skills.setCurrentHp(null);
-        assertFalse(characterSheet.equals(other));
-    }
-
-    @Test
-    public void characterSheetCurrentHpNotEqual() {
-        other.setCurrentHp(5L);
-        assertFalse(characterSheet.equals(other));
-    }
-
-    @Test
-    public void characterSheetExpNullButOtherExpNotNull() {
-        characterSheet.setExp(null);
-        assertFalse(characterSheet.equals(other));
-    }
-
-    @Test
-    public void characterSheetExpNotEqual() {
-        other.setExp(5L);
-        assertFalse(characterSheet.equals(other));
+        skills.setFullProficiency(null);
+        assertFalse(skills.equals(other));
     }
 
     @Test(expected = NullPointerException.class)
     public void nullId() {
-        characterSheet.setCharacterId(null);
-        assertFalse(characterSheet.equals(other));
+        skills.setSkillsId (null);
+        assertFalse(skills.equals(other));
     }
 
     @Test
     public void characterSheetIDDifferent() {
-        other.setCharacterId(1L);
-        assertFalse(characterSheet.equals(other));
+        other.setSkillsId(1L);
+        assertFalse(skills.equals(other));
     }
 
     @Test
     public void otherIdDifferent() {
-        other.setCharacterId(2L);
-        assertFalse(characterSheet.equals(other));
-    }
-
-    @Test
-    public void constructorWithoutId() {
-        CharacterSheet characterSheet = new CharacterSheet("Sinnis", 20L, 20L, 3000L);
-        assertNull(characterSheet.getCharacterId ());
-        assertNotNull(characterSheet.getName());
-        assertNotNull(characterSheet.getMaxHp ());
-        assertNotNull(characterSheet.getCurrentHp ());
-        assertNotNull(characterSheet.getExp ());
+        other.setSkillsId(2L);
+        assertFalse(skills.equals(other));
     }
 
     @Test
     public void hashCodeTestWithNull() {
-        CharacterSheet characterSheet = new CharacterSheet(null, null, null, null);
-        CharacterSheet other = new CharacterSheet(null, null, null, null);
-        assertEquals(characterSheet.hashCode(), other.hashCode());
+        Skills skills = new Skills(null, null, null, null);
+        Skills other = new Skills(null, null, null, null);
+        assertEquals(skills.hashCode(), other.hashCode());
     }
 
 }
