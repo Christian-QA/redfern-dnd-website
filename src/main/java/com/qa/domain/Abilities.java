@@ -24,7 +24,7 @@ public class Abilities {
     @Column(name = "charisma")
     private Long charisma;
 
-    @ManyToOne(targetEntity = CharacterSheet.class)
+    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.LAZY)
     @JoinColumn(name="character_id")
     private CharacterSheet characterSheet;
 

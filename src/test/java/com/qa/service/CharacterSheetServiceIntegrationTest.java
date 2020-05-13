@@ -54,7 +54,7 @@ public class CharacterSheetServiceIntegrationTest {
     }
 
     @Test
-    public void createSkillsTest(){
+    public void createCharacterTest(){
         assertEquals(this.mapToDTO(this.testCharacterSheetWithID), this.service.createCharacter (testCharacterSheet));
     }
 

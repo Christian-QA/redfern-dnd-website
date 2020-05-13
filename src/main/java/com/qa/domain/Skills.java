@@ -18,7 +18,7 @@ public class Skills {
     @Column(name = "full_proficiency")
     private Boolean fullProficiency;
 
-    @ManyToOne(targetEntity = CharacterSheet.class)
+    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.LAZY)
     @JoinColumn(name="character_id")
     private CharacterSheet characterSheet;
 

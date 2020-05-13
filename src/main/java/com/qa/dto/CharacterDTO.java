@@ -9,8 +9,8 @@ public class CharacterDTO {
     private Long maxHp;
     private Long currentHp;
     private Long exp;
-    private Collection<SkillsDTO> skills = new HashSet<>();
-    private Collection<AbilitiesDTO> abilities = new HashSet<>();
+    private List<SkillsDTO> skills = new ArrayList<> ();
+    private List<AbilitiesDTO> abilities = new ArrayList<> ();
 
     public CharacterDTO() {
     }
@@ -63,19 +63,19 @@ public class CharacterDTO {
         this.exp = exp;
     }
 
-    public Collection<SkillsDTO> getSkills() {
+    public List<SkillsDTO> getSkills() {
         return skills;
     }
 
-    public void setSkills(Collection<SkillsDTO> skills) {
+    public void setSkills(List<SkillsDTO> skills) {
         this.skills = skills;
     }
 
-    public Collection<AbilitiesDTO> getAbilities() {
+    public List<AbilitiesDTO> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(Collection<AbilitiesDTO> abilities) {
+    public void setAbilities(List<AbilitiesDTO> abilities) {
         this.abilities = abilities;
     }
 

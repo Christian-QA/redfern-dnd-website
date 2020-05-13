@@ -1,10 +1,7 @@
 package com.qa.domain;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "character_sheet")
@@ -24,10 +21,10 @@ public class CharacterSheet {
     private Long exp;
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private Collection<Skills> skills = new HashSet<>();
+    private List<Skills> skills = new ArrayList<> ();
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private Collection<Abilities> abilities = new HashSet<>();
+    private List<Abilities> abilities = new ArrayList<> ();
 
     public CharacterSheet() {
     }
@@ -79,19 +76,19 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
-    public Collection<Skills> getSkills() {
+    public List<Skills> getSkills() {
         return skills;
     }
 
-    public void setSkills(Collection<Skills> skills) {
+    public void setSkills(List<Skills> skills) {
         this.skills = skills;
     }
 
-    public Collection<Abilities> getAbilities() {
+    public List<Abilities> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(Collection<Abilities> abilities) {
+    public void setAbilities(List<Abilities> abilities) {
         this.abilities = abilities;
     }
 
