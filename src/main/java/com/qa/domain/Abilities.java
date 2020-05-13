@@ -40,6 +40,16 @@ public class Abilities {
         this.charisma = charisma;
     }
 
+    public Abilities(Long abilitiesId, Long strength, Long dexterity,  Long constitution,  Long intelligence,  Long wisdom,  Long charisma) {
+        this.abilitiesId = abilitiesId;
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.constitution = constitution;
+        this.intelligence = intelligence;
+        this.wisdom = wisdom;
+        this.charisma = charisma;
+    }
+
     public Long getAbilitiesId() {
         return abilitiesId;
     }
