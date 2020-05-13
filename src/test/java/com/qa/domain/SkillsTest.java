@@ -3,6 +3,8 @@ package com.qa.domain;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.sql.SQLException;
+
 import static org.junit.Assert.*;
 
 public class SkillsTest {
@@ -108,7 +110,7 @@ public class SkillsTest {
         other.setSkillsId(2L);
         assertFalse(skills.equals(other));
     }
-
+    
     @Test
     public void hashCodeTestWithNull() {
         Skills skills = new Skills(null, null, null, null);
