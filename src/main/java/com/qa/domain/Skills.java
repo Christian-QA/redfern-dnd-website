@@ -31,6 +31,13 @@ public class Skills {
         this.fullProficiency = fullProficiency;
     }
 
+    public Skills(Long skillsId, String skillName, String statModifier, Boolean fullProficiency) {
+        this.skillsId = skillsId;
+        this.skillName = skillName;
+        this.statModifier = statModifier;
+        this.fullProficiency = fullProficiency;
+    }
+
     public Long getSkillsId() {
         return skillsId;
     }

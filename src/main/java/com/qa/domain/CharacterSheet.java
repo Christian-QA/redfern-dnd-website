@@ -36,6 +36,14 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
+    public CharacterSheet(Long characterId, String name, Long maxHp, Long currentHp, Long exp) {
+        this.characterId = characterId;
+        this.name = name;
+        this.maxHp = maxHp;
+        this.currentHp = currentHp;
+        this.exp = exp;
+    }
+
     public Long getCharacterId() {
         return characterId;
     }
