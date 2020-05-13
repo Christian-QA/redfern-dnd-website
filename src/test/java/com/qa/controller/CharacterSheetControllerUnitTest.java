@@ -58,7 +58,7 @@ public class CharacterSheetControllerUnitTest {
 
     @Test
     public void getAllCharacterTest(){
-        when(service.readCharacter ()).thenReturn(this.characterSheet.stream().map(this::mapToDTO).collect(Collectors.toSet()));
+        when(service.readCharacter ()).thenReturn(this.characterSheet.stream().map(this::mapToDTO).collect(Collectors.toList()));
         assertFalse("No notes found", this.characterController.getAllCharacters().getBody().isEmpty());
         verify(service, times(1)).readCharacter ();
     }

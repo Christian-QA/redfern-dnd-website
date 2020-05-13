@@ -41,8 +41,8 @@ public class CharacterService {
         return this.mapper.map(characterSheet, CharacterDTO.class);
     }
 
-    public Set<CharacterDTO> readCharacter(){
-        return this.characterRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toSet());
+    public List<CharacterDTO> readCharacter(){
+        return this.characterRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
     public CharacterDTO createCharacter(CharacterSheet characterSheet){

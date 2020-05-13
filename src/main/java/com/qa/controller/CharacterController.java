@@ -25,7 +25,7 @@ public class CharacterController {
     }
 
     @GetMapping("/getAllCharacters")
-    public ResponseEntity<Set<CharacterDTO>> getAllCharacters(){
+    public ResponseEntity<List<CharacterDTO>> getAllCharacters(){
         return ResponseEntity.ok(this.service.readCharacter ());
     }
 

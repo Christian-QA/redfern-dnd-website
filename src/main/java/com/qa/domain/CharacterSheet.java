@@ -1,7 +1,9 @@
 package com.qa.domain;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -22,10 +24,10 @@ public class CharacterSheet {
     private Long exp;
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private Set<Skills> skills = new HashSet<>();
+    private Collection<Skills> skills = new HashSet<>();
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private Set<Abilities> abilities = new HashSet<>();
+    private Collection<Abilities> abilities = new HashSet<>();
 
     public CharacterSheet() {
     }
@@ -77,19 +79,40 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
-    public Set<Skills> getSkills() {
+    public Collection<Skills> getSkills() {
         return skills;
     }
 
-    public void setSkills(Set<Skills> skills) {
+    public void setSkills(Collection<Skills> skills) {
         this.skills = skills;
     }
 
-    public Set<Abilities> getAbilities() {
+    public Collection<Abilities> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(Set<Abilities> abilities) {
+    public void setAbilities(Collection<Abilities> abilities) {
         this.abilities = abilities;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof CharacterSheet))
+            return false;
+        CharacterSheet that = (CharacterSheet) o;
+        return getCharacterId ().equals (that.getCharacterId ()) &&
+                getName ().equals (that.getName ()) &&
+                getMaxHp ().equals (that.getMaxHp ()) &&
+                getCurrentHp ().equals (that.getCurrentHp ()) &&
+                getExp ().equals (that.getExp ()) &&
+                getSkills ().equals (that.getSkills ()) &&
+                getAbilities ().equals (that.getAbilities ());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash (getCharacterId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
     }
 }
