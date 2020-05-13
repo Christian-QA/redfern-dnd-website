@@ -62,32 +62,32 @@ public class SkillsTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void characterSheetNameNullButOtherNameNotNull() {
+    public void skillsNameNullButOtherNameNotNull() {
         skills.setSkillName(null);
         assertFalse(skills.equals(other));
     }
 
     @Test
-    public void characterSheetNamesNotEqual() {
+    public void skillsNamesNotEqual() {
         other.setSkillName("Perception");
         assertFalse(skills.equals(other));
     }
 
     @Test
-    public void characterSheetMaxHpNullButOtherMaxHpNotNull() {
-        skills.setMaxHp(null);
+    public void skillModifierNullButOtherSkillModifierNotNull() {
+        skills.setStatModifier (null);
         assertFalse(skills.equals(other));
     }
 
     @Test
-    public void characterSheetMaxHpNotEqual() {
-        other.setMaxHp(5L);
-        assertFalse(characterSheet.equals(other));
+    public void skillModifierNotEqual() {
+        other.setStatModifier ("Wisdom");
+        assertFalse(skills.equals(other));
     }
 
     @Test
-    public void characterSheetCurrentHpNullButOtherCurrentHpNotNull() {
-        characterSheet.setCurrentHp(null);
+    public void skillsFullProficiencyNullButOtherFullProficiencyNotNull() {
+        skills.setCurrentHp(null);
         assertFalse(characterSheet.equals(other));
     }
 
