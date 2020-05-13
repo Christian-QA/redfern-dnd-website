@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import static org.junit.Assert.*;
 
-public class CharacterSheetTest {
+public class CharacterSheetUnitTest {
 
     private CharacterSheet characterSheet;
     private CharacterSheet other;

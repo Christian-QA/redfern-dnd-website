@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import static org.junit.Assert.*;
 
-public class SkillsTest {
+public class SkillsUnitTest {
 
     private Skills skills;
     private Skills other;
@@ -110,7 +110,7 @@ public class SkillsTest {
         other.setSkillsId(2L);
         assertFalse(skills.equals(other));
     }
-    
+
     @Test
     public void hashCodeTestWithNull() {
         Skills skills = new Skills(null, null, null, null);
