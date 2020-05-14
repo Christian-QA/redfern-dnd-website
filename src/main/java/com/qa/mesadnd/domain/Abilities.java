@@ -1,11 +1,10 @@
 package com.qa.mesadnd.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "abilities")
@@ -29,16 +28,9 @@ public class Abilities {
     @Column(name = "charisma")
     private Long charisma;
 
-    @ManyToMany(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "abilities_character_sheet",
-            joinColumns = @JoinColumn(name = "abilities_id"),
-            inverseJoinColumns = @JoinColumn(name = "character_id"))
-    Set<CharacterSheet> characterSheet = new HashSet<> ();
-
-
-//    @JoinColumn(name="character_id")
-//    private List<CharacterSheet> characterSheet;
+    @JsonIgnore
+    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "abilities")
+    private Set<CharacterSheet> characterSheet = new HashSet<> ();
 
     public Abilities() {
     }

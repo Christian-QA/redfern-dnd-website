@@ -23,15 +23,19 @@ public class CharacterSheet {
     @Column(name = "exp")
     private Long exp;
 
-    @ManyToMany(targetEntity = Skills.class, fetch = FetchType.EAGER)
+    @ManyToMany(targetEntity = Skills.class, fetch = FetchType.LAZY)
     @JoinTable(
             name = "skills_character_sheet",
             joinColumns = @JoinColumn(name = "character_id"),
             inverseJoinColumns = @JoinColumn(name = "skills_id"))
     private List<Skills> skills = new ArrayList<> ();
 
-    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private List<Abilities> abilities = new  ArrayList<> ();
+    @ManyToMany(targetEntity = Abilities.class, fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "abilities_character_sheet",
+            joinColumns = @JoinColumn(name = "character_id"),
+            inverseJoinColumns = @JoinColumn(name = "abilities_id"))
+    private List<Abilities> abilities = new ArrayList<> ();
 
     public CharacterSheet() {
     }
