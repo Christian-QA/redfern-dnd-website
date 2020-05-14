@@ -16,6 +16,17 @@ public class AbilitiesDTO {
     }
 
     public AbilitiesDTO(Long strength, Long dexterity,  Long constitution,  Long intelligence,  Long wisdom,  Long charisma) {
+        super();
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.constitution = constitution;
+        this.intelligence = intelligence;
+        this.wisdom = wisdom;
+        this.charisma = charisma;
+    }
+
+    public AbilitiesDTO(Long abilitiesId, Long strength, Long dexterity,  Long constitution,  Long intelligence,  Long wisdom,  Long charisma) {
+        this.abilitiesId = abilitiesId;
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;

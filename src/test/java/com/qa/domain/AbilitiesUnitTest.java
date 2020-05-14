@@ -152,7 +152,7 @@ public class AbilitiesUnitTest {
     }
 
     @Test
-    public void characterSheetIDDifferent() {
+    public void abilitiesIDDifferent() {
         other.setAbilitiesId (1L);
         assertFalse(abilities.equals(other));
     }

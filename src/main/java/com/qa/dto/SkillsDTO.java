@@ -13,6 +13,15 @@ public class SkillsDTO {
     }
 
     public SkillsDTO(String skillName, String statModifier, Boolean fullProficiency) {
+        super();
+        this.skillName = skillName;
+        this.statModifier = statModifier;
+        this.fullProficiency = fullProficiency;
+    }
+
+    public SkillsDTO(Long skillsId, String skillName, String statModifier, Boolean fullProficiency) {
+        super();
+        this.skillsId = skillsId;
         this.skillName = skillName;
         this.statModifier = statModifier;
         this.fullProficiency = fullProficiency;
