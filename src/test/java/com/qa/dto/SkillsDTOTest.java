@@ -14,7 +14,7 @@ public class SkillsDTOTest {
     @Before
     public void setUp() {
         skills = new SkillsDTO(1L,"Perception", "Wisdom", Boolean.TRUE);
-        other = new SkillsDTO(1L, "History", "Intelligence", Boolean.TRUE);
+        other = new SkillsDTO("History", "Intelligence", Boolean.TRUE);
     }
 
     @Test
@@ -65,6 +65,7 @@ public class SkillsDTOTest {
     @Test(expected = NullPointerException.class)
     public void skillsNameNullButOtherNameNotNull() {
         skills.setSkillName(null);
+        other.setSkillsId (1L);
         assertFalse(skills.equals(other));
     }
 
@@ -113,7 +114,7 @@ public class SkillsDTOTest {
     @Test
     public void hashCodeTestWithNull() {
         Skills skills = new Skills(null, null, null, null);
-        Skills other = new Skills(null, null, null, null);
+        Skills other = new Skills(null, null, null);
         assertEquals(skills.hashCode(), other.hashCode());
     }
 

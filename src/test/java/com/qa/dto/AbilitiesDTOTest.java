@@ -13,7 +13,7 @@ public class AbilitiesDTOTest {
     @Before
     public void setUp() {
         abilities = new AbilitiesDTO(1L,10L,10L,10L,10L,10L,10L);
-        other = new AbilitiesDTO(1L,11L,12L,14L,15L,12L,14L);
+        other = new AbilitiesDTO(11L,12L,14L,15L,12L,14L);
     }
 
     @Test
@@ -76,6 +76,7 @@ public class AbilitiesDTOTest {
     @Test(expected = NullPointerException.class)
     public void strengthNullButOtherStrengthNotNull() {
         abilities.setStrength(null);
+        other.setAbilitiesId (1L);
         assertFalse(abilities.equals(other));
     }
 
