@@ -133,8 +133,8 @@ public class CharacterSheet {
                 ", maxHp=" + maxHp +
                 ", currentHp=" + currentHp +
                 ", exp=" + exp +
-                ", skills=" + skills +
-                ", abilities=" + abilities +
+                ", skills=" + skills.toString() +
+                ", abilities=" + abilities.toString() +
                 '}';
     }
 }
