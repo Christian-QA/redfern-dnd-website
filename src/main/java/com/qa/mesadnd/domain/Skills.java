@@ -1,5 +1,6 @@
 package com.qa.mesadnd.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
@@ -23,12 +24,9 @@ public class Skills {
     @Column(name = "full_proficiency")
     private Boolean fullProficiency;
 
-    @ManyToMany(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "skills_character_sheet",
-            joinColumns = @JoinColumn(name = "skills_id"),
-            inverseJoinColumns = @JoinColumn(name = "character_id"))
-    Set<CharacterSheet> characterSheet = new HashSet<> ();
+    @JsonIgnore
+    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "skills")
+    private Set<CharacterSheet> characterSheet = new HashSet<> ();
 
     public Skills() {
     }

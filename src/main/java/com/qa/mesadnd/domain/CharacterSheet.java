@@ -23,11 +23,15 @@ public class CharacterSheet {
     @Column(name = "exp")
     private Long exp;
 
-    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private Set<Skills> skills = new HashSet<> ();
+    @ManyToMany(targetEntity = Skills.class, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "skills_character_sheet",
+            joinColumns = @JoinColumn(name = "character_id"),
+            inverseJoinColumns = @JoinColumn(name = "skills_id"))
+    private List<Skills> skills = new ArrayList<> ();
 
     @ManyToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private Set<Abilities> abilities = new HashSet<> ();
+    private List<Abilities> abilities = new  ArrayList<> ();
 
     public CharacterSheet() {
     }
@@ -87,19 +91,19 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
-    public Set<Skills> getSkills() {
+    public List<Skills> getSkills() {
         return skills;
     }
 
-    public void setSkills(Set<Skills> skills) {
+    public void setSkills(List<Skills> skills) {
         this.skills = skills;
     }
 
-    public Set<Abilities> getAbilities() {
+    public List<Abilities> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(Set<Abilities> abilities) {
+    public void setAbilities(List<Abilities> abilities) {
         this.abilities = abilities;
     }
 
