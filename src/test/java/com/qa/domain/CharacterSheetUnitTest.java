@@ -3,7 +3,6 @@ package com.qa.domain;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.sql.SQLException;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +14,7 @@ public class CharacterSheetUnitTest {
     @Before
     public void setUp() {
         characterSheet = new CharacterSheet(1L, "Sinnis", 20L, 20L, 3000L);
-        other = new CharacterSheet(1L, "Corvus", 5L, 1L, 3000L);
+        other = new CharacterSheet("Corvus", 5L, 1L, 3000L);
     }
 
     @Test
@@ -70,6 +69,7 @@ public class CharacterSheetUnitTest {
     @Test(expected = NullPointerException.class)
     public void characterSheetNameNullButOtherNameNotNull() {
         characterSheet.setName(null);
+        other.setCharacterId (1L);
         assertFalse(characterSheet.equals(other));
     }
 

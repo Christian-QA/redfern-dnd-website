@@ -3,6 +3,7 @@ package com.qa;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class MesaDND
 {
@@ -10,4 +11,6 @@ public class MesaDND
     {
         SpringApplication.run(MesaDND.class);
     }
+
 }
+

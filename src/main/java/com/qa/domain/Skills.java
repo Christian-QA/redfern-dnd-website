@@ -1,5 +1,7 @@
 package com.qa.domain;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -18,7 +20,7 @@ public class Skills {
     @Column(name = "full_proficiency")
     private Boolean fullProficiency;
 
-    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="character_id")
     private CharacterSheet characterSheet;
 

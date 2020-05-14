@@ -1,5 +1,7 @@
 package com.qa.domain;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.*;
 

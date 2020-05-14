@@ -1,7 +1,10 @@
 package com.qa.dto;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.*;
 
+@Transactional
 public class CharacterDTO {
 
     private Long characterId;

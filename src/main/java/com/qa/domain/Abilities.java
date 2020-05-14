@@ -1,5 +1,7 @@
 package com.qa.domain;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -24,7 +26,7 @@ public class Abilities {
     @Column(name = "charisma")
     private Long charisma;
 
-    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="character_id")
     private CharacterSheet characterSheet;
 

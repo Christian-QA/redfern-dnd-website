@@ -15,7 +15,7 @@ public class SkillsUnitTest {
     @Before
     public void setUp() {
         skills = new Skills(1L,"Perception", "Wisdom", Boolean.TRUE);
-        other = new Skills(1L, "History", "Intelligence", Boolean.TRUE);
+        other = new Skills("History", "Intelligence", Boolean.TRUE);
     }
 
     @Test
@@ -66,6 +66,7 @@ public class SkillsUnitTest {
     @Test(expected = NullPointerException.class)
     public void skillsNameNullButOtherNameNotNull() {
         skills.setSkillName(null);
+        other.setSkillsId (1L);
         assertFalse(skills.equals(other));
     }
 

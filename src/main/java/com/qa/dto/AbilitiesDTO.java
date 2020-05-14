@@ -1,7 +1,10 @@
 package com.qa.dto;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Objects;
 
+@Transactional
 public class AbilitiesDTO {
 
     private Long abilitiesId;
