@@ -33,7 +33,7 @@ public class Abilities {
 
     @ManyToMany(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
     @JoinTable(
-            name = "abilities_like",
+            name = "abilities_character_sheet",
             joinColumns = @JoinColumn(name = "abilities_id"),
             inverseJoinColumns = @JoinColumn(name = "character_id"))
     Set<CharacterSheet> characterSheet = new HashSet<> ();

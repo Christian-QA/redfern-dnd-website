@@ -28,7 +28,7 @@ public class Skills {
 
     @ManyToMany(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
     @JoinTable(
-            name = "skills_like",
+            name = "skills_character_sheet",
             joinColumns = @JoinColumn(name = "skills_id"),
             inverseJoinColumns = @JoinColumn(name = "character_id"))
     Set<CharacterSheet> characterSheet = new HashSet<> ();
