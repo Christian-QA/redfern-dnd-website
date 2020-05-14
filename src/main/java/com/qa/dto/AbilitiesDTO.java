@@ -114,4 +114,17 @@ public class AbilitiesDTO {
     public int hashCode() {
         return Objects.hash (getAbilitiesId (), getStrength (), getDexterity (), getConstitution (), getIntelligence (), getWisdom (), getCharisma ());
     }
+
+    @Override
+    public String toString() {
+        return "AbilitiesDTO{" +
+                "abilitiesId=" + abilitiesId +
+                ", strength=" + strength +
+                ", dexterity=" + dexterity +
+                ", constitution=" + constitution +
+                ", intelligence=" + intelligence +
+                ", wisdom=" + wisdom +
+                ", charisma=" + charisma +
+                '}';
+    }
 }

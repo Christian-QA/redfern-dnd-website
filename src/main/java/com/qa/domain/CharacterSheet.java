@@ -122,4 +122,17 @@ public class CharacterSheet {
     public int hashCode() {
         return Objects.hash (getCharacterId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
     }
+
+    @Override
+    public String toString() {
+        return "CharacterSheet{" +
+                "characterId=" + characterId +
+                ", name='" + name + '\'' +
+                ", maxHp=" + maxHp +
+                ", currentHp=" + currentHp +
+                ", exp=" + exp +
+                ", skills=" + skills +
+                ", abilities=" + abilities +
+                '}';
+    }
 }

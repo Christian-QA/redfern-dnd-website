@@ -1,5 +1,7 @@
 package com.qa.domain;
 
+import org.hibernate.annotations.Loader;
+import org.hibernate.annotations.Proxy;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
@@ -7,6 +9,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "skills")
+@Proxy(lazy=false)
 public class Skills {
 
     @Id
@@ -97,5 +100,16 @@ public class Skills {
     @Override
     public int hashCode() {
         return Objects.hash (getSkillsId (), getSkillName(), getStatModifier(), getFullProficiency(), getCharacterSheet ());
+    }
+
+    @Override
+    public String toString() {
+        return "Skills{" +
+                "skillsId=" + skillsId +
+                ", skillName='" + skillName + '\'' +
+                ", statModifier='" + statModifier + '\'' +
+                ", fullProficiency=" + fullProficiency +
+                ", characterSheet=" + characterSheet +
+                '}';
     }
 }

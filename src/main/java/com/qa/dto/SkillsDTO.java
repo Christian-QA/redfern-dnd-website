@@ -79,4 +79,14 @@ public class SkillsDTO {
     public int hashCode() {
         return Objects.hash (getSkillsId (), getSkillName (), getStatModifier (), getFullProficiency ());
     }
+
+    @Override
+    public String toString() {
+        return "SkillsDTO{" +
+                "skillsId=" + skillsId +
+                ", skillName='" + skillName + '\'' +
+                ", statModifier='" + statModifier + '\'' +
+                ", fullProficiency=" + fullProficiency +
+                '}';
+    }
 }

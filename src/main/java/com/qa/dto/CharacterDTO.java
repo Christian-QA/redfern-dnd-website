@@ -110,4 +110,17 @@ public class CharacterDTO {
     public int hashCode() {
         return Objects.hash (getCharacterId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
     }
+
+    @Override
+    public String toString() {
+        return "CharacterDTO{" +
+                "characterId=" + characterId +
+                ", name='" + name + '\'' +
+                ", maxHp=" + maxHp +
+                ", currentHp=" + currentHp +
+                ", exp=" + exp +
+                ", skills=" + skills +
+                ", abilities=" + abilities +
+                '}';
+    }
 }
