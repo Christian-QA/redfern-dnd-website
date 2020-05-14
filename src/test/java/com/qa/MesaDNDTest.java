@@ -1,5 +1,6 @@
 package com.qa;
 
+import com.qa.mesadnd.MesaDND;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
