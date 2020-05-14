@@ -4,7 +4,10 @@ import org.hibernate.annotations.Proxy;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "abilities")
@@ -28,9 +31,16 @@ public class Abilities {
     @Column(name = "charisma")
     private Long charisma;
 
-    @ManyToOne(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
-    @JoinColumn(name="character_id")
-    private CharacterSheet characterSheet;
+    @ManyToMany(targetEntity = CharacterSheet.class, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "abilities_like",
+            joinColumns = @JoinColumn(name = "abilities_id"),
+            inverseJoinColumns = @JoinColumn(name = "character_id"))
+    Set<CharacterSheet> characterSheet = new HashSet<> ();
+
+
+//    @JoinColumn(name="character_id")
+//    private List<CharacterSheet> characterSheet;
 
     public Abilities() {
     }
@@ -110,11 +120,11 @@ public class Abilities {
         this.charisma = charisma;
     }
 
-    public CharacterSheet getCharacterSheet() {
+    public Set<CharacterSheet> getCharacterSheet() {
         return characterSheet;
     }
 
-    public void setCharacterSheet(CharacterSheet characterSheet) {
+    public void setCharacterSheet(Set<CharacterSheet> characterSheet) {
         this.characterSheet = characterSheet;
     }
 

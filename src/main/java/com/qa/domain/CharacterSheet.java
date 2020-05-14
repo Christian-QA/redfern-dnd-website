@@ -1,5 +1,6 @@
 package com.qa.domain;
 
+import org.hibernate.annotations.Proxy;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "character_sheet")
+@Proxy(lazy=false)
 public class CharacterSheet {
 
     @Id
@@ -22,11 +24,11 @@ public class CharacterSheet {
     @Column(name = "exp")
     private Long exp;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private List<Skills> skills = new ArrayList<> ();
+    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
+    private Set<Skills> skills = new HashSet<> ();
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
-    private List<Abilities> abilities = new ArrayList<> ();
+    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "characterSheet")
+    private Set<Abilities> abilities = new HashSet<> ();
 
     public CharacterSheet() {
     }
@@ -86,19 +88,19 @@ public class CharacterSheet {
         this.exp = exp;
     }
 
-    public List<Skills> getSkills() {
+    public Set<Skills> getSkills() {
         return skills;
     }
 
-    public void setSkills(List<Skills> skills) {
+    public void setSkills(Set<Skills> skills) {
         this.skills = skills;
     }
 
-    public List<Abilities> getAbilities() {
+    public Set<Abilities> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(List<Abilities> abilities) {
+    public void setAbilities(Set<Abilities> abilities) {
         this.abilities = abilities;
     }
 
