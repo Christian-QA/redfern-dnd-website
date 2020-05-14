@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CharacterDTO {
 
-    private Long id;
+    private Long characterId;
     private String name;
     private Long maxHp;
     private Long currentHp;
@@ -23,12 +23,20 @@ public class CharacterDTO {
         this.exp = exp;
     }
 
-    public Long getId() {
-        return id;
+    public CharacterDTO(Long characterId, String name, Long maxHp, Long currentHp, Long exp) {
+        this.characterId = characterId;
+        this.name = name;
+        this.maxHp = maxHp;
+        this.currentHp = currentHp;
+        this.exp = exp;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getCharacterId() {
+        return characterId;
+    }
+
+    public void setCharacterId(Long characterId) {
+        this.characterId = characterId;
     }
 
     public String getName() {
@@ -86,7 +94,7 @@ public class CharacterDTO {
         if (!(o instanceof CharacterDTO))
             return false;
         CharacterDTO that = (CharacterDTO) o;
-        return getId ().equals (that.getId ()) &&
+        return getCharacterId ().equals (that.getCharacterId ()) &&
                 getName ().equals (that.getName ()) &&
                 getMaxHp ().equals (that.getMaxHp ()) &&
                 getCurrentHp ().equals (that.getCurrentHp ()) &&
@@ -97,6 +105,6 @@ public class CharacterDTO {
 
     @Override
     public int hashCode() {
-        return Objects.hash (getId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
+        return Objects.hash (getCharacterId (), getName (), getMaxHp (), getCurrentHp (), getExp (), getSkills (), getAbilities ());
     }
 }
