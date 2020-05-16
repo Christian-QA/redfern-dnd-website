@@ -15,17 +15,17 @@ public class Abilities {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long abilitiesId;
 
-    @Column(name = "strength")
+    @Column(name = "strength", columnDefinition = "int(3) default 1 NOT NULL")
     private Long strength;
-    @Column(name = "dexterity")
+    @Column(name = "dexterity", columnDefinition = "int(3) default 1 NOT NULL")
     private Long dexterity;
-    @Column(name = "constitution")
+    @Column(name = "constitution", columnDefinition = "int(3) default 1 NOT NULL")
     private Long constitution;
-    @Column(name = "intelligence")
+    @Column(name = "intelligence", columnDefinition = "int(3) default 1 NOT NULL")
     private Long intelligence;
-    @Column(name = "wisdom")
+    @Column(name = "wisdom", columnDefinition = "int(3) default 1 NOT NULL")
     private Long wisdom;
-    @Column(name = "charisma")
+    @Column(name = "charisma", columnDefinition = "int(3) default 1 NOT NULL")
     private Long charisma;
 
     @JsonIgnore

@@ -30,24 +30,18 @@ let config = {
 const getCharacterSheets = () => {
     axios.get('http://localhost:8181/getAllCharacters', config)
     .then(function (response) {
-
         document.querySelector('#charactername').innerHTML = response.data[currentID].name
-        
         document.querySelector('#strength').innerHTML = response.data[currentID].abilities[0].strength;
         document.querySelector('#dexterity').innerHTML = response.data[currentID].abilities[0].dexterity;
         document.querySelector('#constitution').innerHTML = response.data[currentID].abilities[0].constitution;
         document.querySelector('#intelligence').innerHTML = response.data[currentID].abilities[0].intelligence;
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
-
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
-     
-
             console.log(element.skillName);
             document.querySelector('#skillname').innerHTML = element.skillName;
-        });
-        
+        }); 
     })
     .catch(function (error) {
         console.log(error);

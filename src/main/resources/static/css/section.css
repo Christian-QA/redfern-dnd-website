@@ -1,10 +1,38 @@
 section {
+    background-color:  rgb(17, 16, 24);
     margin-right: 50px;
     font-family: "Lucida Console", Monaco, monospace;
 }
 section p {
-    background-color: rgb(255, 255, 255);
+    background-color:  rgb(17, 16, 24);
     padding: 25px 50px;
     font-size: 16px;
     color: black;
+}
+
+/* Container holding the image and the text */
+.container {
+    float:left;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 24px;
+}
+
+/* Centered text */
+.below {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
 }
