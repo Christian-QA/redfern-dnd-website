@@ -1,9 +1,9 @@
 
-
+let charname = document.getElementById('#name')
 
 
 const postCharacterSheet = () => {
-    let charname = document.getElementById('#name')
+    document.getElementById("name").innerHTML = charname;
     axios({
         method: 'post',
         url: 'http://localhost:8181/createCharacter',
