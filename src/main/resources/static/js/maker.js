@@ -1,14 +1,19 @@
 
-let charname = document.getElementById('#name')
 
 
 const postCharacterSheet = () => {
-    document.getElementById("name").innerHTML = charname;
+    let charname = document.getElementById("name").value;
+    let strength = document.getElementById("strength").value;
+    let dexterity = document.getElementById("dexterity").value;
+    let constitution = document.getElementById("constitution").value;
+    let intelligence = document.getElementById("intelligence").value;
+    let wisdom = document.getElementById("wisdom").value;
+    let charisma = document.getElementById("charisma").value;
     axios({
         method: 'post',
         url: 'http://localhost:8181/createCharacter',
         data: `{
-            "name" : ${charname},
+            "name" : "${charname}",
             "maxHp" : 1,
             "currentHp" : 1,
             "exp" : 0,
@@ -28,13 +33,13 @@ const postCharacterSheet = () => {
             ],
             "abilities": [
                 {
-                    "abilitiesId": 2,
-                    "strength": 14,
-                    "dexterity": 12,
-                    "constitution": 13,
-                    "intelligence": 14,
-                    "wisdom": 6,
-                    "charisma": 14
+                    "abilitiesId": 1,
+                    "strength": ${strength},
+                    "dexterity": ${dexterity},
+                    "constitution": ${constitution},
+                    "intelligence": ${intelligence},
+                    "wisdom": ${wisdom},
+                    "charisma": ${charisma}
                 }
             ]
         }`,
