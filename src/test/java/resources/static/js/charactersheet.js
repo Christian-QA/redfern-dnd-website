@@ -1,3 +1,4 @@
+
 function toggleEditor() {
     let theText = document.getElementById('charactername');
     let theEditor = document.getElementById('ta1');
@@ -19,25 +20,51 @@ function toggleEditor() {
 }
 
 
-let REQ = new XMLHttpRequest();
-
 let currentID = 0;
 
-function getAllCharacters() {
-    REQ.onload = () => {
-        if (REQ.status === 200) {
-            let responseObject = REQ.response;
-            console.log(REQ.response);
-            document.querySelector('#charactername').innerHTML = REQ.response[currentID].name;
-        } else {
-            console.log(`Handle Error!`);
-        }
-    }
-    REQ.open('GET', 'http://localhost:8181/getAllCharacters', true);
-    REQ.setRequestHeader('Content-Type', 'Application/json');
-    REQ.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8181/html/character.html');
-    REQ.responseType = 'json';
-    REQ.send();
+let config = {
+    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html' },
+    responseType: 'json'
+};
+
+const getCharacterSheets = () => {
+    axios.get('http://localhost:8181/getAllCharacters', config)
+        .then(function (response) {
+
+            document.querySelector('#charactername').innerHTML = response.data[currentID].name
+
+            document.querySelector('#strength').innerHTML = response.data[currentID].abilities[0].strength;
+            document.querySelector('#dexterity').innerHTML = response.data[currentID].abilities[0].dexterity;
+            document.querySelector('#constitution').innerHTML = response.data[currentID].abilities[0].constitution;
+            document.querySelector('#intelligence').innerHTML = response.data[currentID].abilities[0].intelligence;
+            document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
+            document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
+
+            const arraySkills = response.data[currentID].skills
+            arraySkills.forEach(element => {
+
+
+                console.log(element.skillName);
+                document.querySelector('#skillname').innerHTML = element.skillName;
+            });
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
-window.addEventListener("load", getAllCharacters);
+window.addEventListener("load", getCharacterSheets);
+
+/*
+const updateCharacters = axios.put(`localhost:8181/updateCharacter/${currentID}`, config, {
+    name: 'Gohso'
+})
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.log(err);
+    });
+window.addEventListener("load", updateCharacters);
+*/
 
