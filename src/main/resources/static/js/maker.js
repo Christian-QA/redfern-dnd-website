@@ -1,9 +1,14 @@
+
+
+
+
 const postCharacterSheet = () => {
+    let charname = document.getElementById('#name')
     axios({
         method: 'post',
         url: 'http://localhost:8181/createCharacter',
-        data: {
-            "name" : "Gohso",
+        data: `{
+            "name" : ${charname},
             "maxHp" : 1,
             "currentHp" : 1,
             "exp" : 0,
@@ -32,16 +37,16 @@ const postCharacterSheet = () => {
                     "charisma": 14
                 }
             ]
-        },
-        headers: {'Content-Type': 'multipart/form-data' }
+        }`,
+        headers: {'Content-Type': 'application/json' }
         })
         .then(function (response) {
-            //handle success
             console.log(response);
         })
         .catch(function (response) {
-            //handle error
             console.log(response);
         });
     }
-    
+
+let postButton = document.querySelector('#postButton');
+postButton.addEventListener('click', postCharacterSheet);
