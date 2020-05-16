@@ -17,11 +17,11 @@ public class Skills {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long skillsId;
 
-    @Column(name = "skill_name")
+    @Column(name = "skill_name", columnDefinition = "varchar(35) default 'Acrobatics' NOT NULL")
     private String skillName;
-    @Column(name = "stat_modifier")
+    @Column(name = "stat_modifier", columnDefinition = "varchar(12) default 'Dexterity' NOT NULL")
     private String statModifier;
-    @Column(name = "full_proficiency")
+    @Column(name = "full_proficiency", columnDefinition = "bit(1) default 1 NOT NULL")
     private Boolean fullProficiency;
 
     @JsonIgnore
