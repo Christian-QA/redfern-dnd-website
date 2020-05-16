@@ -22,5 +22,88 @@
       </div>
       <link rel="stylesheet" href="../css/nav.css" />
     </nav>
+    <article>
+      <div class="container">
+        <form action="action_page.php">
+      
+          <label for="name">Name</label>
+          <input type="text" id="name" name="charactername" placeholder="Your name..">
+          
+          <section>
+            <fieldset>
+              <label for="strength">Strength</label>
+              <input type="text" id="strength" name="strength" placeholder="Strength">
+              <label for="dexterity">Dexterity</label>
+              <input type="text" id="dexterity" name="dexterity" placeholder="Dexterity">
+              <label for="constitution">Constitution</label>
+              <input type="text" id="constitution" name="constitution" placeholder="Constitution">
+              <label for="intelligence">Intelligence</label>
+              <input type="text" id="intelligence" name="intelligence" placeholder="Intelligence">
+              <label for="wisdom">Wisdom</label>
+              <input type="text" id="wisdom" name="wisdom" placeholder="Wisdom">
+              <label for="charisma">Charisma</label>
+              <input type="text" id="charisma" name="charisma" placeholder="Charisma">
+            </fieldset>
+          </section>
+
+          <fieldset>      
+            <legend>Skills</legend>   
+            <legend>Half/Full Proficiency</legend>         
+            <td><input type="checkbox" name="halfacrobatics" />/</td>
+            <td><input type="checkbox" name="fullacrobatics" />Acrobatics (Dexterity) || </td>
+            <td><input type="checkbox" name="halfanimal" />/</td>
+            <td><input type="checkbox" name="fullanimal" />Animal Handling (Wisdom) || </td>
+            <td><input type="checkbox" name="halfarcana" />/</td>
+            <td><input type="checkbox" name="fullarcana" />Arcana (Intelligence) || </td><br>
+            <td><input type="checkbox" name="halfathletics" />/</td>
+            <td><input type="checkbox" name="fullathletics" />Athletics (Strength) || </td>
+            <td><input type="checkbox" name="name2" />/</td>
+            <td><input type="checkbox" name="fullathletics" />Deception (Charisma) || </td>
+            <td><input type="checkbox" name="halfarcana" />/</td>
+            <td><input type="checkbox" name="fullarcana" />History (Intelligence) || </td><br>
+            <td><input type="checkbox" name="halfanimal" />/</td>
+            <td><input type="checkbox" name="fullanimal" />Insight (Wisdom) || </td>
+            <td><input type="checkbox" name="name2" />/</td>
+            <td><input type="checkbox" name="fullathletics" />Intimidation (Charisma) || </td>
+            <td><input type="checkbox" name="halfarcana" />/</td>
+            <td><input type="checkbox" name="fullarcana" />Investigation (Intelligence) || </td><br>
+            <td><input type="checkbox" name="halfanimal" />/</td>
+            <td><input type="checkbox" name="fullanimal" />Medicine (Wisdom) || </td>
+            <td><input type="checkbox" name="halfarcana" />/</td>
+            <td><input type="checkbox" name="fullarcana" />Nature (Intelligence) || </td>
+            <td><input type="checkbox" name="halfanimal" />/</td>
+            <td><input type="checkbox" name="fullanimal" />Perception (Wisdom) || </td><br>
+            <td><input type="checkbox" name="name2" />/</td>
+            <td><input type="checkbox" name="fullathletics" />Performance (Charisma) || </td>
+            <td><input type="checkbox" name="halfarcana" />/</td>
+            <td><input type="checkbox" name="fullathletics" />Persuasion (Charisma) || </td>
+            <td><input type="checkbox" name="halfarcana" />/</td>
+            <td><input type="checkbox" name="fullarcana" />Religion (Intelligence) || </td><br>
+            <td><input type="checkbox" name="halfacrobatics" />/</td>
+            <td><input type="checkbox" name="fullacrobatics" />Sleight of Hand (Dexterity) || </td>
+            <td><input type="checkbox" name="halfacrobatics" />/</td>
+            <td><input type="checkbox" name="fullacrobatics" />Stealth (Dexterity) || </td>
+            <td><input type="checkbox" name="halfanimal" />/</td>
+            <td><input type="checkbox" name="fullanimal" />Survival (Wisdom)</td>
+          </fieldset>  
+
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+        <link rel="stylesheet" href="../css/form.css" />
+      </div>
+
+    </article>
   </body>
 </html>
