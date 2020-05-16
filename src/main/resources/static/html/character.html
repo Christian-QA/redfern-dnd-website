@@ -4,34 +4,69 @@
     <title>index.html</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
   </head>
   <body>
     <header>
-      <img src="/images/mesafinalex1.png" onmouseover="this.src='/images/mesafinalex2.png'" onmouseout="this.src='/images/mesafinalex1.png'" width="408" alt="Mesa's DND" />
-      <link rel="stylesheet" href="/css/header.css" />
+      <img src="../images/mesafinalex1.png" onmouseover="this.src='../images/mesafinalex2.png'" onmouseout="this.src='../images/mesafinalex1.png'" width="408" alt="Mesa's DND" />
+      <link rel="stylesheet" href="../css/header.css" />
     </header>
     <nav>
       <div>
         <ul class="topnav">
-          <li><a href="/index.html">Home</a></li>
-          <li><a class="active" href="/html/character.html">Character Sheet</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="active" href="../html/character.html">Character Sheet</a></li>
+          <li><a href="./html/maker.html">Character Maker</a></li>
           <li class="right"><a href="#about">About</a></li>
         </ul>
       </div>
-      <link rel="stylesheet" href="/css/nav.css" />
+      <link rel="stylesheet" href="../css/nav.css" />
     </nav>
     <article>
-      <div id="charactername" onclick="toggleEditor()"><br /></div>
-      <div id="editor">
-        <textarea id="ta1" name="ta1" rows="1" cols="120"></textarea><br />
-        <input name="submit" id="submit" type="button" value="Change Name" onclick="doEdit()" />
-      </div>
-      <script src="/js/charactersheet.js"></script>
+      <div id="charactername" contentEditable="true" spellcheck="false"><br /></div>
+      <button type="button">Confirm Changes</button>
+      <script src="../js/charactersheet.js"></script>
       <section>
-        <p>fsdgt</p>
-        <link rel="stylesheet" href="/css/section.css" />
+          <div class="container">
+            <img src="../images/abilitybox.png" alt="Snow" >
+            <div class="centered" id="strength"></div>
+            <div class="below">Strength</div>
+          </div>
+          <div class="container">
+            <img src="../images/abilitybox.png" alt="Snow" >
+            <div class="centered" id="dexterity"></div>
+            <div class="below">Dexterity</div>
+          </div>
+          <div class="container">
+            <img src="../images/abilitybox.png" alt="Snow" >
+            <div class="centered" id="constitution"></div>
+            <div class="below">Constitution</div>
+          </div>
+          <div class="container">
+            <img src="../images/abilitybox.png" alt="Snow" >
+            <div class="centered" id="intelligence"></div>
+            <div class="below">Intelligence</div>
+          </div>
+          <div class="container">
+            <img src="../images/abilitybox.png" alt="Snow" >
+            <div class="centered" id="wisdom"></div>
+            <div class="below">Wisdom</div>
+          </div>
+          <div class="container">
+            <img src="../images/abilitybox.png" alt="Snow" >
+            <div class="centered" id="charisma"></div>
+            <div class="below">Charisma</div>
+          </div>
+        <link rel="stylesheet" href="../css/section.css" />
+          <p style="clear: both;">
       </section>
-      <link rel="stylesheet" href="/css/article.css" />
+      <section>
+          <div class="container">
+              <img src="../images/skillist.png" alt="Snow" >
+              <div class="centered" id="skillname"></div>
+          </div>
+      </section>
+      <link rel="stylesheet" href="../css/article.css" />
     </article>
   </body>
 </html>

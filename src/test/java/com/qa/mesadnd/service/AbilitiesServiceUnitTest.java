@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.modelmapper.ModelMapper;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
+@TestPropertySource(locations="classpath:resources/test.properties")
 public class AbilitiesServiceUnitTest {
 
     @InjectMocks
