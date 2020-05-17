@@ -65,20 +65,8 @@ public class SkillsServiceIntegrationTest {
         assertThat(this.service.findSkillsById (this.testSkillsWithID.getSkillsId ())).isEqualTo(this.mapToDTO(this.testSkillsWithID));
     }
 
-
-//    @Test
-//    public void updateNoteTest(){
-//        Note newNote = new Note("Favourite movies", "The grinch");
-//        Note updateNote = new Note(newNote.getTitle(), newNote.getDescription());
-//        updateNote.setId(this.testNoteWithID.getId());
-//        assertThat(this.service.updateNote(this.testNoteWithID.getId() ,newNote))
-//                .isEqualTo(this.mapToDTO(updateNote));
-//    }
-
     @Test
     public void deleteSkillsTest(){
         assertThat(this.service.deleteSkills (this.testSkillsWithID.getSkillsId ())).isFalse();
     }
-
-
 }
