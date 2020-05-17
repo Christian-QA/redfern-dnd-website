@@ -85,6 +85,7 @@ const updateCharacterSheet = () => {
     currentID = document.getElementById("characterfind").value;
     let idCorrection = Number(currentID) + 1;
     let charname = document.getElementById("charactername").value;
+    console.log(charname);
     let strength = document.getElementById("strength").value;
     let dexterity = document.getElementById("dexterity").value;
     let constitution = document.getElementById("constitution").value;
@@ -98,27 +99,10 @@ const updateCharacterSheet = () => {
             "name": "${charname}",
             "maxHp": 21,
             "currentHp": 21,
-            "exp": 3000,
-            "skills": [
-                {
-                    "skillsId": 1,
-                    "skillName": "Acrobatics",
-                    "statModifier": "Dexterity"
-                }
-            ], 
-            "abilities": [
-                {
-                    "abilitiesId": ${idCorrection},
-                    "strength": ${strength},
-                    "dexterity": ${dexterity},
-                    "constitution": ${constitution},
-                    "intelligence": ${intelligence},
-                    "wisdom": ${wisdom},
-                    "charisma": ${charisma}
-                }
-            ]
+            "exp": 3000
         }`,
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html'}
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'multipart/form-data'},
+
     }).then(function (response) {
         console.log(response);
     })
