@@ -1,22 +1,6 @@
-function toggleEditor() {
+
     let theText = document.getElementById('charactername');
-    let theEditor = document.getElementById('ta1');
-    let editorArea = document.getElementById('editor');
-
-
-    //set text in text div to textarea
-    //correct line breaks, prevent HTML injection
-    let subject = theText.innerHTML;
-    subject = subject.replace(new RegExp("<br />", "gi"), 'n');
-    subject = subject.replace(new RegExp("<br />", "gi"), 'n');
-    subject = subject.replace(new RegExp("<", "gi"), '<');
-    subject = subject.replace(new RegExp(">", "gi"), '>');
-    theEditor.value = subject;
-
-    //hide text, show editor
-    theText.style.display = 'none';
-    editorArea.style.display = 'inline';
-}
+  
 
 let currentID = document.getElementById("characterfind").value;
 console.log(currentID);
@@ -63,10 +47,6 @@ const getCharacterSheets = () => {
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
-
-        document.querySelector('#dropdown2').innerHTML = response.data[1].name
-        document.querySelector('#dropdown3').innerHTML = response.data[2].name
-        document.querySelector('#dropdown4').innerHTML = response.data[3].name
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
             console.log(element.skillName);
@@ -113,7 +93,7 @@ const updateCharacterSheet = () => {
     let charisma = document.getElementById("charisma").value;
     axios({
         method: 'put',
-        url: `localhost:8181/updateCharacter/${idCorrection}`,
+        url: `http://localhost:8181/updateCharacter/${idCorrection}`,
         data: `{
             "name": "${charname}",
             "maxHp": 21,
@@ -122,13 +102,13 @@ const updateCharacterSheet = () => {
             "skills": [
                 {
                     "skillsId": 1,
-                    "skillName": "History",
-                    "statModifier": "Wisdom"
+                    "skillName": "Acrobatics",
+                    "statModifier": "Dexterity"
                 }
             ], 
             "abilities": [
                 {
-                    "abilitiesId": 1,
+                    "abilitiesId": ${idCorrection},
                     "strength": ${strength},
                     "dexterity": ${dexterity},
                     "constitution": ${constitution},
@@ -138,10 +118,7 @@ const updateCharacterSheet = () => {
                 }
             ]
         }`,
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': '*', "Access-Control-Allow-Headers": 'Origin, X-Requested-With, Content-Type, Accept, Z-Key' },
-        pact: {
-            cors: true
-          }
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html'}
     }).then(function (response) {
         console.log(response);
     })
