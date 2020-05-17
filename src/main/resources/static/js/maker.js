@@ -9,6 +9,16 @@ const postCharacterSheet = () => {
     let intelligence = document.getElementById("intelligence").value;
     let wisdom = document.getElementById("wisdom").value;
     let charisma = document.getElementById("charisma").value;
+
+    let skilllist = "";
+
+    if (document.getElementById("skill").checked = true) {
+        let skilllist = document.getElementById("skill").value;
+    }
+    
+
+    console.log(skilllist);
+    
     axios({
         method: 'post',
         url: 'http://localhost:8181/createCharacter',

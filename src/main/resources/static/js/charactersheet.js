@@ -22,6 +22,13 @@ function toggleEditor() {
 
 let currentID = 0;
 
+
+
+
+
+
+
+
 let config = {
     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html' },
     responseType: 'json'
