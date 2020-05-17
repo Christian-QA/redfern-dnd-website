@@ -9,13 +9,28 @@ article {
 }
 
 
-div.namebox {
+textarea.namebox {
     width: 350px; 
     background-color: purple; 
     border-width: 5px; 
     border-color: aqua;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    color: aliceblue;
+    height: 20px;
 }
 
 a {
     display: block;
   }
+
+select.form-control {
+    background-color: purple; 
+    border-width: 5px; 
+    border-color: aqua;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    color: aliceblue;
+    height: 30px;
+    width: 120px;
+}
