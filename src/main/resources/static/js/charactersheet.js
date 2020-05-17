@@ -44,10 +44,16 @@ const getCharacterSheets = () => {
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
-        document.querySelector('#dropdown1').innerHTML = response.data[0].name
-        document.querySelector('#dropdown2').innerHTML = response.data[1].name
-        document.querySelector('#dropdown3').innerHTML = response.data[2].name
-        document.querySelector('#dropdown4').innerHTML = response.data[3].name
+        const arrayDrop = response.data;
+        arrayDrop.forEach(element => {
+            console.log(element.name);
+            document.querySelector(`#dropdown1`).innerHTML = element.name
+        }); 
+
+        //document.querySelector('#dropdown1').innerHTML = response.data[0].name
+        //document.querySelector('#dropdown2').innerHTML = response.data[1].name
+        //document.querySelector('#dropdown3').innerHTML = response.data[2].name
+        //document.querySelector('#dropdown4').innerHTML = response.data[3].name
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
             console.log(element.skillName);
