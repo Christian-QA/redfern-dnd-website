@@ -83,7 +83,7 @@ let refreshCharacter = document.querySelector('#refreshCharacter');
 refreshCharacter.addEventListener('click', getCharacterSheets);
 
 const deleteCharacterSheet = () => {
-    let currentID = document.getElementById("characterfind").value;
+    currentID = document.getElementById("characterfind").value;
     let idCorrection = Number(currentID) + 1;
     axios({
         method: 'delete',
@@ -101,17 +101,53 @@ let deleteCharacter = document.querySelector('#deleteCharacter');
 deleteCharacter.addEventListener('click', deleteCharacterSheet);
 
 
-
-/*
-const updateCharacters = axios.put(`localhost:8181/updateCharacter/${currentID}`, config, {
-    name: 'Gohso'
-})
-    .then(response => {
+const updateCharacterSheet = () => {
+    currentID = document.getElementById("characterfind").value;
+    let idCorrection = Number(currentID) + 1;
+    let charname = document.getElementById("charactername").value;
+    let strength = document.getElementById("strength").value;
+    let dexterity = document.getElementById("dexterity").value;
+    let constitution = document.getElementById("constitution").value;
+    let intelligence = document.getElementById("intelligence").value;
+    let wisdom = document.getElementById("wisdom").value;
+    let charisma = document.getElementById("charisma").value;
+    axios({
+        method: 'put',
+        url: `localhost:8181/updateCharacter/${idCorrection}`,
+        data: `{
+            "name": "${charname}",
+            "maxHp": 21,
+            "currentHp": 21,
+            "exp": 3000,
+            "skills": [
+                {
+                    "skillsId": 1,
+                    "skillName": "History",
+                    "statModifier": "Wisdom"
+                }
+            ], 
+            "abilities": [
+                {
+                    "abilitiesId": 1,
+                    "strength": ${strength},
+                    "dexterity": ${dexterity},
+                    "constitution": ${constitution},
+                    "intelligence": ${intelligence},
+                    "wisdom": ${wisdom},
+                    "charisma": ${charisma}
+                }
+            ]
+        }`,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': '*', "Access-Control-Allow-Headers": 'Origin, X-Requested-With, Content-Type, Accept, Z-Key' },
+        pact: {
+            cors: true
+          }
+    }).then(function (response) {
         console.log(response);
     })
-    .catch(error => {
-        console.log(err);
+    .catch(function (response) {
+        console.log(response);
     });
-window.addEventListener("load", updateCharacters);
-*/
-
+}
+let updateCharacter = document.querySelector('#updateCharacter');
+updateCharacter.addEventListener('click', updateCharacterSheet);
