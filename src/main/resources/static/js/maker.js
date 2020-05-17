@@ -10,33 +10,29 @@ const postCharacterSheet = () => {
     let wisdom = document.getElementById("wisdom").value;
     let charisma = document.getElementById("charisma").value;
 
+    /*
     let skilllist = "";
 
     if (document.getElementById("skill").checked = true) {
         let skilllist = document.getElementById("skill").value;
     }
-    
+    */
 
-    console.log(skilllist);
+
     
     axios({
         method: 'post',
         url: 'http://localhost:8181/createCharacter',
         data: `{
-            "name" : "${charname}",
-            "maxHp" : 1,
-            "currentHp" : 1,
-            "exp" : 0,
+            "name": "${charname}",
+            "maxHp": 21,
+            "currentHp": 21,
+            "exp": 3000,
             "skills": [
                 {
                     "skillsId": 1,
                     "skillName": "History",
-                    "statModifier": "Intelligence"
-                },
-                {
-                    "skillsId": 2,
-                    "skillName": "Deception",
-                    "statModifier": "Charisma"
+                    "statModifier": "Wisdom"
                 }
             ],
             "abilities": [

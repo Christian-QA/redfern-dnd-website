@@ -15,3 +15,7 @@ div.namebox {
     border-width: 5px; 
     border-color: aqua;
 }
+
+a {
+    display: block;
+  }

@@ -32,23 +32,6 @@ let configGet = {
     responseType: 'json'
   };
 
-  function getCharacterById(){
-    axios.get('http://localhost:8181/getAllCharacters', configGet)
-    .then(function (response) {
-    let dropdown = document.getElementById('characterfind');
-    //dropdown.options[0] = new Option("Sinnis");
-    //dropdown.options[1] = new Option("Sinnis");
-    let i = 0;
-    const arrayDrop = response.data;
-    arrayDrop.forEach(element => {
-        console.log(element.name);
-        dropdown.options.length=element.length;
-        dropdown.options[i] = new Option(element.name);
-        i++;
-      }); 
-    });
-  }
-
 
 const getCharacterSheets = () => {
     axios.get('http://localhost:8181/getAllCharacters', configGet)
@@ -64,10 +47,10 @@ const getCharacterSheets = () => {
 
           
 
-        //document.querySelector('#dropdown1').innerHTML = response.data[0].name
-        //document.querySelector('#dropdown2').innerHTML = response.data[1].name
-        //document.querySelector('#dropdown3').innerHTML = response.data[2].name
-        //document.querySelector('#dropdown4').innerHTML = response.data[3].name
+        document.querySelector('#dropdown1').innerHTML = response.data[0].name
+        document.querySelector('#dropdown2').innerHTML = response.data[1].name
+        document.querySelector('#dropdown3').innerHTML = response.data[2].name
+        document.querySelector('#dropdown4').innerHTML = response.data[3].name
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
             console.log(element.skillName);
@@ -87,7 +70,7 @@ const deleteCharacterSheet = () => {
     let currentID = document.getElementById("characterfind").value;
     axios({
         method: 'delete',
-        url: `http://localhost:8181/deleteCharacter/${currentID + 1}`,
+        url: `http://localhost:8181/deleteCharacter/${1 + currentID}`,
         headers: { 'Content-Type': 'application/json' },
     }).then(function (response) {
         console.log(response);
