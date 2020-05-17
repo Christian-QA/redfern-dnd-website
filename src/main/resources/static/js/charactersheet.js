@@ -1,4 +1,3 @@
-
 function toggleEditor() {
     let theText = document.getElementById('charactername');
     let theEditor = document.getElementById('ta1');
@@ -19,15 +18,13 @@ function toggleEditor() {
     editorArea.style.display = 'inline';
 }
 
+let currentID = document.getElementById("characterfind").value;
 
-let currentID = 0;
-
-
-
-
-
-
-
+function changeCharacter() {
+    let currentID = document.getElementById("characterfind").value;
+    console.log(currentID);
+    window.addEventListener("load", getCharacterSheets);
+}
 
 let config = {
     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html' },
@@ -37,6 +34,7 @@ let config = {
 const getCharacterSheets = () => {
     axios.get('http://localhost:8181/getAllCharacters', config)
     .then(function (response) {
+        let currentID = document.getElementById("characterfind").value;
         document.querySelector('#charactername').innerHTML = response.data[currentID].name
         document.querySelector('#strength').innerHTML = response.data[currentID].abilities[0].strength;
         document.querySelector('#dexterity').innerHTML = response.data[currentID].abilities[0].dexterity;
@@ -44,6 +42,11 @@ const getCharacterSheets = () => {
         document.querySelector('#intelligence').innerHTML = response.data[currentID].abilities[0].intelligence;
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
+
+        document.querySelector('#dropdown1').innerHTML = response.data[0].name
+        document.querySelector('#dropdown2').innerHTML = response.data[1].name
+        document.querySelector('#dropdown3').innerHTML = response.data[2].name
+        document.querySelector('#dropdown4').innerHTML = response.data[3].name
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
             console.log(element.skillName);
@@ -55,6 +58,22 @@ const getCharacterSheets = () => {
     });
 }
 window.addEventListener("load", getCharacterSheets);
+
+let refreshCharacter = document.querySelector('#refreshCharacter');
+refreshCharacter.addEventListener('click', getCharacterSheets);
+
+const deleteCharacterSheet = () => {
+    axios.delete(`http://localhost:8181/deleteCharacter/${currentID}`, config)
+    .then(function (response) {
+        console.log(response);
+    });
+
+}
+
+let deleteCharacter = document.querySelector('#deleteCharacter');
+deleteCharacter.addEventListener('click', deleteCharacterSheet);
+
+
 
 /*
 const updateCharacters = axios.put(`localhost:8181/updateCharacter/${currentID}`, config, {
