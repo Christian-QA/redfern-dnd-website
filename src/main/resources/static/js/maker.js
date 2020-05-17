@@ -17,7 +17,27 @@ const postCharacterSheet = () => {
         let skilllist = document.getElementById("skill").value;
     }
     */
-
+   axios({
+    method: 'post',
+    url: 'http://localhost:8181/createCharacter',
+    data: `{
+        "abilitiesId": 1,
+        "strength": ${strength},
+        "dexterity": ${dexterity},
+        "constitution": ${constitution},
+        "intelligence": ${intelligence},
+        "wisdom": ${wisdom},
+        "charisma": ${charisma}
+    }`,
+    headers: {'Content-Type': 'application/json' }
+    })
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (response) {
+        console.log(response);
+    });
+}
 
     
     axios({
@@ -33,17 +53,6 @@ const postCharacterSheet = () => {
                     "skillsId": 1,
                     "skillName": "History",
                     "statModifier": "Wisdom"
-                }
-            ],
-            "abilities": [
-                {
-                    "abilitiesId": 1,
-                    "strength": ${strength},
-                    "dexterity": ${dexterity},
-                    "constitution": ${constitution},
-                    "intelligence": ${intelligence},
-                    "wisdom": ${wisdom},
-                    "charisma": ${charisma}
                 }
             ]
         }`,
