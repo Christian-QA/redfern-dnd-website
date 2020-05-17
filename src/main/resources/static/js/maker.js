@@ -19,9 +19,8 @@ const postCharacterSheet = () => {
     */
    axios({
     method: 'post',
-    url: 'http://localhost:8181/createCharacter',
+    url: 'http://localhost:8181/createAbilities',
     data: `{
-        "abilitiesId": 1,
         "strength": ${strength},
         "dexterity": ${dexterity},
         "constitution": ${constitution},
