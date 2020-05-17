@@ -1,7 +1,9 @@
 package com.qa.mesadnd.controller;
 
 import com.qa.mesadnd.domain.Abilities;
+import com.qa.mesadnd.domain.CharacterSheet;
 import com.qa.mesadnd.dto.AbilitiesDTO;
+import com.qa.mesadnd.dto.CharacterDTO;
 import com.qa.mesadnd.service.AbilitiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,14 +44,8 @@ public class AbilitiesController {
         return ResponseEntity.ok(this.service.findAbilitiesById (id));
     }
 
-//    @PutMapping("/updateNote/{id}")
-//    public ResponseEntity<NoteDTO> updateNote(@PathVariable Long id, @RequestBody Note note){
-//        return ResponseEntity.ok(this.service.updateNote(id, note));
-//    }
-//
-//    @PutMapping("/updateNote2")
-//    public ResponseEntity<NoteDTO> updateNote2(@PathParam("id") Long id, @RequestBody Note note){
-//        return ResponseEntity.ok(this.service.updateNote(id, note));
-//    }
-
+    @PutMapping("/updateAbilities/{id}")
+    public ResponseEntity<AbilitiesDTO> updateCharacter(@PathVariable Long id, @RequestBody Abilities abilities){
+        return ResponseEntity.ok(this.service.updateAbilities (id, abilities));
+    }
 }
