@@ -34,3 +34,25 @@ select.form-control {
     height: 30px;
     width: 120px;
 }
+
+input.form-control {
+    background-color: purple; 
+    border-width: 5px; 
+    border-color: aqua;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    color: aliceblue;
+    height: 30px;
+    width: 120px;
+}
+
+button.form-control {
+    background-color: purple; 
+    border-width: 5px; 
+    border-color: aqua;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    color: aliceblue;
+    height: 30px;
+    width: 120px;
+}
