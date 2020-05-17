@@ -19,6 +19,7 @@ function toggleEditor() {
 }
 
 let currentID = document.getElementById("characterfind").value;
+console.log(currentID);
 
 function changeCharacter() {
     let currentID = document.getElementById("characterfind").value;
@@ -26,13 +27,13 @@ function changeCharacter() {
     window.addEventListener("load", getCharacterSheets);
 }
 
-let config = {
+let configGet = {
     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html' },
     responseType: 'json'
   };
 
 const getCharacterSheets = () => {
-    axios.get('http://localhost:8181/getAllCharacters', config)
+    axios.get('http://localhost:8181/getAllCharacters', configGet)
     .then(function (response) {
         let currentID = document.getElementById("characterfind").value;
         document.querySelector('#charactername').innerHTML = response.data[currentID].name
@@ -63,11 +64,17 @@ let refreshCharacter = document.querySelector('#refreshCharacter');
 refreshCharacter.addEventListener('click', getCharacterSheets);
 
 const deleteCharacterSheet = () => {
-    axios.delete(`http://localhost:8181/deleteCharacter/${currentID}`, config)
-    .then(function (response) {
+    let currentID = document.getElementById("characterfind").value;
+    axios({
+        method: 'delete',
+        url: `http://localhost:8181/deleteCharacter/${currentID + 1}`,
+        headers: { 'Content-Type': 'application/json' },
+    }).then(function (response) {
+        console.log(response);
+    })
+    .catch(function (response) {
         console.log(response);
     });
-
 }
 
 let deleteCharacter = document.querySelector('#deleteCharacter');
