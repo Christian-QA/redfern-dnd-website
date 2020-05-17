@@ -10,24 +10,21 @@ public class SkillsDTO {
     private Long skillsId;
     private String skillName;
     private String statModifier;
-    private Boolean fullProficiency;
 
     public SkillsDTO() {
     }
 
-    public SkillsDTO(String skillName, String statModifier, Boolean fullProficiency) {
+    public SkillsDTO(String skillName, String statModifier) {
         super();
         this.skillName = skillName;
         this.statModifier = statModifier;
-        this.fullProficiency = fullProficiency;
     }
 
-    public SkillsDTO(Long skillsId, String skillName, String statModifier, Boolean fullProficiency) {
+    public SkillsDTO(Long skillsId, String skillName, String statModifier) {
         super();
         this.skillsId = skillsId;
         this.skillName = skillName;
         this.statModifier = statModifier;
-        this.fullProficiency = fullProficiency;
     }
 
     public Long getSkillsId() {
@@ -54,14 +51,6 @@ public class SkillsDTO {
         this.statModifier = statModifier;
     }
 
-    public Boolean getFullProficiency() {
-        return fullProficiency;
-    }
-
-    public void setFullProficiency(Boolean fullProficiency) {
-        this.fullProficiency = fullProficiency;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -71,13 +60,12 @@ public class SkillsDTO {
         SkillsDTO skillsDTO = (SkillsDTO) o;
         return getSkillsId ().equals (skillsDTO.getSkillsId ()) &&
                 getSkillName ().equals (skillsDTO.getSkillName ()) &&
-                getStatModifier ().equals (skillsDTO.getStatModifier ()) &&
-                getFullProficiency ().equals (skillsDTO.getFullProficiency ());
+                getStatModifier ().equals (skillsDTO.getStatModifier ());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getSkillsId (), getSkillName (), getStatModifier (), getFullProficiency ());
+        return Objects.hash (getSkillsId (), getSkillName (), getStatModifier ());
     }
 
     @Override
@@ -86,7 +74,6 @@ public class SkillsDTO {
                 "skillsId=" + skillsId +
                 ", skillName='" + skillName + '\'' +
                 ", statModifier='" + statModifier + '\'' +
-                ", fullProficiency=" + fullProficiency +
                 '}';
     }
 }

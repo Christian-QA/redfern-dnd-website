@@ -51,9 +51,9 @@ public class SkillsControllerUnitTest {
     @Before
     public void setUp(){
         this.skills = new ArrayList<>();
-        this.testSkills = new Skills ("Arcana", "Intelligence", Boolean.TRUE);
+        this.testSkills = new Skills ("Arcana", "Intelligence");
         this.skills.add(testSkills);
-        this.testSkillsWithId = new Skills (testSkills.getSkillName (), testSkills.getStatModifier(), testSkills.getFullProficiency());
+        this.testSkillsWithId = new Skills (testSkills.getSkillName (), testSkills.getStatModifier());
         this.testSkillsWithId.setSkillsId (this.id);
         this.skillsDTO = this.mapToDTO(testSkillsWithId);
     }

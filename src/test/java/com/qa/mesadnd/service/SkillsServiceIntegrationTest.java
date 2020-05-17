@@ -42,7 +42,7 @@ public class SkillsServiceIntegrationTest {
 
     @Before
     public void setUp(){
-        this.testSkills = new Skills ("Arcana", "Intelligence", Boolean.TRUE);
+        this.testSkills = new Skills ("Arcana", "Intelligence");
         this.repository.deleteAll();
         this.testSkillsWithID = this.repository.save(this.testSkills);
     }

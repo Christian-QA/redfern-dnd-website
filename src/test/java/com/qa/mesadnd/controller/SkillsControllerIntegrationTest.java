@@ -56,7 +56,7 @@ public class SkillsControllerIntegrationTest {
     @Before
     public void setUp(){
         this.repository.deleteAll();
-        this.testSkills = new Skills ("Arcana", "Intelligence", Boolean.TRUE);
+        this.testSkills = new Skills ("Arcana", "Intelligence");
         this.testSkillsWithID = this.repository.save(testSkills);
         this.id = testSkillsWithID.getSkillsId ();
         this.skillsDTO = this.mapToDTO(testSkillsWithID);
