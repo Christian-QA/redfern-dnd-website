@@ -21,14 +21,12 @@ const postCharacterSheet = () => {
                 {
                     "skillsId": 1,
                     "skillName": "History",
-                    "statModifier": "Intelligence",
-                    "fullProficiency": true
+                    "statModifier": "Intelligence"
                 },
                 {
                     "skillsId": 2,
                     "skillName": "Deception",
-                    "statModifier": "Charisma",
-                    "fullProficiency": false
+                    "statModifier": "Charisma"
                 }
             ],
             "abilities": [
