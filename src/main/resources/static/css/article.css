@@ -7,3 +7,15 @@ article {
     font-size: 20px;
     color: aliceblue;
 }
+
+
+div.namebox {
+    width: 350px; 
+    background-color: purple; 
+    border-width: 5px; 
+    border-color: aqua;
+}
+
+a {
+    display: block;
+  }

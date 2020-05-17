@@ -50,9 +50,9 @@ public class SkillsServiceUnitTest {
     @Before
     public void setUp(){
         this.skillsList = new ArrayList<>();
-        this.testSkills = new Skills ("Arcana", "Intelligence", Boolean.TRUE);
+        this.testSkills = new Skills ("Arcana", "Intelligence");
         this.skillsList.add(testSkills);
-        this.testSkillsWithID = new Skills (testSkills.getSkillName(), testSkills.getStatModifier(), testSkills.getFullProficiency());
+        this.testSkillsWithID = new Skills (testSkills.getSkillName(), testSkills.getStatModifier());
         this.testSkillsWithID.setSkillsId (id);
         this.skillsDTO = this.mapToDTO(testSkillsWithID);
     }

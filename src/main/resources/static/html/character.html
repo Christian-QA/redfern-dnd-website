@@ -23,8 +23,18 @@
       <link rel="stylesheet" href="../css/nav.css" />
     </nav>
     <article>
-      <div id="charactername" contentEditable="true" spellcheck="false"><br /></div>
+      <div class="namebox" id="charactername" contentEditable="true" spellcheck="false"><br /></div>
+      <form>
+        <select class="form-control"  id='characterfind' name='characterfind' onClick="getCharacterById()" >
+          <option value=0 id="dropdown1"></option>
+          <option value=1 id="dropdown2"></option>
+          <option value=2 id="dropdown3"></option>
+          <option value=3 id="dropdown4"></option>
+        </select>
+        <input type="button" value="Change Character" onclick="changeCharacter()" id="refreshCharacter"></input>
+      </form>
       <button type="button">Confirm Changes</button>
+      <button type="submit" id="deleteCharacter">Delete Character</button>
       <script src="../js/charactersheet.js"></script>
       <section>
           <div class="container">

@@ -12,8 +12,8 @@ public class SkillsUnitTest {
 
     @Before
     public void setUp() {
-        skills = new Skills(1L,"Perception", "Wisdom", Boolean.TRUE);
-        other = new Skills("History", "Intelligence", Boolean.TRUE);
+        skills = new Skills(1L,"Perception", "Wisdom");
+        other = new Skills("History", "Intelligence");
     }
 
     @Test
@@ -21,7 +21,6 @@ public class SkillsUnitTest {
         assertNotNull(skills.getSkillsId());
         assertNotNull(skills.getSkillName ());
         assertNotNull(skills.getStatModifier ());
-        assertNotNull(skills.getFullProficiency ());
 
         skills.setSkillsId(null);
         assertNull(skills.getSkillsId());
@@ -29,8 +28,6 @@ public class SkillsUnitTest {
         assertNull(skills.getSkillName());
         skills.setStatModifier (null);
         assertNull(skills.getStatModifier ());
-        skills.setFullProficiency(null);
-        assertNull(skills.getFullProficiency ());
     }
 
     @Test
@@ -48,7 +45,6 @@ public class SkillsUnitTest {
         assertEquals(1L, skills.getSkillsId(), 0);
         assertEquals("Perception", skills.getSkillName ());
         assertEquals("Wisdom", skills.getStatModifier ());
-        assertEquals(Boolean.TRUE, skills.getFullProficiency ());
     }
 
     @Test
@@ -86,12 +82,6 @@ public class SkillsUnitTest {
         assertFalse(skills.equals(other));
     }
 
-    @Test
-    public void skillsFullProficiencyNullButOtherFullProficiencyNotNull() {
-        skills.setFullProficiency(null);
-        assertFalse(skills.equals(other));
-    }
-
     @Test(expected = NullPointerException.class)
     public void nullId() {
         skills.setSkillsId (null);
@@ -112,8 +102,8 @@ public class SkillsUnitTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        Skills skills = new Skills(null, null, null, null);
-        Skills other = new Skills(null, null, null, null);
+        Skills skills = new Skills(null, null, null);
+        Skills other = new Skills(null, null, null);
         assertEquals(skills.hashCode(), other.hashCode());
     }
 
