@@ -1,0 +1,18 @@
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Acrobatics', 'Dexterity');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Animal Handling', 'Wisdom');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Arcana', 'Intelligence');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Athletics', 'Strength');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Deception', 'Charisma');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('History', 'Intelligence');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Insight', 'Wisdom');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Intimidation', 'Charisma');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Investigation', 'Intelligence');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Medicine', 'Wisdom');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Nature', 'Intelligence');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Perception', 'Wisdom');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Performance', 'Charisma');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Persuasion', 'Charisma');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Persuasion', 'Intelligence');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Sleight of Hand', 'Dexterity');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Stealth', 'Dexterity');
+INSERT INTO skills (skill_name, stat_modifier) VALUES ('Survival', 'Wisdom');

@@ -14,13 +14,13 @@ public class CharacterSheet {
     @GeneratedValue
     private Long characterId;
 
-    @Column(name = "name")
+    @Column(name = "name", columnDefinition = "varchar(120) default 'Noname' NOT NULL")
     private String name;
-    @Column(name = "max_hp")
+    @Column(name = "max_hp", columnDefinition = "int(4) default 1 NOT NULL")
     private Long maxHp;
-    @Column(name = "current_hp")
+    @Column(name = "current_hp", columnDefinition = "int(4) default 1 NOT NULL")
     private Long currentHp;
-    @Column(name = "exp")
+    @Column(name = "exp", columnDefinition = "int(11) default 0 NOT NULL")
     private Long exp;
 
     @ManyToMany(targetEntity = Skills.class, fetch = FetchType.LAZY)

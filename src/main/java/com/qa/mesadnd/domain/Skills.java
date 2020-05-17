@@ -17,12 +17,10 @@ public class Skills {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long skillsId;
 
-    @Column(name = "skill_name")
+    @Column(name = "skill_name", columnDefinition = "varchar(35) default 'Acrobatics' NOT NULL")
     private String skillName;
-    @Column(name = "stat_modifier")
+    @Column(name = "stat_modifier", columnDefinition = "varchar(12) default 'Dexterity' NOT NULL")
     private String statModifier;
-    @Column(name = "full_proficiency")
-    private Boolean fullProficiency;
 
     @JsonIgnore
     @ManyToMany(cascade=CascadeType.ALL, mappedBy = "skills")
@@ -31,17 +29,15 @@ public class Skills {
     public Skills() {
     }
 
-    public Skills(String skillName, String statModifier, Boolean fullProficiency) {
+    public Skills(String skillName, String statModifier) {
         this.skillName = skillName;
         this.statModifier = statModifier;
-        this.fullProficiency = fullProficiency;
     }
 
-    public Skills(Long skillsId, String skillName, String statModifier, Boolean fullProficiency) {
+    public Skills(Long skillsId, String skillName, String statModifier) {
         this.skillsId = skillsId;
         this.skillName = skillName;
         this.statModifier = statModifier;
-        this.fullProficiency = fullProficiency;
     }
 
     public Long getSkillsId() {
@@ -68,14 +64,6 @@ public class Skills {
         this.statModifier = statModifier;
     }
 
-    public Boolean getFullProficiency() {
-        return fullProficiency;
-    }
-
-    public void setFullProficiency(Boolean fullProficiency) {
-        this.fullProficiency = fullProficiency;
-    }
-
     public Set<CharacterSheet> getCharacterSheet() {
         return characterSheet;
     }
@@ -94,13 +82,12 @@ public class Skills {
         return getSkillsId ().equals (skills.getSkillsId ()) &&
                 getSkillName ().equals (skills.getSkillName ()) &&
                 getStatModifier ().equals (skills.getStatModifier ()) &&
-                getFullProficiency ().equals (skills.getFullProficiency ()) &&
                 getCharacterSheet ().equals (skills.getCharacterSheet ());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash (getSkillsId (), getSkillName(), getStatModifier(), getFullProficiency(), getCharacterSheet ());
+        return Objects.hash (getSkillsId (), getSkillName(), getStatModifier(), getCharacterSheet ());
     }
 
     @Override
@@ -109,7 +96,6 @@ public class Skills {
                 "skillsId=" + skillsId +
                 ", skillName='" + skillName + '\'' +
                 ", statModifier='" + statModifier + '\'' +
-                ", fullProficiency=" + fullProficiency +
                 ", characterSheet=" + characterSheet +
                 '}';
     }

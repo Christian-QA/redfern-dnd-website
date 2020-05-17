@@ -13,8 +13,8 @@ public class SkillsDTOTest {
 
     @Before
     public void setUp() {
-        skills = new SkillsDTO(1L,"Perception", "Wisdom", Boolean.TRUE);
-        other = new SkillsDTO("History", "Intelligence", Boolean.TRUE);
+        skills = new SkillsDTO(1L,"Perception", "Wisdom");
+        other = new SkillsDTO("History", "Intelligence");
     }
 
     @Test
@@ -22,7 +22,6 @@ public class SkillsDTOTest {
         assertNotNull(skills.getSkillsId());
         assertNotNull(skills.getSkillName ());
         assertNotNull(skills.getStatModifier ());
-        assertNotNull(skills.getFullProficiency ());
 
         skills.setSkillsId(null);
         assertNull(skills.getSkillsId());
@@ -30,8 +29,6 @@ public class SkillsDTOTest {
         assertNull(skills.getSkillName());
         skills.setStatModifier (null);
         assertNull(skills.getStatModifier ());
-        skills.setFullProficiency(null);
-        assertNull(skills.getFullProficiency ());
     }
 
     @Test
@@ -49,7 +46,6 @@ public class SkillsDTOTest {
         assertEquals(1L, skills.getSkillsId(), 0);
         assertEquals("Perception", skills.getSkillName ());
         assertEquals("Wisdom", skills.getStatModifier ());
-        assertEquals(Boolean.TRUE, skills.getFullProficiency ());
     }
 
     @Test
@@ -87,12 +83,6 @@ public class SkillsDTOTest {
         assertFalse(skills.equals(other));
     }
 
-    @Test
-    public void skillsFullProficiencyNullButOtherFullProficiencyNotNull() {
-        skills.setFullProficiency(null);
-        assertFalse(skills.equals(other));
-    }
-
     @Test(expected = NullPointerException.class)
     public void nullId() {
         skills.setSkillsId (null);
@@ -113,8 +103,8 @@ public class SkillsDTOTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        Skills skills = new Skills(null, null, null, null);
-        Skills other = new Skills(null, null, null);
+        Skills skills = new Skills(null, null, null);
+        Skills other = new Skills(null, null);
         assertEquals(skills.hashCode(), other.hashCode());
     }
 
