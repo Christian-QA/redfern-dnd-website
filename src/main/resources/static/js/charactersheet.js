@@ -32,6 +32,24 @@ let configGet = {
     responseType: 'json'
   };
 
+  function getCharacterById(){
+    axios.get('http://localhost:8181/getAllCharacters', configGet)
+    .then(function (response) {
+    let dropdown = document.getElementById('characterfind');
+    //dropdown.options[0] = new Option("Sinnis");
+    //dropdown.options[1] = new Option("Sinnis");
+    let i = 0;
+    const arrayDrop = response.data;
+    arrayDrop.forEach(element => {
+        console.log(element.name);
+        dropdown.options.length=element.length;
+        dropdown.options[i] = new Option(element.name);
+        i++;
+      }); 
+    });
+  }
+
+
 const getCharacterSheets = () => {
     axios.get('http://localhost:8181/getAllCharacters', configGet)
     .then(function (response) {
@@ -44,11 +62,7 @@ const getCharacterSheets = () => {
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
-        const arrayDrop = response.data;
-        arrayDrop.forEach(element => {
-            console.log(element.name);
-            document.querySelector(`#dropdown1`).innerHTML = element.name
-        }); 
+          
 
         //document.querySelector('#dropdown1').innerHTML = response.data[0].name
         //document.querySelector('#dropdown2').innerHTML = response.data[1].name
