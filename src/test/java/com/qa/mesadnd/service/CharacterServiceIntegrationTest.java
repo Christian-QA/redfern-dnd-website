@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
-@TestPropertySource(locations="classpath:resources/test.properties")
+@TestPropertySource(locations= "classpath:test.properties")
 @SpringBootTest
 public class CharacterServiceIntegrationTest {
 
