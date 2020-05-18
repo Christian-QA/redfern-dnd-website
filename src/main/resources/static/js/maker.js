@@ -74,9 +74,6 @@ const postCharacterSheet = () => {
         console.log(response.data);
     });
 
-    
-    
-    
     }
 
 let postButton = document.querySelector('#postButton');
