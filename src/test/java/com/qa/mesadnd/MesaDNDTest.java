@@ -1,4 +1,4 @@
-package com.qa;
+package com.qa.mesadnd;
 
 import com.qa.mesadnd.MesaDND;
 import org.junit.Test;
