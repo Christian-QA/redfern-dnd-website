@@ -211,6 +211,7 @@ Note: if you changed the Artifact Id within your pom.xml, you will need to enter
 - [TestNG](https://testng.org/doc/) - Integration Testing Testing
 - [Selenium](https://www.selenium.dev/) - Integration Testing Testing
 - [Postman](https://www.postman.com/) - Testing
+- [Diagrams](https://www.diagrams.net/) - Diagram Making
 
 
 ## Versioning
