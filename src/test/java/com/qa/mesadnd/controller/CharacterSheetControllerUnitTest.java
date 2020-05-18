@@ -23,7 +23,7 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-@TestPropertySource(locations="classpath:resources/test.properties")
+@TestPropertySource(locations= "classpath:test.properties")
 public class CharacterSheetControllerUnitTest {
 
     @InjectMocks
