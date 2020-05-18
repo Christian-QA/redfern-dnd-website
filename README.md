@@ -1,5 +1,3 @@
-(mesadndonline)
-
 Test Coverage: Junit - 86%, SonarQube 80.2%
 # MesaDND - Dungeons and Dragons Homebrew Application - QA Individual Project 
 
