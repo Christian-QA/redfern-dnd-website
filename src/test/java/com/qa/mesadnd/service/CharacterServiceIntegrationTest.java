@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 @TestPropertySource(locations="classpath:resources/test.properties")
 @SpringBootTest
-public class CharacterSheetServiceIntegrationTest {
+public class CharacterServiceIntegrationTest {
 
     @Autowired
     private CharacterService service;

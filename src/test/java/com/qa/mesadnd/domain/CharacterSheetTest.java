@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class CharacterSheetUnitTest {
+public class CharacterSheetTest {
 
     private CharacterSheet characterSheet;
     private CharacterSheet other;

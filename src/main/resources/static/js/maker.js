@@ -11,7 +11,7 @@ const postCharacterSheet = () => {
     let intelligence = document.getElementById("intelligence").value;
     let wisdom = document.getElementById("wisdom").value;
     let charisma = document.getElementById("charisma").value;
-    let newId = 0;
+
 
     /*
     let skilllist = "";
@@ -36,44 +36,47 @@ const postCharacterSheet = () => {
     headers: {'Content-Type': 'application/json' }
     })
     .then(function (response) {
-        newId = response.abilitiesId;
-        console.log(response);
+        let newId = response.data.abilitiesId;
+        console.log(newId);
+        return axios({
+            method: 'post',
+            url: 'http://localhost:8181/createCharacter',
+            data: `{
+                "name": "${charname}",
+                "maxHp": 21,
+                "currentHp": 21,
+                "exp": 3000,
+                "skills": [
+                    {
+                        "skillsId": 1,
+                        "skillName": "History",
+                        "statModifier": "Wisdom"
+                    }
+                ], 
+                "abilities": [
+                    {
+                        "abilitiesId": ${newId}
+                    }
+                ]
+            }`,
+            headers: {'Content-Type': 'application/json' }
+            })
+            .then(function (response) {
+                console.log(response.data);
+                console.log(newId);
+            })
+            .catch(function (response) {
+                console.log(response.data);
+                console.log(newId);
+            });
     })
     .catch(function (response) {
-        console.log(response);
+        console.log(response.data);
     });
 
-
     
-    axios({
-        method: 'post',
-        url: 'http://localhost:8181/createCharacter',
-        data: `{
-            "name": "${charname}",
-            "maxHp": 21,
-            "currentHp": 21,
-            "exp": 3000,
-            "skills": [
-                {
-                    "skillsId": 1,
-                    "skillName": "History",
-                    "statModifier": "Wisdom"
-                }
-            ], 
-            "abilities": [
-                {
-                    "abilitiesId": 1
-                }
-            ]
-        }`,
-        headers: {'Content-Type': 'application/json' }
-        })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (response) {
-            console.log(response);
-        });
+    
+    
     }
 
 let postButton = document.querySelector('#postButton');
