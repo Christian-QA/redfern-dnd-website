@@ -41,113 +41,112 @@ If you use this project for your own development, you will need to follow the in
 
 ## Getting Started
 
-To run the application, use a terminal of your choice (Windows Command Prompt is recommended) and enter 'mvn spring-boot:run'. This will initialise the server
+The app can be run on an App Engine on [GCP](https://console.cloud.google.com/). An App Engine already exists for this application to be accessed from other devices, though accessibility is subject to change for as long as the project remains in the pre-beta stages. 
+For now, a local or self-hosted GCP App Engine is the recommended option, and mandatory if you wish to develop this app further.
 
-
-
-
+To run the application on your local machine, use a terminal of your choice (Windows Command Prompt is recommended) and enter 'mvn spring-boot:run'. This will initialise the server and allocate a server port (8181 by default) to the application. This server port can be accessed by searching 'localport:8181' in your browser.
 
 
 Once the server is running, you can access the web application as a user. 
-The Mesa Home Page (index.html) displays basic information about the application relating to the scenario it's based off. 
+Upon accessing the application on your browser, you will be taken to the Mesa Home Page (index.html) displays basic information about the application relating to the scenario it's based off. 
+From here you can either access the Character Sheet (character.html) or the Character Maker (maker.html).
+
+The Character Sheet page contains all of the details regarding the character's in the database, containing one character's information at a time. The information displayed in the current build are:
+   - The character's name
+   - The character's ability statistics
+   - The character's stills
+
+From this page, the user can change characters, update characters (the name and abilities are editable by click) and delete the currently selected character. 
+To switch between characters, click on the drop-down menu below the name and select the character you wish to view.
+
+The Character Maker page contains a form which allows the user to create a character and add it to the database. The things which can be attributed to the character are identical to what appears on the character sheet.
 
 
+## Database
 
+The application uses a database called mesadnd, hosted on [GCP](https://console.cloud.google.com/). As with the App Engine, its accessibility to subject to change while the project is in pre-beta stages, so it's recommended that any user or developer make their own at this stage.
+Their are six tables contained in the database, and any missing will be recreated by the application upon its next run.
 
+### Character Sheet
 
+In the database, this table is called 'character_sheet'. It contains the following fields:
+   - character_id - A bigint(20), auto-incrementing field serving as the primary key.
+   - name - A varchar(120) acting as the personalised name of the selected character. This is assigned on the Character Maker page and read on the Character Sheet.
+   - max_hp - An int(4) field storying the last inputted maximum value for hp. This fields currently defaults to '1' upon character creation.
+   - current_hp - An int(4) field storing the last inputted hp value. This fields currently defaults to '1' upon character creation.
+   - exp - An int(11) field storing the total experience points of the selected character. This field currently defaults to '0' upon character creation.
 
+To create the character values, navigate to the Character Maker page. Every field, excluding the Skills checkboxes, need to be filled.
 
+To read the character fields, navigate to the Character Sheet page. The values are all displayed on the Character Sheet on the top-most section of the page's article, below the navbar. This works by utilising an [axios](https://github.com/axios/axios) GET API request and fetching the values from the database by the character_id. At this stage, the character_id defaults to the first entry in the database.
 
-From here, you will have five options (Domain Commands) which can either be selected by inputting the number or word surrounded by square brackets ([ ]). The words are not case sensitive. These options are:
+To update the character fields, navigate to the Character Sheet page. Click on the value you wish to change and edit the text. Once you've changed to the new value, click 'confirm changes'. This will update every entry on the page to their new value. This works by utilising an [axios](https://github.com/axios/axios) PUT API request and sending replacement values to the database by the currently selected character_id.
 
-1. Review customers - This selects the customers table for manipulation. The customer table contains three fields:
+To delete a character, navigate to the Character Sheet page. Click the 'delete character' button next to 'confirm changes'. This will delete the currently selected character. This works by utilising an [axios](https://github.com/axios/axios) DELETE API request, which deletes every entry associated with the current character_id.
+(WARNING: This will send the delete request the moment it is clicked. There are plans to move this option to its own page and give a warning message to reduce the chance of users accidently clicking it).
 
-   - customer_id (primary key)
-   - forename
-   - surname
+### Abilities
 
-2. Review products - This selects the products table for manipulation. The products table contains five fields:
+In the database, this table is called 'abilities'. It contains the following fields:
+   - abilities_id - A bigint(20), auto-incrementing field serving as the primary key.
+   - strength - An int(3) value used as the strength ability statistic for the selected character.
+   - dexterity - An int(3) value used as the dexterity ability statistic for the selected character.
+   - constitution - An int(3) value used as the constitution ability statistic for the selected character.
+   - intelligence - An int(3) value used as the intelligence ability statistic for the selected character.
+   - wisdom - An int(3) value used as the wisdom ability statistic for the selected character.
+   - charisma - An int(3) value used as the charisma ability statistic for the selected character.
+   
+To create the ability values, navigate to the Character Maker page. Every field, excluding the Skills checkboxes, need to be filled. This is done alongside the Character Sheet values, and must be filled in together to avoid an error. Currently, the abilities_id is assigned alongside the character_id, and increment simultaneously.  
 
-   - product_id (primary key)
-   - name
-   - category
-   - price
-   - inventory
+To read the abilities fields, navigate to the Character Sheet page. The values are all displayed atop images below the CRUD buttons. This works by utilising an [axios](https://github.com/axios/axios) GET API request and fetching the values from the database by the character_id (not the abilities_id as abilities can only be made alongside the character, meaning there's only one set of abilities embedded into characters at any given time). 
+At this stage, the character_id defaults to the first entry in the database.
 
-3. Review orders - This displays an additional option asking if you want to manipulate all orders or a specific orderline. The orders table is what links the customers to their orders, while the orderline table is what links the products to a specific order.
+To update the abilities fields, navigate to the Character Sheet page. Updating the character_sheet will update the abilities as well as the [axios](https://github.com/axios/axios) PUT API request is executed simultaneous to the character_sheets request. The update uses the currently selected character_id, which is synched to the abilities_id.
 
-- The orders table contains three fields:
-  - order_id (primary key)
-  - customer_id (foreign key)
-  - date_ordered
-- The orderline table contains three fields:
-  - product_id (foreign key)
-  - order_id (foreign key)
-  - quanitity_ordered
+To delete the abilities fields, navigate to the Character Sheet page. Deleting the character sheet will delete the abilities entries as well because the abilities table from the front-end's perspective is embedded into the character_sheet. 
 
-4. Help - This displays a simple explanation of what each option does, after which you cannot proceed until you've selected an option (note: if you select 'help' twice, the help task will repeat and you will still need to select an option).
+### Skills
 
-5. Stop - Ends the program
+In the database, this table is called 'skills'. It contains the following fields:
+   - skills_id - A bigint(20), auto-incrementing field serving as the primary key.
+   - skill_name - A varchar(35) value used to specify the name of the skill.
+   - stat_modifier - varchar(12) value used to specify which ability the roll is modified by.
 
-If you entered either options one or two, or you entered three followed by one, you will be given six new options:
+The skill values are premade and cannot be made by the user without accessing the code. This may be reconsidered at a later date.
 
-- Create - Allows you to add an entity to the table selected from the previous set of options.
-- Read - Allows you to read every entry within the selected table.
-- Update - Allows you to edit an entity within the selected table.
-- Delete - Allows you to delete an entity from the table.
-- Help - This displays a simple explanation of what each option does, after which you cannot proceed until you've selected an option (note: if you select 'help' twice, the help task will repeat and you will still need to select an option).
-- Return - Brings you back to the previous set of options.
+To read the skills fields, navigate to the Character Sheet page. The values are all displayed atop a box below the ability statistic boxes, alongside their ability modifier. This is retrieved by the same GET request which obtains the Character Sheet and Abilities data.
 
-### Customer
+The skills values cannot be deleted at this time. 
 
-The mySQL database is set up to automatically input and auto-increment the customer_id, meaning all you need to create a customer is their forename and surname.
+### Skills to Character Sheet and Abilities to Character Sheet
 
-Choosing to read the customers table will display every entry in the table. With the current version, specific selection of a customer to read is yet to be implemented, so this read function is the only way to find the customer_id of a customer you wish to update or delete.
-To update a customer, you need to know their customer_id. The only way to find their id is to use the read command or to directly interface with the mySQL. Once you have their customer_id, you can input it when prompted following the selection of the update option. Following this, you enter the new forename and surname of the customer. You do not need to specify the original name of the customer at any point. The customer_id will not change following this action.
+In the database, to link the Skills table and the Abilities table to the Character Sheet, intermediate tables exists to hold their respective keys to allow for ManyToMany connections. 
 
-As with updating a customer, deleting a customer from the database requires knowing their customer_id. This can be found using the read action. Once the customer_id has been inputted following the selection of this option, the customer is removed from the database. The customer_id does not decrement, meaning this customer_id cannot be used again unless the table or the entire database is dropped and recreated (you can do this by inputting the mySQL commands found in the '/src/test/resources/mysql-schema.sql', **though this will delete every entity from the entire database**).
+The 'skills_character_sheet' contains the following fields:
+   - skills_id - A bigint(20) foreign key referring to the skills_id of the skills table.
+   - character_id - A bigint(20) foreign key referring to the character_id of the character_sheets table.
 
-### Product
+The 'abilities_character_sheet' contains the following fields:
+   - abilities_id - A bigint(20) foreign key referring to the abilities_id of the abilities table.
+   - character_id - A bigint(20) foreign key referring to the character_id of the character_sheets table.
 
-The mySQL database is set up to automatically input and auto-increment the product_id, meaning all you need to create a product is the name. The other values (category, price and quantity) are nullable and can be left blank, though can be given values using this option if desired. Category will default to 'Miscellaneous', price will default to '0.0' and quantity will default to '0'.
+Both these table work the same way, by taking a Character Sheet row by its id and associating it with multiple rows belonging to the Skills and Abilities table. This is mainly for the benefit of skills, as characters will likely possess numerous skills throughout their campaign.
 
-Reading the products table will read the entire table, and is the only way to find the product_id from the application.
+### Hibernate Sequence
 
-To update a product, you need to know its product_id. This can be found through the read action, the same as when reading the customer table. Following this, you will be asked for the new name, category, price and quantity. All values need to be inputted in the current version to avoid throwing an error.
-
-To delete a product, you need to know its product_id. This can also be found using the read action. As with the customer delete option, the auto-increment will not be reset in any way, meaning that product_id will not be used again unless the table or database is dropped.
-
-### Order and Orderline
-
-The difference between an order and an orderline is that an order takes in details about a customer and when the order was made, but doesn't contain anything about the contents of the order itself. The orderline gives the order meaning by adding products to the order in question by its id. To manipulate customer and date related details of an order, select order. To manipulate the contents of an order (i.e. add and remove products), select orderline.
-
-Choosing to create an order will ask you to input the customer_id you wish to attach to it. You will need to read the customers table to know the specific id of the customer you wish to affiliate with the order. The date is set to local time upon the creation of the order, and can be changed by updating the order.
-
-Choosing to create an orderline will ask you which product you would like to add by its product_id and the quantity. To find the product_id, you will need to read the products table. With the current version, you can only add the products one at a time.
-
-Choosing to read the orders table will display every order made by the order_id, customer_id and date_ordered.
-
-Choosing to read the orderline table will prompt you to ask the order_id of the order you wish to read. Once inputted, you will be shown the product_id, name of the product, quantity and price (both the price of each product and a price taken from multiplying the price value by the quantity, not to be confused with the overall price) of each product (by id) ordered. You will not be shown details about the customer or the date ordered, as these are viewed from the orders table. At the bottom will be the total price of the order, adding together the price multiplied by quantity of every product in the order.
-
-Choosing to update the orders table will ask you to enter the order_id of the order you wish to modify. You can find the order_id by reading the orders table. Following this, you will be asked which customer_id you wish to use (you need to enter a value to avoid an error, making it recommended to view the orders table first to see the customer_id if you do not wish to change it). You will be asked to input a date, as updating it will not default it to local time. If you do not wish to change the date, you will need to enter the original date in the format specified (yyyy-mm-dd).
-
-You cannot update the orderline with the current version of this application as the only value which could be changed is the quantity_ordered. As the use is too niche to be above low priority, it has been set aside until there is a demand for it as a feature.
-
-Choosing to delete an order will ask you the order_id of the order you wish to delete. Entering the order_id will attempt to delete the order, **but the orderline linked to this order_id must be empty first**. For now, the number three command which is usually fulfilled by update is reserved for a read specific function where the user can search for a customer by username.
-
-Choosing to delete an orderline will ask you the order_id of the order you wish to delete from, and the product you wish to delete. If you wish to delete the enter order, you will need to delete every product from within the orderline and then delete the order.
+In the database, this table is called hibernate_sequence. This is a table created and utilised by the Spring Boot framework, and should not be touched. If deleted, it will recreate itself upon the applications next run.
 
 ## Running the Tests
 
-The project utilises three different tools for testing: JUnit for Unit Testing, JUnit with Mockito for Integration Testing, and SonarQube for Coding Style Tests.
+The project utilises three different tools for testing: JUnit for Unit Testing, JUnit with Mockito and TestNG with Selenium for Integration Testing, and SonarQube for Coding Style Tests.
 
 ### Unit Tests
 
 Individual modules within the program can be tested using JUnit, which tests the methods within their main counterpart.
 
-To test on JUnit (Eclipse):
+To test on JUnit (IntelliJ):
 
-1. Right click on the class you wish to test in the file explorer of the Eclipse IDE, as found in src/test/java, not the actual classes found in src/main/java (to run all tests, right click the src/test/java folder instead).
+1. Right click on the class you wish to test in the file explorer of the IntelliJ IDE, as found in src/test/java, not the actual classes found in src/main/java (to run all tests, right click the src/test/java folder instead).
 2. Hover over 'Run As' on the dropdown menu.
 3. Click '2 JUnit Test'.
 4. All tests within the application are undertaken and can be reviewed using the 'JUnit' and 'Coverage' windows.
@@ -198,7 +197,9 @@ Note: if you changed the Artifact Id within your pom.xml, you will need to enter
 
 ## Built With
 
-- [Eclipse](https://www.eclipse.org/) - IDE
+- [IntelliJ IDE](https://www.jetbrains.com/idea/) - Back-End IDE
+- [Visual Studios Code IDE](https://code.visualstudio.com/) - Front-End IDE
+- [Spring Boot](https://spring.io/guides/gs/spring-boot/) - API Development Platform
 - [Maven](https://maven.apache.org/) - Dependency Management
 - [GCP (Google Cloud Platform](https://console.cloud.google.com/) - Database and Instance Host
 - [MySQL](https://www.mysql.com/) - Database Language
@@ -207,8 +208,12 @@ Note: if you changed the Artifact Id within your pom.xml, you will need to enter
 - [GitHub](https://github.com/) - Online Repository, Version Control and Project Management
 - [SonarQube](https://www.sonarqube.org/) - Static Program Analysis
 - [Nexus](https://www.sonatype.com/product-nexus-repository) - Artifact Repository
-- [JUnit](https://junit.org/junit5/) - Testing
-- [Mockito](https://site.mockito.org/) - Testing
+- [JUnit](https://junit.org/junit5/) - Unit and Integration Testing
+- [Mockito](https://site.mockito.org/) - Integration Testing Testing
+- [TestNG](https://testng.org/doc/) - Integration Testing Testing
+- [Selenium](https://www.selenium.dev/) - Integration Testing Testing
+- [Postman](https://www.postman.com/) - Testing
+
 
 ## Versioning
 
@@ -217,7 +222,6 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 - \*_Christian Redfern_ - _Author_ - [Christian-QA](https://github.com/Christian-QA)
-- \*_Chris Perrins_ - _Initial work_ - [christophperrins](https://github.com/christophperrins)
 
 ## License
 
@@ -227,8 +231,15 @@ _For help in [Choosing a license](https://choosealicense.com/)_
 
 ## Acknowledgements
 
-- Chris Perrins - Provided a working early version of the project capable of CRUD functionality with the customers table - [christophperrins](https://github.com/christophperrins)
 - Nicholas Johnson - Software Trainer - [nickrstewarttds](https://github.com/nickrstewarttds)
 - Jordan Harrison - Software Trainer - [JHarry444](https://github.com/JHarry444)
-- Caroline Strasenburgh - Advice with Java and Github - [CarolineS-QA](https://github.com/CarolineS-QA)
-- Korbinian Ring - Assistance with Java planning - [KMRRingQA](https://github.com/KMRRingQA)
+- Tadas Vaidotas - Software Trainer - [tvaidotas](https://github.com/tvaidotas)
+- David Williams - Advice with Java - [DavidWilliamsQA](https://github.com/DavidWilliamsQA)
+- Caroline Strasenburgh - Advice with JavaScript - [CarolineS-QA](https://github.com/CarolineS-QA)
+- Korbinian Ring - Advice with Java - [KMRRingQA](https://github.com/KMRRingQA)
+- Luke Conway - Advice with Database Planning - [ConwayQA](https://github.com/ConwayQA)
+- Felix Marley - Feedback - [Femarleycode](https://github.com/Femarleycode)
+
+
+
+
