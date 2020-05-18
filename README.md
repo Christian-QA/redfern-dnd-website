@@ -5,7 +5,7 @@ Test Coverage: Junit - 86%, SonarQube 80.2%
 
 MesaDND is a spring web application made to accompany a Dungeons and Dragons scenario I made in 2017. It holds character sheets for a player to use, which can be created, read, updated and destroyed at the behest of the user. The character sheets are stored in a [MySQL](https://www.mysql.com/) 
 database on [GCP](https://console.cloud.google.com/). The application is built with Spring Boot [Spring Boot](https://spring.io/guides/gs/spring-boot/, a [Java](https://www.java.com/en/)-based framework commonly used to create stand-alone applications. The back-end was developed in [Java](https://www.java.com/en/) 
-using the [IntelliJ IDE](https://www.jetbrains.com/idea/) while the front-end was developed in [HTML, CSS](https://html.com/) and [JavaScript](https://www.javascript.com/) using the [Visual Studios Code IDE](https://code.visualstudio.com/).  
+using the [IntelliJ IDEA](https://www.jetbrains.com/idea/) while the front-end was developed in [HTML, CSS](https://html.com/) and [JavaScript](https://www.javascript.com/) using the [Visual Studios Code](https://code.visualstudio.com/).  
 The project is built using [Maven](https://maven.apache.org/). [Jenkins](https://www.jenkins.io/) is used as a CI Pipeline to send to an instance on GCP, which hosts [SonarQube](https://www.sonarqube.org/), and to send to [Nexus Artifact Repository](https://www.sonatype.com/product-nexus-repository).
 Progress on the project can be viewed in the [Projects tab on GitHub as a kanban board](https://github.com/Christian-QA/redfern-dnd-website/projects/1).
 
@@ -32,10 +32,10 @@ At the moment, a demo mySQL database exists and is linked to this application. I
 
 To develop using this project, you will need:
 
-- [IntelliJ IDE](https://www.jetbrains.com/idea/) or a similar IDE capable of running Spring Boot.
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) or a similar IDE capable of running Spring Boot.
 - [Apache Maven](https://maven.apache.org/)
 
-It is also recommended you use [Visual Studios Code IDE](https://code.visualstudio.com/) for your HTML, CSS and JavaScript as most Java-centric IDEs like [IntelliJ IDE](https://www.jetbrains.com/idea/) show false-errors with other languages, though ignoring these issues is viable.
+It is also recommended you use [Visual Studios Code](https://code.visualstudio.com/) for your HTML, CSS and JavaScript as most Java-centric IDEs like [IntelliJ IDE](https://www.jetbrains.com/idea/) show false-errors with other languages, though ignoring these issues is viable.
 
 If you use this project for your own development, you will need to follow the instructions above in order to use your own database.
 
@@ -197,8 +197,8 @@ Note: if you changed the Artifact Id within your pom.xml, you will need to enter
 
 ## Built With
 
-- [IntelliJ IDE](https://www.jetbrains.com/idea/) - Back-End IDE
-- [Visual Studios Code IDE](https://code.visualstudio.com/) - Front-End IDE
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/) - Back-End IDE
+- [Visual Studios Code](https://code.visualstudio.com/) - Front-End IDE
 - [Spring Boot](https://spring.io/guides/gs/spring-boot/) - API Development Platform
 - [Maven](https://maven.apache.org/) - Dependency Management
 - [GCP (Google Cloud Platform](https://console.cloud.google.com/) - Database and Instance Host
