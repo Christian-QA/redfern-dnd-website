@@ -1,5 +1,7 @@
-
-
+let configGet = {
+    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html' },
+    responseType: 'json'
+  };
 
 const postCharacterSheet = () => {
     let charname = document.getElementById("name").value;
@@ -9,6 +11,7 @@ const postCharacterSheet = () => {
     let intelligence = document.getElementById("intelligence").value;
     let wisdom = document.getElementById("wisdom").value;
     let charisma = document.getElementById("charisma").value;
+    let newId = 0;
 
     /*
     let skilllist = "";
@@ -17,11 +20,12 @@ const postCharacterSheet = () => {
         let skilllist = document.getElementById("skill").value;
     }
     */
+    
+
    axios({
     method: 'post',
-    url: 'http://localhost:8181/createCharacter',
+    url: 'http://localhost:8181/createAbilities',
     data: `{
-        "abilitiesId": 1,
         "strength": ${strength},
         "dexterity": ${dexterity},
         "constitution": ${constitution},
@@ -32,6 +36,7 @@ const postCharacterSheet = () => {
     headers: {'Content-Type': 'application/json' }
     })
     .then(function (response) {
+        newId = response.abilitiesId;
         console.log(response);
     })
     .catch(function (response) {
@@ -53,6 +58,11 @@ const postCharacterSheet = () => {
                     "skillsId": 1,
                     "skillName": "History",
                     "statModifier": "Wisdom"
+                }
+            ], 
+            "abilities": [
+                {
+                    "abilitiesId": 1
                 }
             ]
         }`,

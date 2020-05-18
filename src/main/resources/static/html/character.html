@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="../css/nav.css" />
     </nav>
     <article>
-      <div class="namebox" id="charactername" contentEditable="true" spellcheck="false"><br /></div>
+      <textarea  class="namebox" id="charactername" contentEditable="true" spellcheck="false"></textarea ><br />
       <form>
         <select class="form-control"  id='characterfind' name='characterfind' onClick="getCharacterById()" >
           <option value=0 id="dropdown1"></option>
@@ -31,40 +31,40 @@
           <option value=2 id="dropdown3"></option>
           <option value=3 id="dropdown4"></option>
         </select>
-        <input type="button" value="Change Character" onclick="changeCharacter()" id="refreshCharacter"></input>
+        <input class="form-control" type="button" value="Change Character" onclick="changeCharacter()" id="refreshCharacter"></input>
       </form>
-      <button type="button">Confirm Changes</button>
-      <button type="submit" id="deleteCharacter">Delete Character</button>
+      <button class="form-control" type="submit" id="updateCharacter">Confirm Changes</button>
+      <button class="form-control"type="submit" id="deleteCharacter">Delete Character</button>
       <script src="../js/charactersheet.js"></script>
       <section>
           <div class="container">
             <img src="../images/abilitybox.png" alt="Snow" >
-            <div class="centered" id="strength"></div>
+            <textarea class="centered" id="strength"></textarea>
             <div class="below">Strength</div>
           </div>
           <div class="container">
             <img src="../images/abilitybox.png" alt="Snow" >
-            <div class="centered" id="dexterity"></div>
+            <textarea class="centered" id="dexterity"></textarea>
             <div class="below">Dexterity</div>
           </div>
           <div class="container">
             <img src="../images/abilitybox.png" alt="Snow" >
-            <div class="centered" id="constitution"></div>
+            <textarea class="centered" id="constitution"></textarea>
             <div class="below">Constitution</div>
           </div>
           <div class="container">
             <img src="../images/abilitybox.png" alt="Snow" >
-            <div class="centered" id="intelligence"></div>
+            <textarea class="centered" id="intelligence"></textarea>
             <div class="below">Intelligence</div>
           </div>
           <div class="container">
             <img src="../images/abilitybox.png" alt="Snow" >
-            <div class="centered" id="wisdom"></div>
+            <textarea class="centered" id="wisdom"></textarea>
             <div class="below">Wisdom</div>
           </div>
           <div class="container">
             <img src="../images/abilitybox.png" alt="Snow" >
-            <div class="centered" id="charisma"></div>
+            <textarea class="centered" id="charisma"></textarea>
             <div class="below">Charisma</div>
           </div>
         <link rel="stylesheet" href="../css/section.css" />

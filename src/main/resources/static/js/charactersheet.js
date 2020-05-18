@@ -1,23 +1,6 @@
-function toggleEditor() {
-    let theText = document.getElementById('charactername');
-    let theEditor = document.getElementById('ta1');
-    let editorArea = document.getElementById('editor');
 
-
-    //set text in text div to textarea
-    //correct line breaks, prevent HTML injection
-    let subject = theText.innerHTML;
-    subject = subject.replace(new RegExp("<br />", "gi"), 'n');
-    subject = subject.replace(new RegExp("<br />", "gi"), 'n');
-    subject = subject.replace(new RegExp("<", "gi"), '<');
-    subject = subject.replace(new RegExp(">", "gi"), '>');
-    theEditor.value = subject;
-
-    //hide text, show editor
-    theText.style.display = 'none';
-    editorArea.style.display = 'inline';
-}
-
+let theText = document.getElementById('charactername');
+  
 let currentID = document.getElementById("characterfind").value;
 console.log(currentID);
 
@@ -32,23 +15,22 @@ let configGet = {
     responseType: 'json'
   };
 
-
-  function getCharacterById(){
+function getCharacterById(){
     axios.get('http://localhost:8181/getAllCharacters', configGet)
     .then(function (response) {
     let dropdown = document.getElementById('characterfind');
-    //dropdown.options[0] = new Option("Sinnis");
-    //dropdown.options[1] = new Option("Sinnis");
-    let i = 0;
-    const arrayDrop = response.data;
-    arrayDrop.forEach(element => {
-        console.log(element.name);
-        dropdown.options.length=element.length;
-        dropdown.options[i] = new Option(response.data[0].name, 0, true, true);
-        i++;
-      }); 
+     //dropdown.options[0] = new Option("Sinnis");
+     //dropdown.options[1] = new Option("Sinnis");
+     let i = 0;
+     const arrayDrop = response.data;
+     arrayDrop.forEach(element => {
+         console.log(element.name);
+         dropdown.options.length=element.length;
+         dropdown.options[i] = new Option(response.data[0].name, 0, true, true);
+         i++;
+       }); 
     });
-  }
+}
 
 
 const getCharacterSheets = () => {
@@ -63,13 +45,13 @@ const getCharacterSheets = () => {
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
-
-        document.querySelector('#dropdown2').innerHTML = response.data[1].name
-        document.querySelector('#dropdown3').innerHTML = response.data[2].name
-        document.querySelector('#dropdown4').innerHTML = response.data[3].name
+        let skilllist = "";
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
             console.log(element.skillName);
+            let skilllist = "sfgdsr";
+
+
             document.querySelector('#skillname').innerHTML = element.skillName;
         }); 
     })
@@ -83,7 +65,7 @@ let refreshCharacter = document.querySelector('#refreshCharacter');
 refreshCharacter.addEventListener('click', getCharacterSheets);
 
 const deleteCharacterSheet = () => {
-    let currentID = document.getElementById("characterfind").value;
+    currentID = document.getElementById("characterfind").value;
     let idCorrection = Number(currentID) + 1;
     axios({
         method: 'delete',
@@ -96,22 +78,56 @@ const deleteCharacterSheet = () => {
         console.log(response);
     });
 }
-
 let deleteCharacter = document.querySelector('#deleteCharacter');
 deleteCharacter.addEventListener('click', deleteCharacterSheet);
 
+const updateCharacterSheet = () => {
+    currentID = document.getElementById("characterfind").value;
+    let idCorrection = Number(currentID) + 1;
+    let charname = document.getElementById("charactername").value;
+    console.log(charname);
+    axios({
+        method: 'put',
+        url: `http://localhost:8181/updateCharacter/${idCorrection}`,
+        data: `{
+            "name": "${charname}",
+            "maxHp": 21,
+            "currentHp": 21,
+            "exp": 3000
+        }`,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'multipart/form-data'},
 
-
-/*
-const updateCharacters = axios.put(`localhost:8181/updateCharacter/${currentID}`, config, {
-    name: 'Gohso'
-})
-    .then(response => {
+    }).then(function (response) {
         console.log(response);
     })
-    .catch(error => {
-        console.log(err);
+    .catch(function (response) {
+        console.log(response);
     });
-window.addEventListener("load", updateCharacters);
-*/
+    let strength = document.getElementById("strength").value;
+    let dexterity = document.getElementById("dexterity").value;
+    let constitution = document.getElementById("constitution").value;
+    let intelligence = document.getElementById("intelligence").value;
+    let wisdom = document.getElementById("wisdom").value;
+    let charisma = document.getElementById("charisma").value;
+    axios({
+        method: 'put',
+        url: `http://localhost:8181/updateAbilities/${idCorrection}`,
+        data: `{
+            "strength": ${strength},
+            "dexterity": ${dexterity},
+            "constitution": ${constitution},
+            "intelligence": ${intelligence},
+            "wisdom": ${wisdom},
+            "charisma": ${charisma}
+        }`,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'multipart/form-data'},
 
+    }).then(function (response) {
+        console.log(response);
+    })
+    .catch(function (response) {
+        console.log(response);
+    });
+}
+let updateCharacter = document.querySelector('#updateCharacter');
+updateCharacter.addEventListener('click', updateCharacterSheet);
