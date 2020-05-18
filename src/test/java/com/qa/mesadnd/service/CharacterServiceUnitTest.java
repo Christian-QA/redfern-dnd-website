@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
 @TestPropertySource(locations="classpath:resources/test.properties")
-public class CharacterSheetServiceUnitTest {
+public class CharacterServiceUnitTest {
 
     @InjectMocks
     private CharacterService service;

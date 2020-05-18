@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class AbilitiesUnitTest {
+public class AbilitiesTest {
 
     private Abilities abilities;
     private Abilities other;
