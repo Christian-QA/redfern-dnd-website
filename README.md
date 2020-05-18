@@ -1,5 +1,3 @@
-(mesadndonline)
-
 Test Coverage: Junit - 86%, SonarQube 80.2%
 # MesaDND - Dungeons and Dragons Homebrew Application - QA Individual Project 
 
@@ -213,6 +211,7 @@ Note: if you changed the Artifact Id within your pom.xml, you will need to enter
 - [TestNG](https://testng.org/doc/) - Integration Testing Testing
 - [Selenium](https://www.selenium.dev/) - Integration Testing Testing
 - [Postman](https://www.postman.com/) - Testing
+- [Diagrams](https://www.diagrams.net/) - Diagram Making
 
 
 ## Versioning
@@ -226,8 +225,6 @@ We use [SemVer](http://semver.org/) for versioning.
 ## License
 
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details
-
-_For help in [Choosing a license](https://choosealicense.com/)_
 
 ## Acknowledgements
 
