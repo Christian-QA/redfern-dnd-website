@@ -1,8 +1,3 @@
-let configGet = {
-    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8181/html/character.html' },
-    responseType: 'json'
-  };
-
 const postCharacterSheet = () => {
     let charname = document.getElementById("name").value;
     let strength = document.getElementById("strength").value;
@@ -73,8 +68,7 @@ const postCharacterSheet = () => {
     .catch(function (response) {
         console.log(response.data);
     });
-
-    }
+}
 
 let postButton = document.querySelector('#postButton');
 postButton.addEventListener('click', postCharacterSheet);

@@ -45,15 +45,14 @@ const getCharacterSheets = () => {
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
-        let skilllist = "";
-        const arraySkills = response.data[currentID].skills
-        arraySkills.forEach(element => {
-            console.log(element.skillName);
-            let skilllist = "sfgdsr";
+
+        let skilllist = response.data[currentID].skills[0].skillName;
+        for (let i = 0; i < response.data.length; i++) {
+
+        }
+        console.log(skilllist.toString());
 
 
-            document.querySelector('#skillname').innerHTML = element.skillName;
-        }); 
     })
     .catch(function (error) {
         console.log(error);
