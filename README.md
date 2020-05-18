@@ -1,7 +1,7 @@
 (mesadndonline)
 
 Test Coverage: Junit - 86%, SonarQube 80.2%
-# Redfern Inventory Management System - QA Individual Project 
+# MesaDND - Dungeons and Dragons Homebrew Application - QA Individual Project 
 
 MesaDND is a spring web application made to accompany a Dungeons and Dragons scenario I made in 2017. It holds character sheets for a player to use, which can be created, read, updated and destroyed at the behest of the user. The character sheets are stored in a [MySQL](https://www.mysql.com/) 
 database on [GCP](https://console.cloud.google.com/). The application is built with Spring Boot [Spring Boot](https://spring.io/guides/gs/spring-boot/, a [Java](https://www.java.com/en/)-based framework commonly used to create stand-alone applications. The back-end was developed in [Java](https://www.java.com/en/) 
