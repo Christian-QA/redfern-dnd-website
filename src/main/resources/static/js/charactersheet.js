@@ -1,7 +1,6 @@
 
-    let theText = document.getElementById('charactername');
+let theText = document.getElementById('charactername');
   
-
 let currentID = document.getElementById("characterfind").value;
 console.log(currentID);
 
@@ -16,23 +15,22 @@ let configGet = {
     responseType: 'json'
   };
 
-
-  function getCharacterById(){
+function getCharacterById(){
     axios.get('http://localhost:8181/getAllCharacters', configGet)
     .then(function (response) {
     let dropdown = document.getElementById('characterfind');
-    //dropdown.options[0] = new Option("Sinnis");
-    //dropdown.options[1] = new Option("Sinnis");
-    let i = 0;
-    const arrayDrop = response.data;
-    arrayDrop.forEach(element => {
-        console.log(element.name);
-        dropdown.options.length=element.length;
-        dropdown.options[i] = new Option(response.data[0].name, 0, true, true);
-        i++;
-      }); 
+     //dropdown.options[0] = new Option("Sinnis");
+     //dropdown.options[1] = new Option("Sinnis");
+     let i = 0;
+     const arrayDrop = response.data;
+     arrayDrop.forEach(element => {
+         console.log(element.name);
+         dropdown.options.length=element.length;
+         dropdown.options[i] = new Option(response.data[0].name, 0, true, true);
+         i++;
+       }); 
     });
-  }
+}
 
 
 const getCharacterSheets = () => {
@@ -47,9 +45,13 @@ const getCharacterSheets = () => {
         document.querySelector('#wisdom').innerHTML = response.data[currentID].abilities[0].wisdom;
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
+        let skilllist = "";
         const arraySkills = response.data[currentID].skills
         arraySkills.forEach(element => {
             console.log(element.skillName);
+            let skilllist = "sfgdsr";
+
+
             document.querySelector('#skillname').innerHTML = element.skillName;
         }); 
     })
@@ -76,10 +78,8 @@ const deleteCharacterSheet = () => {
         console.log(response);
     });
 }
-
 let deleteCharacter = document.querySelector('#deleteCharacter');
 deleteCharacter.addEventListener('click', deleteCharacterSheet);
-
 
 const updateCharacterSheet = () => {
     currentID = document.getElementById("characterfind").value;
