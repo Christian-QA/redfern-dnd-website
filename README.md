@@ -2,7 +2,7 @@ Test Coverage: Junit - 86%, SonarQube 80.2%
 # MesaDND - Dungeons and Dragons Homebrew Application - QA Individual Project 
 
 MesaDND is a spring web application made to accompany a Dungeons and Dragons scenario I made in 2017. It holds character sheets for a player to use, which can be created, read, updated and destroyed at the behest of the user. The character sheets are stored in a [MySQL](https://www.mysql.com/) 
-database on [GCP](https://console.cloud.google.com/). The application is built with Spring Boot [Spring Boot](https://spring.io/guides/gs/spring-boot/, a [Java](https://www.java.com/en/)-based framework commonly used to create stand-alone applications. The back-end was developed in [Java](https://www.java.com/en/) 
+database on [GCP](https://console.cloud.google.com/). The application is built with Spring Boot [Spring Boot](https://spring.io/guides/gs/spring-boot/), a [Java](https://www.java.com/en/)-based framework commonly used to create stand-alone applications. The back-end was developed in [Java](https://www.java.com/en/) 
 using the [IntelliJ IDEA](https://www.jetbrains.com/idea/) while the front-end was developed in [HTML, CSS](https://html.com/) and [JavaScript](https://www.javascript.com/) using the [Visual Studios Code](https://code.visualstudio.com/).  
 The project is built using [Maven](https://maven.apache.org/). [Jenkins](https://www.jenkins.io/) is used as a CI Pipeline to send to an instance on GCP, which hosts [SonarQube](https://www.sonarqube.org/), and to send to [Nexus Artifact Repository](https://www.sonatype.com/product-nexus-repository).
 Progress on the project can be viewed in the [Projects tab on GitHub as a kanban board](https://github.com/Christian-QA/redfern-dnd-website/projects/1).
@@ -224,7 +224,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Contributing to the Project
 
-This project has a code of conduct for those wishing to propose changes - see the [CONTRIBUTION.md](CONTRIBUTION.md) file for details
+This project has a code of conduct for those wishing to propose changes - see the [CONTRIBUTING.md](CONTRIBUTING.md) file for details
 
 
 ## License
