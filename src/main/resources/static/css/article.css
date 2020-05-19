@@ -31,7 +31,7 @@ select.form-control {
     font-size: 20px;
     color: aliceblue;
     height: 30px;
-    width: 120px;
+    width: 240px;
 }
 
 input.form-control {
@@ -42,7 +42,7 @@ input.form-control {
     font-size: 20px;
     color: aliceblue;
     height: 30px;
-    width: 120px;
+    width: 240px;
 }
 
 button.form-control {
@@ -53,7 +53,7 @@ button.form-control {
     font-size: 20px;
     color: aliceblue;
     height: 30px;
-    width: 120px;
+    width: 240px;
 }
 
 button.form-control-xl {
