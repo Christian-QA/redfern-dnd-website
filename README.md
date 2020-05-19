@@ -1,4 +1,4 @@
-Test Coverage: Junit - 86%, SonarQube 80.2%
+Test Coverage: Junit - 88.9%, SonarQube 80.2%
 # MesaDND - Dungeons and Dragons Homebrew Application - QA Individual Project 
 
 MesaDND is a spring web application made to accompany a Dungeons and Dragons scenario I made in 2017. It holds character sheets for a player to use, which can be created, read, updated and destroyed at the behest of the user. The character sheets are stored in a [MySQL](https://www.mysql.com/) 
