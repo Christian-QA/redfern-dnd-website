@@ -58,10 +58,11 @@ From here you can either access the Character Sheet (character.html) or the Char
 
 ## Database
 
-![alt text](https://github.com/Christian-QA/redfern-dnd-website/blob/master/documentation/ERD%20DND%20Website.png)
-
 The application uses a database called mesadnd, hosted on [GCP](https://console.cloud.google.com/). As with the App Engine, its accessibility to subject to change while the project is in pre-beta stages, so it's recommended that any user or developer make their own at this stage.
-Their are six tables contained in the database, and any missing will be recreated by the application upon its next run.
+
+Their are currently six tables (those with 'must') contained in the database, and any missing will be recreated by the application upon its next run.
+
+![alt text](https://github.com/Christian-QA/redfern-dnd-website/blob/master/documentation/ERD%20DND%20Website.png)
 
 ### Character Sheet
 
