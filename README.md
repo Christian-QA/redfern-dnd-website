@@ -68,11 +68,11 @@ Their are six tables contained in the database, and any missing will be recreate
 ### Character Sheet
 
 In the database, this table is called 'character_sheet'. It contains the following fields:
-   - character_id - A bigint(20), auto-incrementing field serving as the primary key.
-   - name - A varchar(120) acting as the personalised name of the selected character. This is assigned on the Character Maker page and read on the Character Sheet.
-   - max_hp - An int(4) field storying the last inputted maximum value for hp. This fields currently defaults to '1' upon character creation.
-   - current_hp - An int(4) field storing the last inputted hp value. This fields currently defaults to '1' upon character creation.
-   - exp - An int(11) field storing the total experience points of the selected character. This field currently defaults to '0' upon character creation.
+   - `character_id` - A bigint(20), auto-incrementing field serving as the primary key.
+   - `name` - A varchar(120) acting as the personalised name of the selected character. This is assigned on the Character Maker page and read on the Character Sheet.
+   - `max_hp` - An int(4) field storying the last inputted maximum value for hp. This fields currently defaults to '1' upon character creation.
+   - `current_hp` - An int(4) field storing the last inputted hp value. This fields currently defaults to '1' upon character creation.
+   - `exp` - An int(11) field storing the total experience points of the selected character. This field currently defaults to '0' upon character creation.
 
 To create the character values, navigate to the Character Maker page. Every field, excluding the Skills checkboxes, need to be filled.
 
@@ -86,13 +86,13 @@ To delete a character, navigate to the Character Sheet page. Click the 'delete c
 ### Abilities
 
 In the database, this table is called 'abilities'. It contains the following fields:
-   - abilities_id - A bigint(20), auto-incrementing field serving as the primary key.
-   - strength - An int(3) value used as the strength ability statistic for the selected character.
-   - dexterity - An int(3) value used as the dexterity ability statistic for the selected character.
-   - constitution - An int(3) value used as the constitution ability statistic for the selected character.
-   - intelligence - An int(3) value used as the intelligence ability statistic for the selected character.
-   - wisdom - An int(3) value used as the wisdom ability statistic for the selected character.
-   - charisma - An int(3) value used as the charisma ability statistic for the selected character.
+   - `abilities_id` - A bigint(20), auto-incrementing field serving as the primary key.
+   - `strength` - An int(3) value used as the strength ability statistic for the selected character.
+   - `dexterity` - An int(3) value used as the dexterity ability statistic for the selected character.
+   - `constitution` - An int(3) value used as the constitution ability statistic for the selected character.
+   - `intelligence` - An int(3) value used as the intelligence ability statistic for the selected character.
+   - `wisdom` - An int(3) value used as the wisdom ability statistic for the selected character.
+   - `charisma` - An int(3) value used as the charisma ability statistic for the selected character.
    
 To create the ability values, navigate to the Character Maker page. Every field, excluding the Skills checkboxes, need to be filled. This is done alongside the Character Sheet values, and must be filled in together to avoid an error. Currently, the abilities_id is assigned alongside the character_id, and increment simultaneously.  
 
@@ -106,9 +106,9 @@ To delete the abilities fields, navigate to the Character Sheet page. Deleting t
 ### Skills
 
 In the database, this table is called 'skills'. It contains the following fields:
-   - skills_id - A bigint(20), auto-incrementing field serving as the primary key.
-   - skill_name - A varchar(35) value used to specify the name of the skill.
-   - stat_modifier - varchar(12) value used to specify which ability the roll is modified by.
+   - `skills_id` - A bigint(20), auto-incrementing field serving as the primary key.
+   - `skill_name` - A varchar(35) value used to specify the name of the skill.
+   - `stat_modifier` - varchar(12) value used to specify which ability the roll is modified by.
 
 The skill values are premade and cannot be made by the user without accessing the code. This may be reconsidered at a later date.
 
@@ -121,12 +121,12 @@ The skills values cannot be deleted at this time.
 In the database, to link the Skills table and the Abilities table to the Character Sheet, intermediate tables exists to hold their respective keys to allow for ManyToMany connections. 
 
 The 'skills_character_sheet' contains the following fields:
-   - skills_id - A bigint(20) foreign key referring to the skills_id of the skills table.
-   - character_id - A bigint(20) foreign key referring to the character_id of the character_sheets table.
+   - `skills_id` - A bigint(20) foreign key referring to the skills_id of the skills table.
+   - `character_id` - A bigint(20) foreign key referring to the character_id of the character_sheets table.
 
 The 'abilities_character_sheet' contains the following fields:
-   - abilities_id - A bigint(20) foreign key referring to the abilities_id of the abilities table.
-   - character_id - A bigint(20) foreign key referring to the character_id of the character_sheets table.
+   - `abilities_id` - A bigint(20) foreign key referring to the abilities_id of the abilities table.
+   - `character_id` - A bigint(20) foreign key referring to the character_id of the character_sheets table.
 
 Both these table work the same way, by taking a Character Sheet row by its id and associating it with multiple rows belonging to the Skills and Abilities table. This is mainly for the benefit of skills, as characters will likely possess numerous skills throughout their campaign.
 
