@@ -36,6 +36,10 @@ To develop using this project, you will need:
 
 It is also recommended you use [Visual Studios Code](https://code.visualstudio.com/) for your HTML, CSS and JavaScript as most Java-centric IDEs like [IntelliJ IDE](https://www.jetbrains.com/idea/) show false-errors with other languages, though ignoring these issues is viable.
 
+A [UML Diagram](https://github.com/Christian-QA/redfern-dnd-website/blob/master/documentation/Mesa%20UML.png) detailing the relationship between the back-end, database and front-end can be seen below or found in the repository's documentation if below is too blurry.
+
+![alt text](https://github.com/Christian-QA/redfern-dnd-website/blob/master/documentation/Mesa%20UML.png)
+
 If you use this project for your own development, you will need to follow the instructions above in order to use your own database.
 
 
