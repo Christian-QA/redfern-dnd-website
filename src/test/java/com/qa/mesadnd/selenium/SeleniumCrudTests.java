@@ -16,7 +16,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.io.IOException;
 
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.*;
@@ -27,7 +26,6 @@ public class SeleniumCrudTests {
     WebDriver driver;
     ExtentReports report;
     ExtentTest test;
-    MesaDND mesaDND;
 
     @BeforeTest
     public void startReport(){
@@ -47,7 +45,7 @@ public class SeleniumCrudTests {
     }
 
     @Test
-    public void testACharacterAbilityCreateRead() throws InterruptedException, IOException{
+    public void testACharacterAbilityCreateRead() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
@@ -198,7 +196,6 @@ public class SeleniumCrudTests {
             attempts++;
         }
         sleep(2000);
-
     }
 
     @Test
