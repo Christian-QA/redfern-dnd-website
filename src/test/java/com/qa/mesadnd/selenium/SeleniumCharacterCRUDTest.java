@@ -1,9 +1,12 @@
 package com.qa.mesadnd.selenium;
 
+
+import com.qa.mesadnd.MesaDND;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
+import org.junit.Ignore;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -12,15 +15,15 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 
-import static java.lang.Thread.*;
+import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
 
 public class SeleniumCharacterCRUDTest {
 
     WebDriver driver;
     ExtentReports report;
     ExtentTest test;
+    MesaDND mesaDND;
 
     @BeforeTest
     public void startReport(){
@@ -67,7 +70,4 @@ public class SeleniumCharacterCRUDTest {
         report.flush();
         report.close();
     }
-
-
-
 }
