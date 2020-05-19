@@ -110,6 +110,47 @@
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>2.53.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-support</artifactId>
+      <version>2.53.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.11</version>
+      <scope>test</scope>
+    </dependency>
+
+<!--    Below causes MongoDB to activate for some reason. Works for now, but need to look into it -->
+    <dependency>
+      <groupId>com.relevantcodes</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>2.41.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.15</version>
+    </dependency>
+
   </dependencies>
 
   <repositories>
@@ -118,6 +159,8 @@
       <name>Spring Milestones Repository</name>
       <url>http://repo.spring.io/milestone</url>
     </repository>
+
+
   </repositories>
 
   <build>
@@ -192,15 +235,15 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <archiveClasses>true</archiveClasses>
-          <webResources>
-            <!-- in order to interpolate version from pom into appengine-web.xml -->
-            <resource>
-              <directory>${basedir}/src/main/webapp/WEB-INF</directory>
-              <filtering>true</filtering>
-              <targetPath>WEB-INF</targetPath>
-            </resource>
-          </webResources>
+<!--          <archiveClasses>true</archiveClasses>-->
+<!--          <webResources>-->
+<!--            &lt;!&ndash; in order to interpolate version from pom into appengine-web.xml &ndash;&gt;-->
+<!--            <resource>-->
+<!--              <directory>${basedir}/src/main/webapp/WEB-INF</directory>-->
+<!--              <filtering>true</filtering>-->
+<!--              <targetPath>WEB-INF</targetPath>-->
+<!--            </resource>-->
+<!--          </webResources>-->
         </configuration>
       </plugin>
       <plugin>
