@@ -252,8 +252,6 @@ public class SeleniumCrudTests {
 
     }
 
-
-
     @AfterMethod
     public void getResult(ITestResult result){
         driver.close();
