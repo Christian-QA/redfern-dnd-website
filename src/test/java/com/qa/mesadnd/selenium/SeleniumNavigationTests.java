@@ -43,7 +43,7 @@ public class SeleniumNavigationTests {
     }
 
     @Test
-    public void testMesaHomeTitle() throws InterruptedException, IOException{
+    public void testMesaHomeTitle() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
@@ -55,28 +55,81 @@ public class SeleniumNavigationTests {
     }
 
     @Test
-    public void testCharacterSheetTitle() throws InterruptedException, IOException{
-        test = report.startTest("Open to Mesa Home Page");
+    public void testCharacterSheetTitle() throws InterruptedException {
+        test = report.startTest("Open to Character Sheet Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
         driver.get("http://localhost:8181/html/character.html");
-        test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
+        test.log(LogStatus.INFO, "Navigating to the Character Sheet Page");
         assertEquals(driver.getTitle(), "Character Sheet");
         sleep(2000);
         test.log(LogStatus.PASS, "The page name is exactly the same");
     }
 
     @Test
-    public void testCharacterMakerTitle() throws InterruptedException, IOException{
-        test = report.startTest("Open to Mesa Home Page");
+    public void testCharacterMakerTitle() throws InterruptedException {
+        test = report.startTest("Open to Character Maker Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
         driver.get("http://localhost:8181/html/maker.html");
-        test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
+        test.log(LogStatus.INFO, "Navigating to the Character Maker Page");
         assertEquals(driver.getTitle(), "Character Maker");
         sleep(2000);
         test.log(LogStatus.PASS, "The page name is exactly the same");
     }
+
+    @Test
+    public void testHomeSheetMaker() throws InterruptedException {
+        test = report.startTest("Open to Mesa Home Page");
+        driver.manage().window().maximize();
+        test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
+        driver.get("http://localhost:8181/");
+        test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
+        sleep(2000);
+        WebElement navSheet = driver.findElement(By.id("navSheet"));
+        navSheet.click();
+        assertEquals(driver.getTitle(), "Character Sheet");
+        sleep(2000);
+        test.log(LogStatus.PASS, "The page name is exactly the same, Character Sheet");
+        WebElement navMaker = driver.findElement(By.id("navMaker"));
+        navMaker.click();
+        assertEquals(driver.getTitle(), "Character Maker");
+        sleep(2000);
+        test.log(LogStatus.PASS, "The page name is exactly the same, Character Maker");
+        WebElement navHome = driver.findElement(By.id("navHome"));
+        navHome.click();
+        assertEquals(driver.getTitle(), "Mesa Home Page");
+        sleep(2000);
+        test.log(LogStatus.PASS, "Definitely the Mesa Home Page. " +
+                " pages can navigated using the buttons in this order.");
+    }
+
+    @Test
+    public void testMakerSheetHome() throws InterruptedException {
+        test = report.startTest("Open to Mesa Home Page");
+        driver.manage().window().maximize();
+        test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
+        driver.get("http://localhost:8181/");
+        test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
+        sleep(2000);
+        WebElement navMaker = driver.findElement(By.id("navMaker"));
+        navMaker.click();
+        assertEquals(driver.getTitle(), "Character Maker");
+        sleep(2000);
+        test.log(LogStatus.PASS, "The page name is exactly the same, Character Maker");
+        WebElement navSheet = driver.findElement(By.id("navSheet"));
+        navSheet.click();
+        assertEquals(driver.getTitle(), "Character Sheet");
+        sleep(2000);
+        test.log(LogStatus.PASS, "The page name is exactly the same, Character Sheet");
+        WebElement navHome = driver.findElement(By.id("navHome"));
+        navHome.click();
+        assertEquals(driver.getTitle(), "Mesa Home Page");
+        sleep(2000);
+        test.log(LogStatus.PASS, "Definitely the Mesa Home Page. " +
+                " pages can navigated using the buttons in this order.");
+    }
+
 
 
     @AfterMethod
