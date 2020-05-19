@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.mesadnd.MesaDNDTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.307 s - in com.qa.mesadnd.MesaDNDTest
