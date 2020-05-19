@@ -1,6 +1,8 @@
 Test Coverage: Junit - 88.9%, SonarQube 80.2%
 # MesaDND - Dungeons and Dragons Homebrew Application - QA Individual Project 
 
+![alt text](https://github.com/Christian-QA/redfern-dnd-website/blob/master/src/main/resources/static/images/mesafinalex1.png)
+
 MesaDND is a spring web application made to accompany a Dungeons and Dragons scenario I made in 2017. It holds character sheets for a player to use, which can be created, read, updated and destroyed at the behest of the user. The character sheets are stored in a [MySQL](https://www.mysql.com/) 
 database on [GCP](https://console.cloud.google.com/). The application is built with Spring Boot [Spring Boot](https://spring.io/guides/gs/spring-boot/), a [Java](https://www.java.com/en/)-based framework commonly used to create stand-alone applications. The back-end was developed in [Java](https://www.java.com/en/) 
 using the [IntelliJ IDEA](https://www.jetbrains.com/idea/) while the front-end was developed in [HTML, CSS](https://html.com/) and [JavaScript](https://www.javascript.com/) using the [Visual Studios Code](https://code.visualstudio.com/).  
@@ -54,18 +56,9 @@ Once the server is running, you can access the web application as a user.
 Upon accessing the application on your browser, you will be taken to the Mesa Home Page (index.html) displays basic information about the application relating to the scenario it's based off. 
 From here you can either access the Character Sheet (character.html) or the Character Maker (maker.html).
 
-
-The Character Sheet page contains all of the details regarding the character's in the database, containing one character's information at a time. The information displayed in the current build are:
-   - The character's name
-   - The character's ability statistics
-   - The character's stills
-
-From this page, the user can change characters, update characters (the name and abilities are editable by click) and delete the currently selected character. 
-To switch between characters, click on the drop-down menu below the name and select the character you wish to view.
-
-The Character Maker page contains a form which allows the user to create a character and add it to the database. The things which can be attributed to the character are identical to what appears on the character sheet.
-
 ## Database
+
+![alt text](https://github.com/Christian-QA/redfern-dnd-website/blob/master/documentation/ERD%20DND%20Website.png)
 
 The application uses a database called mesadnd, hosted on [GCP](https://console.cloud.google.com/). As with the App Engine, its accessibility to subject to change while the project is in pre-beta stages, so it's recommended that any user or developer make their own at this stage.
 Their are six tables contained in the database, and any missing will be recreated by the application upon its next run.
@@ -132,91 +125,6 @@ The 'skills_character_sheet' contains the following fields:
 The 'abilities_character_sheet' contains the following fields:
    - `abilities_id` - A bigint(20) foreign key referring to the abilities_id of the abilities table.
    - `character_id` - A bigint(20) foreign key referring to the character_id of the character_sheets table.
-
-Both these table work the same way, by taking a Character Sheet row by its id and associating it with multiple rows belonging to the Skills and Abilities table. This is mainly for the benefit of skills, as characters will likely possess numerous skills throughout their campaign.
-
-### Hibernate Sequence
-
-=======
-
-The Character Sheet page contains all of the details regarding the character's in the database, containing one character's information at a time. The information displayed in the current build are:
-   - The character's name
-   - The character's ability statistics
-   - The character's stills
-
-From this page, the user can change characters, update characters (the name and abilities are editable by click) and delete the currently selected character. 
-To switch between characters, click on the drop-down menu below the name and select the character you wish to view.
-
-The Character Maker page contains a form which allows the user to create a character and add it to the database. The things which can be attributed to the character are identical to what appears on the character sheet.
-
-
-## Database
-
-The application uses a database called mesadnd, hosted on [GCP](https://console.cloud.google.com/). As with the App Engine, its accessibility to subject to change while the project is in pre-beta stages, so it's recommended that any user or developer make their own at this stage.
-Their are six tables contained in the database, and any missing will be recreated by the application upon its next run.
-
-### Character Sheet
-
-In the database, this table is called 'character_sheet'. It contains the following fields:
-   - character_id - A bigint(20), auto-incrementing field serving as the primary key.
-   - name - A varchar(120) acting as the personalised name of the selected character. This is assigned on the Character Maker page and read on the Character Sheet.
-   - max_hp - An int(4) field storying the last inputted maximum value for hp. This fields currently defaults to '1' upon character creation.
-   - current_hp - An int(4) field storing the last inputted hp value. This fields currently defaults to '1' upon character creation.
-   - exp - An int(11) field storing the total experience points of the selected character. This field currently defaults to '0' upon character creation.
-
-To create the character values, navigate to the Character Maker page. Every field, excluding the Skills checkboxes, need to be filled.
-
-To read the character fields, navigate to the Character Sheet page. The values are all displayed on the Character Sheet on the top-most section of the page's article, below the navbar. This works by utilising an [axios](https://github.com/axios/axios) GET API request and fetching the values from the database by the character_id. At this stage, the character_id defaults to the first entry in the database.
-
-To update the character fields, navigate to the Character Sheet page. Click on the value you wish to change and edit the text. Once you've changed to the new value, click 'confirm changes'. This will update every entry on the page to their new value. This works by utilising an [axios](https://github.com/axios/axios) PUT API request and sending replacement values to the database by the currently selected character_id.
-
-To delete a character, navigate to the Character Sheet page. Click the 'delete character' button next to 'confirm changes'. This will delete the currently selected character. This works by utilising an [axios](https://github.com/axios/axios) DELETE API request, which deletes every entry associated with the current character_id.
-(WARNING: This will send the delete request the moment it is clicked. There are plans to move this option to its own page and give a warning message to reduce the chance of users accidently clicking it).
-
-### Abilities
-
-In the database, this table is called 'abilities'. It contains the following fields:
-   - abilities_id - A bigint(20), auto-incrementing field serving as the primary key.
-   - strength - An int(3) value used as the strength ability statistic for the selected character.
-   - dexterity - An int(3) value used as the dexterity ability statistic for the selected character.
-   - constitution - An int(3) value used as the constitution ability statistic for the selected character.
-   - intelligence - An int(3) value used as the intelligence ability statistic for the selected character.
-   - wisdom - An int(3) value used as the wisdom ability statistic for the selected character.
-   - charisma - An int(3) value used as the charisma ability statistic for the selected character.
-   
-To create the ability values, navigate to the Character Maker page. Every field, excluding the Skills checkboxes, need to be filled. This is done alongside the Character Sheet values, and must be filled in together to avoid an error. Currently, the abilities_id is assigned alongside the character_id, and increment simultaneously.  
-
-To read the abilities fields, navigate to the Character Sheet page. The values are all displayed atop images below the CRUD buttons. This works by utilising an [axios](https://github.com/axios/axios) GET API request and fetching the values from the database by the character_id (not the abilities_id as abilities can only be made alongside the character, meaning there's only one set of abilities embedded into characters at any given time). 
-At this stage, the character_id defaults to the first entry in the database.
-
-To update the abilities fields, navigate to the Character Sheet page. Updating the character_sheet will update the abilities as well as the [axios](https://github.com/axios/axios) PUT API request is executed simultaneous to the character_sheets request. The update uses the currently selected character_id, which is synched to the abilities_id.
-
-To delete the abilities fields, navigate to the Character Sheet page. Deleting the character sheet will delete the abilities entries as well because the abilities table from the front-end's perspective is embedded into the character_sheet. 
-
-### Skills
-
-In the database, this table is called 'skills'. It contains the following fields:
-   - skills_id - A bigint(20), auto-incrementing field serving as the primary key.
-   - skill_name - A varchar(35) value used to specify the name of the skill.
-   - stat_modifier - varchar(12) value used to specify which ability the roll is modified by.
-
-The skill values are premade and cannot be made by the user without accessing the code. This may be reconsidered at a later date.
-
-To read the skills fields, navigate to the Character Sheet page. The values are all displayed atop a box below the ability statistic boxes, alongside their ability modifier. This is retrieved by the same GET request which obtains the Character Sheet and Abilities data.
-
-The skills values cannot be deleted at this time. 
-
-### Skills to Character Sheet and Abilities to Character Sheet
-
-In the database, to link the Skills table and the Abilities table to the Character Sheet, intermediate tables exists to hold their respective keys to allow for ManyToMany connections. 
-
-The 'skills_character_sheet' contains the following fields:
-   - skills_id - A bigint(20) foreign key referring to the skills_id of the skills table.
-   - character_id - A bigint(20) foreign key referring to the character_id of the character_sheets table.
-
-The 'abilities_character_sheet' contains the following fields:
-   - abilities_id - A bigint(20) foreign key referring to the abilities_id of the abilities table.
-   - character_id - A bigint(20) foreign key referring to the character_id of the character_sheets table.
 
 Both these table work the same way, by taking a Character Sheet row by its id and associating it with multiple rows belonging to the Skills and Abilities table. This is mainly for the benefit of skills, as characters will likely possess numerous skills throughout their campaign.
 
