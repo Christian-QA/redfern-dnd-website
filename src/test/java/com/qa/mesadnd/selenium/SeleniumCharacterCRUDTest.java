@@ -1,4 +1,4 @@
-package com.qa.mesadnd;
+package com.qa.mesadnd.selenium;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -21,11 +21,6 @@ public class SeleniumCharacterCRUDTest {
     WebDriver driver;
     ExtentReports report;
     ExtentTest test;
-
-    @BeforeSuite
-    public static void initializeDriver(){
-        ChromeDriverManager.getInstance().setup();
-    }
 
     @BeforeTest
     public void startReport(){
