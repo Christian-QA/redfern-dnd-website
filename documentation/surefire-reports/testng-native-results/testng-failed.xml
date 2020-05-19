@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="com.qa.mesadnd.selenium.SeleniumCrudTests">
+        <methods>
+          <include name="testCCharacterAbilityDelete"/>
+          <include name="getResult"/>
+          <include name="endReport"/>
+          <include name="testACharacterAbilityCreateRead"/>
+          <include name="setUp"/>
+          <include name="testBCharacterAbilityUpdate"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.qa.mesadnd.selenium.SeleniumCrudTests -->
+      <class name="com.qa.mesadnd.selenium.SeleniumNavigationTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="testCharacterSheetTitle"/>
+          <include name="testMakerSheetHome"/>
+          <include name="getResult"/>
+          <include name="testCharacterMakerTitle"/>
+          <include name="testHomeSheetMaker"/>
+          <include name="testMesaHomeTitle"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- com.qa.mesadnd.selenium.SeleniumNavigationTests -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

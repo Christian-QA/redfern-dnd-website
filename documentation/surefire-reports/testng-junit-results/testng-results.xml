@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="164" passed="164" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-19T21:20:57Z" name="Surefire suite" finished-at="2020-05-19T21:21:27Z" duration-ms="29955">
+    <groups>
+    </groups>
+    <test started-at="2020-05-19T21:20:57Z" name="Surefire test" finished-at="2020-05-19T21:21:27Z" duration-ms="29955">
+      <class name="com.qa.mesadnd.service.SkillsServiceIntegrationTest">
+        <test-method signature="findSkillsByIdTest()" started-at="2020-05-19T22:21:25Z" name="findSkillsByIdTest" finished-at="2020-05-19T22:21:27Z" duration-ms="1861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findSkillsByIdTest -->
+        <test-method signature="readSkillsTest()" started-at="2020-05-19T22:21:25Z" name="readSkillsTest" finished-at="2020-05-19T22:21:26Z" duration-ms="869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readSkillsTest -->
+        <test-method signature="deleteSkillsTest()" started-at="2020-05-19T22:21:25Z" name="deleteSkillsTest" finished-at="2020-05-19T22:21:27Z" duration-ms="1614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsTest -->
+        <test-method signature="createSkillsTest()" started-at="2020-05-19T22:21:25Z" name="createSkillsTest" finished-at="2020-05-19T22:21:26Z" duration-ms="1109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsTest -->
+      </class> <!-- com.qa.mesadnd.service.SkillsServiceIntegrationTest -->
+      <class name="com.qa.mesadnd.dto.CharacterDTOTest">
+        <test-method signature="createCharacterDTOWithId()" started-at="2020-05-19T22:21:14Z" name="createCharacterDTOWithId" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCharacterDTOWithId -->
+        <test-method signature="characterDTOMaxHpNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterDTOMaxHpNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOMaxHpNotEqual -->
+        <test-method signature="characterDTOIDDifferent()" started-at="2020-05-19T22:21:14Z" name="characterDTOIDDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOIDDifferent -->
+        <test-method signature="characterDTOMaxHpNullButOtherMaxHpNotNull()" started-at="2020-05-19T22:21:14Z" name="characterDTOMaxHpNullButOtherMaxHpNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOMaxHpNullButOtherMaxHpNotNull -->
+        <test-method signature="characterDTONamesNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterDTONamesNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTONamesNotEqual -->
+        <test-method signature="settersTest()" started-at="2020-05-19T22:21:14Z" name="settersTest" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-19T22:21:14Z" name="hashCodeTestWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="constructorWithoutId()" started-at="2020-05-19T22:21:14Z" name="constructorWithoutId" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method signature="characterDTOCurrentHpNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterDTOCurrentHpNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOCurrentHpNotEqual -->
+        <test-method signature="characterDTOExpNullButOtherExpNotNull()" started-at="2020-05-19T22:21:14Z" name="characterDTOExpNullButOtherExpNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOExpNullButOtherExpNotNull -->
+        <test-method signature="characterDTOCurrentHpNullButOtherCurrentHpNotNull()" started-at="2020-05-19T22:21:14Z" name="characterDTOCurrentHpNullButOtherCurrentHpNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOCurrentHpNullButOtherCurrentHpNotNull -->
+        <test-method signature="characterDTOExpNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterDTOExpNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTOExpNotEqual -->
+        <test-method signature="nullId()" started-at="2020-05-19T22:21:14Z" name="nullId" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="checkEquality()" started-at="2020-05-19T22:21:14Z" name="checkEquality" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="characterDTONameNullButOtherNameNotNull()" started-at="2020-05-19T22:21:14Z" name="characterDTONameNullButOtherNameNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterDTONameNullButOtherNameNotNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-19T22:21:14Z" name="otherIdDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="equalsWithDifferentObject()" started-at="2020-05-19T22:21:14Z" name="equalsWithDifferentObject" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method signature="equalsWithNull()" started-at="2020-05-19T22:21:14Z" name="equalsWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-19T22:21:14Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+      </class> <!-- com.qa.mesadnd.dto.CharacterDTOTest -->
+      <class name="com.qa.mesadnd.domain.SkillsUnitTest">
+        <test-method signature="skillsNamesNotEqual()" started-at="2020-05-19T22:21:14Z" name="skillsNamesNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillsNamesNotEqual -->
+        <test-method signature="skillModifierNullButOtherSkillModifierNotNull()" started-at="2020-05-19T22:21:14Z" name="skillModifierNullButOtherSkillModifierNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillModifierNullButOtherSkillModifierNotNull -->
+        <test-method signature="checkEquality()" started-at="2020-05-19T22:21:14Z" name="checkEquality" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="skillModifierNotEqual()" started-at="2020-05-19T22:21:14Z" name="skillModifierNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillModifierNotEqual -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-19T22:21:14Z" name="hashCodeTestWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-19T22:21:14Z" name="otherIdDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="createSkillsSheetWithId()" started-at="2020-05-19T22:21:14Z" name="createSkillsSheetWithId" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsSheetWithId -->
+        <test-method signature="equalsWithNull()" started-at="2020-05-19T22:21:14Z" name="equalsWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method signature="equalsWithDifferentObject()" started-at="2020-05-19T22:21:14Z" name="equalsWithDifferentObject" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-19T22:21:14Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="characterSheetIDDifferent()" started-at="2020-05-19T22:21:14Z" name="characterSheetIDDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetIDDifferent -->
+        <test-method signature="settersTest()" started-at="2020-05-19T22:21:14Z" name="settersTest" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method signature="nullId()" started-at="2020-05-19T22:21:14Z" name="nullId" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="skillsNameNullButOtherNameNotNull()" started-at="2020-05-19T22:21:14Z" name="skillsNameNullButOtherNameNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillsNameNullButOtherNameNotNull -->
+      </class> <!-- com.qa.mesadnd.domain.SkillsUnitTest -->
+      <class name="com.qa.mesadnd.service.AbilitiesServiceUnitTest">
+        <test-method signature="getAllAbilitiesTest()" started-at="2020-05-19T22:21:23Z" name="getAllAbilitiesTest" finished-at="2020-05-19T22:21:23Z" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllAbilitiesTest -->
+        <test-method signature="createAbilitiesTest()" started-at="2020-05-19T22:21:23Z" name="createAbilitiesTest" finished-at="2020-05-19T22:21:23Z" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAbilitiesTest -->
+        <test-method signature="deleteAbilitiesByExistingId()" started-at="2020-05-19T22:21:23Z" name="deleteAbilitiesByExistingId" finished-at="2020-05-19T22:21:23Z" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAbilitiesByExistingId -->
+        <test-method signature="findAbilitiesByIdTest()" started-at="2020-05-19T22:21:23Z" name="findAbilitiesByIdTest" finished-at="2020-05-19T22:21:23Z" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAbilitiesByIdTest -->
+        <test-method signature="deleteAbilitiesByNonExistingId()" started-at="2020-05-19T22:21:23Z" name="deleteAbilitiesByNonExistingId" finished-at="2020-05-19T22:21:23Z" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAbilitiesByNonExistingId -->
+      </class> <!-- com.qa.mesadnd.service.AbilitiesServiceUnitTest -->
+      <class name="com.qa.mesadnd.service.AbilitiesServiceIntegrationTest">
+        <test-method signature="readAbilitiesTest()" started-at="2020-05-19T22:21:18Z" name="readAbilitiesTest" finished-at="2020-05-19T22:21:23Z" duration-ms="4537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAbilitiesTest -->
+        <test-method signature="findAbilitiesByIdTest()" started-at="2020-05-19T22:21:18Z" name="findAbilitiesByIdTest" finished-at="2020-05-19T22:21:22Z" duration-ms="4241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAbilitiesByIdTest -->
+        <test-method signature="deleteAbilitiesTest()" started-at="2020-05-19T22:21:18Z" name="deleteAbilitiesTest" finished-at="2020-05-19T22:21:22Z" duration-ms="3988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAbilitiesTest -->
+        <test-method signature="createAbilitiesTest()" started-at="2020-05-19T22:21:18Z" name="createAbilitiesTest" finished-at="2020-05-19T22:21:23Z" duration-ms="4784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAbilitiesTest -->
+      </class> <!-- com.qa.mesadnd.service.AbilitiesServiceIntegrationTest -->
+      <class name="com.qa.mesadnd.controller.CharacterSheetControllerUnitTest">
+        <test-method signature="deleteCharacterTestFalse()" started-at="2020-05-19T22:21:12Z" name="deleteCharacterTestFalse" finished-at="2020-05-19T22:21:12Z" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCharacterTestFalse -->
+        <test-method signature="getAllCharacterTest()" started-at="2020-05-19T22:21:12Z" name="getAllCharacterTest" finished-at="2020-05-19T22:21:12Z" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCharacterTest -->
+        <test-method signature="createCharacterTest()" started-at="2020-05-19T22:21:12Z" name="createCharacterTest" finished-at="2020-05-19T22:21:12Z" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCharacterTest -->
+        <test-method signature="getCharacterByIDTest()" started-at="2020-05-19T22:21:12Z" name="getCharacterByIDTest" finished-at="2020-05-19T22:21:12Z" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCharacterByIDTest -->
+      </class> <!-- com.qa.mesadnd.controller.CharacterSheetControllerUnitTest -->
+      <class name="com.qa.mesadnd.service.SkillsServiceUnitTest">
+        <test-method signature="createSkillsTest()" started-at="2020-05-19T22:21:27Z" name="createSkillsTest" finished-at="2020-05-19T22:21:27Z" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsTest -->
+        <test-method signature="deleteSkillsByNonExistingId()" started-at="2020-05-19T22:21:27Z" name="deleteSkillsByNonExistingId" finished-at="2020-05-19T22:21:27Z" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsByNonExistingId -->
+        <test-method signature="deleteSkillsByExistingId()" started-at="2020-05-19T22:21:27Z" name="deleteSkillsByExistingId" finished-at="2020-05-19T22:21:27Z" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsByExistingId -->
+        <test-method signature="findSkillsByIdTest()" started-at="2020-05-19T22:21:27Z" name="findSkillsByIdTest" finished-at="2020-05-19T22:21:27Z" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findSkillsByIdTest -->
+        <test-method signature="getAllSkillsTest()" started-at="2020-05-19T22:21:27Z" name="getAllSkillsTest" finished-at="2020-05-19T22:21:27Z" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllSkillsTest -->
+      </class> <!-- com.qa.mesadnd.service.SkillsServiceUnitTest -->
+      <class name="com.qa.mesadnd.domain.AbilitiesTest">
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-19T22:21:14Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="nullId()" started-at="2020-05-19T22:21:14Z" name="nullId" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="wisdomNullButOtherWisdomNotNull()" started-at="2020-05-19T22:21:14Z" name="wisdomNullButOtherWisdomNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wisdomNullButOtherWisdomNotNull -->
+        <test-method signature="equalsWithNull()" started-at="2020-05-19T22:21:14Z" name="equalsWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method signature="dexterityNullButOtherDexterityNotNull()" started-at="2020-05-19T22:21:14Z" name="dexterityNullButOtherDexterityNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dexterityNullButOtherDexterityNotNull -->
+        <test-method signature="abilitiesIDDifferent()" started-at="2020-05-19T22:21:14Z" name="abilitiesIDDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abilitiesIDDifferent -->
+        <test-method signature="dexterityNotEqual()" started-at="2020-05-19T22:21:14Z" name="dexterityNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dexterityNotEqual -->
+        <test-method signature="checkEquality()" started-at="2020-05-19T22:21:14Z" name="checkEquality" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="wisdomNotEqual()" started-at="2020-05-19T22:21:14Z" name="wisdomNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wisdomNotEqual -->
+        <test-method signature="settersTest()" started-at="2020-05-19T22:21:14Z" name="settersTest" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method signature="strengthNullButOtherStrengthNotNull()" started-at="2020-05-19T22:21:14Z" name="strengthNullButOtherStrengthNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- strengthNullButOtherStrengthNotNull -->
+        <test-method signature="strengthNotEqual()" started-at="2020-05-19T22:21:14Z" name="strengthNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- strengthNotEqual -->
+        <test-method signature="constitutionNullButOtherConstitutionNotNull()" started-at="2020-05-19T22:21:14Z" name="constitutionNullButOtherConstitutionNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constitutionNullButOtherConstitutionNotNull -->
+        <test-method signature="constitutionNotEqual()" started-at="2020-05-19T22:21:14Z" name="constitutionNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constitutionNotEqual -->
+        <test-method signature="charismaNotEqual()" started-at="2020-05-19T22:21:14Z" name="charismaNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- charismaNotEqual -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-19T22:21:14Z" name="otherIdDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="equalsWithDifferentObject()" started-at="2020-05-19T22:21:14Z" name="equalsWithDifferentObject" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method signature="intelligenceNullButOtherIntelligenceNotNull()" started-at="2020-05-19T22:21:14Z" name="intelligenceNullButOtherIntelligenceNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intelligenceNullButOtherIntelligenceNotNull -->
+        <test-method signature="createSkillsSheetWithId()" started-at="2020-05-19T22:21:14Z" name="createSkillsSheetWithId" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsSheetWithId -->
+        <test-method signature="intelligenceNotEqual()" started-at="2020-05-19T22:21:14Z" name="intelligenceNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intelligenceNotEqual -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-19T22:21:14Z" name="hashCodeTestWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="charismaNullButOtherCharismaNotNull()" started-at="2020-05-19T22:21:14Z" name="charismaNullButOtherCharismaNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- charismaNullButOtherCharismaNotNull -->
+      </class> <!-- com.qa.mesadnd.domain.AbilitiesTest -->
+      <class name="com.qa.mesadnd.dto.AbilitiesDTOTest">
+        <test-method signature="dexterityNullButOtherDexterityNotNull()" started-at="2020-05-19T22:21:14Z" name="dexterityNullButOtherDexterityNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dexterityNullButOtherDexterityNotNull -->
+        <test-method signature="settersTest()" started-at="2020-05-19T22:21:14Z" name="settersTest" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-19T22:21:14Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="equalsWithNull()" started-at="2020-05-19T22:21:14Z" name="equalsWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method signature="dexterityNotEqual()" started-at="2020-05-19T22:21:14Z" name="dexterityNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dexterityNotEqual -->
+        <test-method signature="wisdomNullButOtherWisdomNotNull()" started-at="2020-05-19T22:21:14Z" name="wisdomNullButOtherWisdomNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wisdomNullButOtherWisdomNotNull -->
+        <test-method signature="equalsWithDifferentObject()" started-at="2020-05-19T22:21:14Z" name="equalsWithDifferentObject" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method signature="nullId()" started-at="2020-05-19T22:21:14Z" name="nullId" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="charismaNotEqual()" started-at="2020-05-19T22:21:14Z" name="charismaNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- charismaNotEqual -->
+        <test-method signature="abilitiesDTOIDDifferent()" started-at="2020-05-19T22:21:14Z" name="abilitiesDTOIDDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abilitiesDTOIDDifferent -->
+        <test-method signature="checkEquality()" started-at="2020-05-19T22:21:14Z" name="checkEquality" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="constitutionNullButOtherConstitutionNotNull()" started-at="2020-05-19T22:21:14Z" name="constitutionNullButOtherConstitutionNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constitutionNullButOtherConstitutionNotNull -->
+        <test-method signature="wisdomNotEqual()" started-at="2020-05-19T22:21:14Z" name="wisdomNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wisdomNotEqual -->
+        <test-method signature="charismaNullButOtherCharismaNotNull()" started-at="2020-05-19T22:21:14Z" name="charismaNullButOtherCharismaNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- charismaNullButOtherCharismaNotNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-19T22:21:14Z" name="otherIdDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-19T22:21:14Z" name="hashCodeTestWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="intelligenceNullButOtherIntelligenceNotNull()" started-at="2020-05-19T22:21:14Z" name="intelligenceNullButOtherIntelligenceNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intelligenceNullButOtherIntelligenceNotNull -->
+        <test-method signature="strengthNotEqual()" started-at="2020-05-19T22:21:14Z" name="strengthNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- strengthNotEqual -->
+        <test-method signature="intelligenceNotEqual()" started-at="2020-05-19T22:21:14Z" name="intelligenceNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intelligenceNotEqual -->
+        <test-method signature="createAbilitiesDTOWithId()" started-at="2020-05-19T22:21:14Z" name="createAbilitiesDTOWithId" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAbilitiesDTOWithId -->
+        <test-method signature="strengthNullButOtherStrengthNotNull()" started-at="2020-05-19T22:21:14Z" name="strengthNullButOtherStrengthNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- strengthNullButOtherStrengthNotNull -->
+        <test-method signature="constitutionNotEqual()" started-at="2020-05-19T22:21:14Z" name="constitutionNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constitutionNotEqual -->
+      </class> <!-- com.qa.mesadnd.dto.AbilitiesDTOTest -->
+      <class name="com.qa.mesadnd.controller.SkillsControllerIntegrationTest">
+        <test-method signature="deleteSkillsTest() throws java.lang.Exception" started-at="2020-05-19T22:21:12Z" name="deleteSkillsTest" finished-at="2020-05-19T22:21:14Z" duration-ms="1713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsTest -->
+        <test-method signature="createSkillsTest() throws java.lang.Exception" started-at="2020-05-19T22:21:12Z" name="createSkillsTest" finished-at="2020-05-19T22:21:13Z" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsTest -->
+        <test-method signature="getAllSkillsTest() throws java.lang.Exception" started-at="2020-05-19T22:21:12Z" name="getAllSkillsTest" finished-at="2020-05-19T22:21:14Z" duration-ms="1181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllSkillsTest -->
+        <test-method signature="getSkillsByID() throws java.lang.Exception" started-at="2020-05-19T22:21:12Z" name="getSkillsByID" finished-at="2020-05-19T22:21:14Z" duration-ms="1978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSkillsByID -->
+      </class> <!-- com.qa.mesadnd.controller.SkillsControllerIntegrationTest -->
+      <class name="com.qa.mesadnd.service.CharacterServiceUnitTest">
+        <test-method signature="deleteCharacterByNonExistingId()" started-at="2020-05-19T22:21:25Z" name="deleteCharacterByNonExistingId" finished-at="2020-05-19T22:21:25Z" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCharacterByNonExistingId -->
+        <test-method signature="deleteCharacterByExistingId()" started-at="2020-05-19T22:21:25Z" name="deleteCharacterByExistingId" finished-at="2020-05-19T22:21:25Z" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCharacterByExistingId -->
+        <test-method signature="findCharacterByIdTest()" started-at="2020-05-19T22:21:25Z" name="findCharacterByIdTest" finished-at="2020-05-19T22:21:25Z" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findCharacterByIdTest -->
+        <test-method signature="createCharacterTest()" started-at="2020-05-19T22:21:25Z" name="createCharacterTest" finished-at="2020-05-19T22:21:25Z" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCharacterTest -->
+        <test-method signature="getAllCharacterTest()" started-at="2020-05-19T22:21:25Z" name="getAllCharacterTest" finished-at="2020-05-19T22:21:25Z" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCharacterTest -->
+      </class> <!-- com.qa.mesadnd.service.CharacterServiceUnitTest -->
+      <class name="com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest">
+        <test-method signature="deleteCharacterTest() throws java.lang.Exception" started-at="2020-05-19T22:21:10Z" name="deleteCharacterTest" finished-at="2020-05-19T22:21:11Z" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCharacterTest -->
+        <test-method signature="createCharacterTest() throws java.lang.Exception" started-at="2020-05-19T22:21:10Z" name="createCharacterTest" finished-at="2020-05-19T22:21:11Z" duration-ms="1073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCharacterTest -->
+        <test-method signature="getCharacterByID() throws java.lang.Exception" started-at="2020-05-19T22:21:10Z" name="getCharacterByID" finished-at="2020-05-19T22:21:12Z" duration-ms="1978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCharacterByID -->
+        <test-method signature="getAllCharacterTest() throws java.lang.Exception" started-at="2020-05-19T22:21:10Z" name="getAllCharacterTest" finished-at="2020-05-19T22:21:12Z" duration-ms="1528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCharacterTest -->
+      </class> <!-- com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest -->
+      <class name="com.qa.mesadnd.domain.CharacterSheetTest">
+        <test-method signature="characterSheetExpNullButOtherExpNotNull()" started-at="2020-05-19T22:21:14Z" name="characterSheetExpNullButOtherExpNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetExpNullButOtherExpNotNull -->
+        <test-method signature="characterSheetNameNullButOtherNameNotNull()" started-at="2020-05-19T22:21:14Z" name="characterSheetNameNullButOtherNameNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetNameNullButOtherNameNotNull -->
+        <test-method signature="nullId()" started-at="2020-05-19T22:21:14Z" name="nullId" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="equalsWithNull()" started-at="2020-05-19T22:21:14Z" name="equalsWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method signature="checkEquality()" started-at="2020-05-19T22:21:14Z" name="checkEquality" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="characterSheetExpNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterSheetExpNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetExpNotEqual -->
+        <test-method signature="characterSheetNamesNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterSheetNamesNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetNamesNotEqual -->
+        <test-method signature="constructorWithoutId()" started-at="2020-05-19T22:21:14Z" name="constructorWithoutId" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-19T22:21:14Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="characterSheetMaxHpNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterSheetMaxHpNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetMaxHpNotEqual -->
+        <test-method signature="settersTest()" started-at="2020-05-19T22:21:14Z" name="settersTest" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method signature="equalsWithDifferentObject()" started-at="2020-05-19T22:21:14Z" name="equalsWithDifferentObject" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method signature="createCharacterSheetWithId()" started-at="2020-05-19T22:21:14Z" name="createCharacterSheetWithId" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCharacterSheetWithId -->
+        <test-method signature="characterSheetIDDifferent()" started-at="2020-05-19T22:21:14Z" name="characterSheetIDDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetIDDifferent -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-19T22:21:14Z" name="hashCodeTestWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="characterSheetMaxHpNullButOtherMaxHpNotNull()" started-at="2020-05-19T22:21:14Z" name="characterSheetMaxHpNullButOtherMaxHpNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetMaxHpNullButOtherMaxHpNotNull -->
+        <test-method signature="characterSheetCurrentHpNullButOtherCurrentHpNotNull()" started-at="2020-05-19T22:21:14Z" name="characterSheetCurrentHpNullButOtherCurrentHpNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetCurrentHpNullButOtherCurrentHpNotNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-19T22:21:14Z" name="otherIdDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="characterSheetCurrentHpNotEqual()" started-at="2020-05-19T22:21:14Z" name="characterSheetCurrentHpNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetCurrentHpNotEqual -->
+      </class> <!-- com.qa.mesadnd.domain.CharacterSheetTest -->
+      <class name="com.qa.mesadnd.service.CharacterServiceIntegrationTest">
+        <test-method signature="readCharacterTest()" started-at="2020-05-19T22:21:23Z" name="readCharacterTest" finished-at="2020-05-19T22:21:24Z" duration-ms="507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readCharacterTest -->
+        <test-method signature="findCharacterByIdTest()" started-at="2020-05-19T22:21:23Z" name="findCharacterByIdTest" finished-at="2020-05-19T22:21:25Z" duration-ms="1974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findCharacterByIdTest -->
+        <test-method signature="deleteSkillsTest()" started-at="2020-05-19T22:21:23Z" name="deleteSkillsTest" finished-at="2020-05-19T22:21:25Z" duration-ms="1522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsTest -->
+        <test-method signature="createCharacterTest()" started-at="2020-05-19T22:21:23Z" name="createCharacterTest" finished-at="2020-05-19T22:21:24Z" duration-ms="908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCharacterTest -->
+      </class> <!-- com.qa.mesadnd.service.CharacterServiceIntegrationTest -->
+      <class name="com.qa.mesadnd.controller.AbilitiesControllerUnitTest">
+        <test-method signature="getAbilitiesByIDTest()" started-at="2020-05-19T22:21:10Z" name="getAbilitiesByIDTest" finished-at="2020-05-19T22:21:10Z" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAbilitiesByIDTest -->
+        <test-method signature="deleteSkillsTestTrue()" started-at="2020-05-19T22:21:10Z" name="deleteSkillsTestTrue" finished-at="2020-05-19T22:21:10Z" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsTestTrue -->
+        <test-method signature="deleteAbilitiesTestFalse()" started-at="2020-05-19T22:21:10Z" name="deleteAbilitiesTestFalse" finished-at="2020-05-19T22:21:10Z" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAbilitiesTestFalse -->
+        <test-method signature="getAllAbilitiesTest()" started-at="2020-05-19T22:21:10Z" name="getAllAbilitiesTest" finished-at="2020-05-19T22:21:10Z" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllAbilitiesTest -->
+        <test-method signature="createAbilitiesTest()" started-at="2020-05-19T22:21:10Z" name="createAbilitiesTest" finished-at="2020-05-19T22:21:10Z" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAbilitiesTest -->
+      </class> <!-- com.qa.mesadnd.controller.AbilitiesControllerUnitTest -->
+      <class name="com.qa.mesadnd.dto.SkillsDTOTest">
+        <test-method signature="skillsNamesNotEqual()" started-at="2020-05-19T22:21:14Z" name="skillsNamesNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillsNamesNotEqual -->
+        <test-method signature="skillModifierNullButOtherSkillModifierNotNull()" started-at="2020-05-19T22:21:14Z" name="skillModifierNullButOtherSkillModifierNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillModifierNullButOtherSkillModifierNotNull -->
+        <test-method signature="skillsNameNullButOtherNameNotNull()" started-at="2020-05-19T22:21:14Z" name="skillsNameNullButOtherNameNotNull" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillsNameNullButOtherNameNotNull -->
+        <test-method signature="skillModifierNotEqual()" started-at="2020-05-19T22:21:14Z" name="skillModifierNotEqual" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillModifierNotEqual -->
+        <test-method signature="settersTest()" started-at="2020-05-19T22:21:14Z" name="settersTest" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method signature="checkEquality()" started-at="2020-05-19T22:21:14Z" name="checkEquality" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="nullId()" started-at="2020-05-19T22:21:14Z" name="nullId" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="characterSheetIDDifferent()" started-at="2020-05-19T22:21:14Z" name="characterSheetIDDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- characterSheetIDDifferent -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-19T22:21:14Z" name="otherIdDifferent" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-19T22:21:14Z" name="hashCodeTestWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="equalsWithNull()" started-at="2020-05-19T22:21:14Z" name="equalsWithNull" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method signature="equalsWithDifferentObject()" started-at="2020-05-19T22:21:14Z" name="equalsWithDifferentObject" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method signature="createSkillsSheetWithId()" started-at="2020-05-19T22:21:14Z" name="createSkillsSheetWithId" finished-at="2020-05-19T22:21:14Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsSheetWithId -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-19T22:21:14Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-19T22:21:14Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+      </class> <!-- com.qa.mesadnd.dto.SkillsDTOTest -->
+      <class name="com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest">
+        <test-method signature="createAbilitiesTest() throws java.lang.Exception" started-at="2020-05-19T22:20:58Z" name="createAbilitiesTest" finished-at="2020-05-19T22:21:09Z" duration-ms="11809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAbilitiesTest -->
+        <test-method signature="deleteAbilitiesTest() throws java.lang.Exception" started-at="2020-05-19T22:20:58Z" name="deleteAbilitiesTest" finished-at="2020-05-19T22:21:09Z" duration-ms="11487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAbilitiesTest -->
+        <test-method signature="getAbilitiesByID() throws java.lang.Exception" started-at="2020-05-19T22:20:58Z" name="getAbilitiesByID" finished-at="2020-05-19T22:21:10Z" duration-ms="12446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAbilitiesByID -->
+        <test-method signature="getAllAbilitiesTest() throws java.lang.Exception" started-at="2020-05-19T22:20:58Z" name="getAllAbilitiesTest" finished-at="2020-05-19T22:21:10Z" duration-ms="12136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllAbilitiesTest -->
+      </class> <!-- com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest -->
+      <class name="com.qa.mesadnd.controller.SkillsControllerUnitTest">
+        <test-method signature="deleteSkillsTestFalse()" started-at="2020-05-19T22:21:14Z" name="deleteSkillsTestFalse" finished-at="2020-05-19T22:21:14Z" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsTestFalse -->
+        <test-method signature="createSkillsTest()" started-at="2020-05-19T22:21:14Z" name="createSkillsTest" finished-at="2020-05-19T22:21:14Z" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSkillsTest -->
+        <test-method signature="getSkillsByIDTest()" started-at="2020-05-19T22:21:14Z" name="getSkillsByIDTest" finished-at="2020-05-19T22:21:14Z" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSkillsByIDTest -->
+        <test-method signature="getAllSkillsTest()" started-at="2020-05-19T22:21:14Z" name="getAllSkillsTest" finished-at="2020-05-19T22:21:14Z" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllSkillsTest -->
+        <test-method signature="deleteSkillsTestTrue()" started-at="2020-05-19T22:21:14Z" name="deleteSkillsTestTrue" finished-at="2020-05-19T22:21:14Z" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSkillsTestTrue -->
+      </class> <!-- com.qa.mesadnd.controller.SkillsControllerUnitTest -->
+      <class name="com.qa.mesadnd.MesaDNDTest">
+        <test-method signature="shouldAnswerWithTrue()" started-at="2020-05-19T22:21:14Z" name="shouldAnswerWithTrue" finished-at="2020-05-19T22:21:18Z" duration-ms="3643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- com.qa.mesadnd.MesaDNDTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

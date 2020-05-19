@@ -1,0 +1,899 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>164/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue May 19 22:20:57 BST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>29 seconds (29955 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.abilitiesDTOIDDifferent()'><b>abilitiesDTOIDDifferent</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>abilitiesDTOIDDifferent(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.abilitiesIDDifferent()'><b>abilitiesIDDifferent</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>abilitiesIDDifferent(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOCurrentHpNotEqual()'><b>characterDTOCurrentHpNotEqual</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOCurrentHpNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOCurrentHpNullButOtherCurrentHpNotNull()'><b>characterDTOCurrentHpNullButOtherCurrentHpNotNull</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOCurrentHpNullButOtherCurrentHpNotNull(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOExpNotEqual()'><b>characterDTOExpNotEqual</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOExpNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOExpNullButOtherExpNotNull()'><b>characterDTOExpNullButOtherExpNotNull</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOExpNullButOtherExpNotNull(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOIDDifferent()'><b>characterDTOIDDifferent</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOIDDifferent(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOMaxHpNotEqual()'><b>characterDTOMaxHpNotEqual</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOMaxHpNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTOMaxHpNullButOtherMaxHpNotNull()'><b>characterDTOMaxHpNullButOtherMaxHpNotNull</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTOMaxHpNullButOtherMaxHpNotNull(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTONameNullButOtherNameNotNull()'><b>characterDTONameNullButOtherNameNotNull</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTONameNullButOtherNameNotNull(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.characterDTONamesNotEqual()'><b>characterDTONamesNotEqual</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterDTONamesNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetCurrentHpNotEqual()'><b>characterSheetCurrentHpNotEqual</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetCurrentHpNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetCurrentHpNullButOtherCurrentHpNotNull()'><b>characterSheetCurrentHpNullButOtherCurrentHpNotNull</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetCurrentHpNullButOtherCurrentHpNotNull(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetExpNotEqual()'><b>characterSheetExpNotEqual</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetExpNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetExpNullButOtherExpNotNull()'><b>characterSheetExpNullButOtherExpNotNull</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetExpNullButOtherExpNotNull(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetIDDifferent()'><b>characterSheetIDDifferent</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetIDDifferent(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.characterSheetIDDifferent()'><b>characterSheetIDDifferent</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetIDDifferent(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.characterSheetIDDifferent()'><b>characterSheetIDDifferent</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetIDDifferent(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetMaxHpNotEqual()'><b>characterSheetMaxHpNotEqual</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetMaxHpNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetMaxHpNullButOtherMaxHpNotNull()'><b>characterSheetMaxHpNullButOtherMaxHpNotNull</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetMaxHpNullButOtherMaxHpNotNull(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetNameNullButOtherNameNotNull()'><b>characterSheetNameNullButOtherNameNotNull</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetNameNullButOtherNameNotNull(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.characterSheetNamesNotEqual()'><b>characterSheetNamesNotEqual</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>characterSheetNamesNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.charismaNotEqual()'><b>charismaNotEqual</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>charismaNotEqual(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.charismaNotEqual()'><b>charismaNotEqual</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>charismaNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.charismaNullButOtherCharismaNotNull()'><b>charismaNullButOtherCharismaNotNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>charismaNullButOtherCharismaNotNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.charismaNullButOtherCharismaNotNull()'><b>charismaNullButOtherCharismaNotNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>charismaNullButOtherCharismaNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.constitutionNotEqual()'><b>constitutionNotEqual</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>constitutionNotEqual(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.constitutionNotEqual()'><b>constitutionNotEqual</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constitutionNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.constitutionNullButOtherConstitutionNotNull()'><b>constitutionNullButOtherConstitutionNotNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>constitutionNullButOtherConstitutionNotNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.constitutionNullButOtherConstitutionNotNull()'><b>constitutionNullButOtherConstitutionNotNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constitutionNullButOtherConstitutionNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.createAbilitiesDTOWithId()'><b>createAbilitiesDTOWithId</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createAbilitiesDTOWithId(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest.createAbilitiesTest()'><b>createAbilitiesTest</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest</td>
+<td></td>
+<td>11</td>
+<td>createAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerUnitTest.createAbilitiesTest()'><b>createAbilitiesTest</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceIntegrationTest.createAbilitiesTest()'><b>createAbilitiesTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceIntegrationTest</td>
+<td></td>
+<td>4</td>
+<td>createAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceUnitTest.createAbilitiesTest()'><b>createAbilitiesTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.createCharacterDTOWithId()'><b>createCharacterDTOWithId</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createCharacterDTOWithId(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.createCharacterSheetWithId()'><b>createCharacterSheetWithId</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>createCharacterSheetWithId(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest.createCharacterTest()'><b>createCharacterTest</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>createCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerUnitTest.createCharacterTest()'><b>createCharacterTest</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceIntegrationTest.createCharacterTest()'><b>createCharacterTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createCharacterTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceUnitTest.createCharacterTest()'><b>createCharacterTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createCharacterTest(com.qa.mesadnd.service.CharacterServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.createSkillsSheetWithId()'><b>createSkillsSheetWithId</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>createSkillsSheetWithId(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.createSkillsSheetWithId()'><b>createSkillsSheetWithId</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createSkillsSheetWithId(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.createSkillsSheetWithId()'><b>createSkillsSheetWithId</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createSkillsSheetWithId(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerIntegrationTest.createSkillsTest()'><b>createSkillsTest</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createSkillsTest(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerUnitTest.createSkillsTest()'><b>createSkillsTest</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createSkillsTest(com.qa.mesadnd.controller.SkillsControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceIntegrationTest.createSkillsTest()'><b>createSkillsTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>createSkillsTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceUnitTest.createSkillsTest()'><b>createSkillsTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createSkillsTest(com.qa.mesadnd.service.SkillsServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceUnitTest.deleteAbilitiesByExistingId()'><b>deleteAbilitiesByExistingId</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteAbilitiesByExistingId(com.qa.mesadnd.service.AbilitiesServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceUnitTest.deleteAbilitiesByNonExistingId()'><b>deleteAbilitiesByNonExistingId</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteAbilitiesByNonExistingId(com.qa.mesadnd.service.AbilitiesServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest.deleteAbilitiesTest()'><b>deleteAbilitiesTest</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest</td>
+<td></td>
+<td>11</td>
+<td>deleteAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceIntegrationTest.deleteAbilitiesTest()'><b>deleteAbilitiesTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceIntegrationTest</td>
+<td></td>
+<td>3</td>
+<td>deleteAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerUnitTest.deleteAbilitiesTestFalse()'><b>deleteAbilitiesTestFalse</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteAbilitiesTestFalse(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceUnitTest.deleteCharacterByExistingId()'><b>deleteCharacterByExistingId</b><br>Test class: com.qa.mesadnd.service.CharacterServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteCharacterByExistingId(com.qa.mesadnd.service.CharacterServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceUnitTest.deleteCharacterByNonExistingId()'><b>deleteCharacterByNonExistingId</b><br>Test class: com.qa.mesadnd.service.CharacterServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteCharacterByNonExistingId(com.qa.mesadnd.service.CharacterServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest.deleteCharacterTest()'><b>deleteCharacterTest</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>deleteCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerUnitTest.deleteCharacterTestFalse()'><b>deleteCharacterTestFalse</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteCharacterTestFalse(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceUnitTest.deleteSkillsByExistingId()'><b>deleteSkillsByExistingId</b><br>Test class: com.qa.mesadnd.service.SkillsServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSkillsByExistingId(com.qa.mesadnd.service.SkillsServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceUnitTest.deleteSkillsByNonExistingId()'><b>deleteSkillsByNonExistingId</b><br>Test class: com.qa.mesadnd.service.SkillsServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSkillsByNonExistingId(com.qa.mesadnd.service.SkillsServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerIntegrationTest.deleteSkillsTest()'><b>deleteSkillsTest</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>deleteSkillsTest(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceIntegrationTest.deleteSkillsTest()'><b>deleteSkillsTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>deleteSkillsTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceIntegrationTest.deleteSkillsTest()'><b>deleteSkillsTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>deleteSkillsTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerUnitTest.deleteSkillsTestFalse()'><b>deleteSkillsTestFalse</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSkillsTestFalse(com.qa.mesadnd.controller.SkillsControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerUnitTest.deleteSkillsTestTrue()'><b>deleteSkillsTestTrue</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSkillsTestTrue(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerUnitTest.deleteSkillsTestTrue()'><b>deleteSkillsTestTrue</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSkillsTestTrue(com.qa.mesadnd.controller.SkillsControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.dexterityNotEqual()'><b>dexterityNotEqual</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>dexterityNotEqual(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.dexterityNotEqual()'><b>dexterityNotEqual</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>dexterityNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.dexterityNullButOtherDexterityNotNull()'><b>dexterityNullButOtherDexterityNotNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>dexterityNullButOtherDexterityNotNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.dexterityNullButOtherDexterityNotNull()'><b>dexterityNullButOtherDexterityNotNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>dexterityNullButOtherDexterityNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceIntegrationTest.findAbilitiesByIdTest()'><b>findAbilitiesByIdTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceIntegrationTest</td>
+<td></td>
+<td>4</td>
+<td>findAbilitiesByIdTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceUnitTest.findAbilitiesByIdTest()'><b>findAbilitiesByIdTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findAbilitiesByIdTest(com.qa.mesadnd.service.AbilitiesServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceIntegrationTest.findCharacterByIdTest()'><b>findCharacterByIdTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>findCharacterByIdTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceUnitTest.findCharacterByIdTest()'><b>findCharacterByIdTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findCharacterByIdTest(com.qa.mesadnd.service.CharacterServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceIntegrationTest.findSkillsByIdTest()'><b>findSkillsByIdTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>findSkillsByIdTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceUnitTest.findSkillsByIdTest()'><b>findSkillsByIdTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findSkillsByIdTest(com.qa.mesadnd.service.SkillsServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest.getAbilitiesByID()'><b>getAbilitiesByID</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest</td>
+<td></td>
+<td>12</td>
+<td>getAbilitiesByID(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerUnitTest.getAbilitiesByIDTest()'><b>getAbilitiesByIDTest</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAbilitiesByIDTest(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest.getAllAbilitiesTest()'><b>getAllAbilitiesTest</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest</td>
+<td></td>
+<td>12</td>
+<td>getAllAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.AbilitiesControllerUnitTest.getAllAbilitiesTest()'><b>getAllAbilitiesTest</b><br>Test class: com.qa.mesadnd.controller.AbilitiesControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceUnitTest.getAllAbilitiesTest()'><b>getAllAbilitiesTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest.getAllCharacterTest()'><b>getAllCharacterTest</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>getAllCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerUnitTest.getAllCharacterTest()'><b>getAllCharacterTest</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceUnitTest.getAllCharacterTest()'><b>getAllCharacterTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllCharacterTest(com.qa.mesadnd.service.CharacterServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerIntegrationTest.getAllSkillsTest()'><b>getAllSkillsTest</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>getAllSkillsTest(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerUnitTest.getAllSkillsTest()'><b>getAllSkillsTest</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllSkillsTest(com.qa.mesadnd.controller.SkillsControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceUnitTest.getAllSkillsTest()'><b>getAllSkillsTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllSkillsTest(com.qa.mesadnd.service.SkillsServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest.getCharacterByID()'><b>getCharacterByID</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>getCharacterByID(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.CharacterSheetControllerUnitTest.getCharacterByIDTest()'><b>getCharacterByIDTest</b><br>Test class: com.qa.mesadnd.controller.CharacterSheetControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getCharacterByIDTest(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerIntegrationTest.getSkillsByID()'><b>getSkillsByID</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>getSkillsByID(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.controller.SkillsControllerUnitTest.getSkillsByIDTest()'><b>getSkillsByIDTest</b><br>Test class: com.qa.mesadnd.controller.SkillsControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getSkillsByIDTest(com.qa.mesadnd.controller.SkillsControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.intelligenceNotEqual()'><b>intelligenceNotEqual</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>intelligenceNotEqual(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.intelligenceNotEqual()'><b>intelligenceNotEqual</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>intelligenceNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.intelligenceNullButOtherIntelligenceNotNull()'><b>intelligenceNullButOtherIntelligenceNotNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>intelligenceNullButOtherIntelligenceNotNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.intelligenceNullButOtherIntelligenceNotNull()'><b>intelligenceNullButOtherIntelligenceNotNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>intelligenceNullButOtherIntelligenceNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.nullId()'><b>nullId</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.nullId()'><b>nullId</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.nullId()'><b>nullId</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.AbilitiesServiceIntegrationTest.readAbilitiesTest()'><b>readAbilitiesTest</b><br>Test class: com.qa.mesadnd.service.AbilitiesServiceIntegrationTest</td>
+<td></td>
+<td>4</td>
+<td>readAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.CharacterServiceIntegrationTest.readCharacterTest()'><b>readCharacterTest</b><br>Test class: com.qa.mesadnd.service.CharacterServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>readCharacterTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.service.SkillsServiceIntegrationTest.readSkillsTest()'><b>readSkillsTest</b><br>Test class: com.qa.mesadnd.service.SkillsServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>readSkillsTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.CharacterSheetTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.mesadnd.domain.CharacterSheetTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.mesadnd.domain.CharacterSheetTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.CharacterDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.mesadnd.dto.CharacterDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.mesadnd.dto.CharacterDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.MesaDNDTest.shouldAnswerWithTrue()'><b>shouldAnswerWithTrue</b><br>Test class: com.qa.mesadnd.MesaDNDTest</td>
+<td></td>
+<td>3</td>
+<td>shouldAnswerWithTrue(com.qa.mesadnd.MesaDNDTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.skillModifierNotEqual()'><b>skillModifierNotEqual</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>skillModifierNotEqual(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.skillModifierNotEqual()'><b>skillModifierNotEqual</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>skillModifierNotEqual(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.skillModifierNullButOtherSkillModifierNotNull()'><b>skillModifierNullButOtherSkillModifierNotNull</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>skillModifierNullButOtherSkillModifierNotNull(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.skillModifierNullButOtherSkillModifierNotNull()'><b>skillModifierNullButOtherSkillModifierNotNull</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>skillModifierNullButOtherSkillModifierNotNull(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.skillsNameNullButOtherNameNotNull()'><b>skillsNameNullButOtherNameNotNull</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>skillsNameNullButOtherNameNotNull(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.skillsNameNullButOtherNameNotNull()'><b>skillsNameNullButOtherNameNotNull</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>skillsNameNullButOtherNameNotNull(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.SkillsUnitTest.skillsNamesNotEqual()'><b>skillsNamesNotEqual</b><br>Test class: com.qa.mesadnd.domain.SkillsUnitTest</td>
+<td></td>
+<td>0</td>
+<td>skillsNamesNotEqual(com.qa.mesadnd.domain.SkillsUnitTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.SkillsDTOTest.skillsNamesNotEqual()'><b>skillsNamesNotEqual</b><br>Test class: com.qa.mesadnd.dto.SkillsDTOTest</td>
+<td></td>
+<td>0</td>
+<td>skillsNamesNotEqual(com.qa.mesadnd.dto.SkillsDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.strengthNotEqual()'><b>strengthNotEqual</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>strengthNotEqual(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.strengthNotEqual()'><b>strengthNotEqual</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>strengthNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.strengthNullButOtherStrengthNotNull()'><b>strengthNullButOtherStrengthNotNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>strengthNullButOtherStrengthNotNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.strengthNullButOtherStrengthNotNull()'><b>strengthNullButOtherStrengthNotNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>strengthNullButOtherStrengthNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.wisdomNotEqual()'><b>wisdomNotEqual</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>wisdomNotEqual(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.wisdomNotEqual()'><b>wisdomNotEqual</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>wisdomNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.domain.AbilitiesTest.wisdomNullButOtherWisdomNotNull()'><b>wisdomNullButOtherWisdomNotNull</b><br>Test class: com.qa.mesadnd.domain.AbilitiesTest</td>
+<td></td>
+<td>0</td>
+<td>wisdomNullButOtherWisdomNotNull(com.qa.mesadnd.domain.AbilitiesTest)</td></tr>
+<tr>
+<td title='com.qa.mesadnd.dto.AbilitiesDTOTest.wisdomNullButOtherWisdomNotNull()'><b>wisdomNullButOtherWisdomNotNull</b><br>Test class: com.qa.mesadnd.dto.AbilitiesDTOTest</td>
+<td></td>
+<td>0</td>
+<td>wisdomNullButOtherWisdomNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)</td></tr>
+</table><p>
+</body>
+</html>

@@ -47,7 +47,8 @@ public class SeleniumCrudTests {
         driver = new ChromeDriver ();
     }
 
-    @Test
+
+    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
     public void testACharacterAbilityCreateRead() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
@@ -133,7 +134,7 @@ public class SeleniumCrudTests {
         sleep(1000);
     }
 
-    @Test
+    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
     public void testBCharacterAbilityUpdate() throws InterruptedException {
         test = report.startTest("Open to Character Sheet Page");
         driver.manage().window().maximize();
@@ -201,7 +202,7 @@ public class SeleniumCrudTests {
         sleep(2000);
     }
 
-    @Test
+    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
     public void testCCharacterAbilityDelete() throws InterruptedException {
         test = report.startTest("Open to Character Sheet Page");
         driver.manage().window().maximize();
