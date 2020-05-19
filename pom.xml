@@ -105,6 +105,11 @@
       <version>${appengine.target.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+    </dependency>
   </dependencies>
 
   <repositories>
@@ -185,7 +190,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.0.0</version>
         <configuration>
           <archiveClasses>true</archiveClasses>
           <webResources>
