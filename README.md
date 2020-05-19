@@ -27,7 +27,6 @@ To use this program, you will need:
 
 At the moment, a demo mySQL database exists and is linked to this application. If you wish to change the database, you can by changing the settings in the 'application.properties' file, specifically 'spring.cloud.gcp.sql.database-name', 'spring.cloud.gcp.sql.instance-connection-name' and 'spring.datasource.url'.
 
-
 To develop using this project, you will need:
 
 - [IntelliJ IDE](https://www.jetbrains.com/idea/) or a similar IDE capable of running Spring Boot.
@@ -36,6 +35,12 @@ To develop using this project, you will need:
 It is also recommended you use [Visual Studios Code IDE](https://code.visualstudio.com/) for your HTML, CSS and JavaScript as most Java-centric IDEs like [IntelliJ IDE](https://www.jetbrains.com/idea/) show false-errors with other languages, though ignoring these issues is viable.
 
 If you use this project for your own development, you will need to follow the instructions above in order to use your own database.
+
+## Obtaining a Copy
+
+You can geta copy of the application in one of two ways:
+- Open [Git Bash](https://git-scm.com/) in a directory of your choice and enter 'git clone https://github.com/Christian-QA/redfern-dnd-website.git'.
+- Navigate to [releases](https://github.com/Christian-QA/redfern-dnd-website/releases) on the project repository's main page and download the redfern-dnd-website-master-v0.1.4.zip file from the assets drop-down list.
 
 ## Getting Started
 
