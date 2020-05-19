@@ -222,6 +222,11 @@ We use [SemVer](http://semver.org/) for versioning.
 
 - \*_Christian Redfern_ - _Author_ - [Christian-QA](https://github.com/Christian-QA)
 
+## Contributing to the Project
+
+This project has a code of conduct for those wishing to propose changes - see the [CONTRIBUTION.md](CONTRIBUTION.md) file for details
+
+
 ## License
 
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details
