@@ -18,7 +18,7 @@ import java.io.IOException;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertEquals;
 
-public class SeleniumCharacterCRUDTest {
+public class SeleniumNavigationTests {
 
     WebDriver driver;
     ExtentReports report;
@@ -43,15 +43,41 @@ public class SeleniumCharacterCRUDTest {
     }
 
     @Test
-    public void testMesaHomeTitle(){
+    public void testMesaHomeTitle() throws InterruptedException, IOException{
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
         driver.get("http://localhost:8181/");
         test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
         assertEquals(driver.getTitle(), "Mesa Home Page");
+        sleep(2000);
         test.log(LogStatus.PASS, "The page name is exactly the same");
     }
+
+    @Test
+    public void testCharacterSheetTitle() throws InterruptedException, IOException{
+        test = report.startTest("Open to Mesa Home Page");
+        driver.manage().window().maximize();
+        test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
+        driver.get("http://localhost:8181/html/character.html");
+        test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
+        assertEquals(driver.getTitle(), "Character Sheet");
+        sleep(2000);
+        test.log(LogStatus.PASS, "The page name is exactly the same");
+    }
+
+    @Test
+    public void testCharacterMakerTitle() throws InterruptedException, IOException{
+        test = report.startTest("Open to Mesa Home Page");
+        driver.manage().window().maximize();
+        test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
+        driver.get("http://localhost:8181/html/maker.html");
+        test.log(LogStatus.INFO, "Navigating to the MesaDND homepage");
+        assertEquals(driver.getTitle(), "Character Maker");
+        sleep(2000);
+        test.log(LogStatus.PASS, "The page name is exactly the same");
+    }
+
 
     @AfterMethod
     public void getResult(ITestResult result){
