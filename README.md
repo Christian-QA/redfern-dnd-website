@@ -51,9 +51,6 @@ You can geta copy of the application in one of two ways:
 
 ## Getting Started
 
-The app can be run on an App Engine on [GCP](https://console.cloud.google.com/). An App Engine already exists for this application to be accessed from other devices, though accessibility is subject to change for as long as the project remains in the pre-beta stages. 
-For now, a local or self-hosted GCP App Engine is the recommended option, and mandatory if you wish to develop this app further.
-
 To run the application on your local machine, use a terminal of your choice (Windows Command Prompt is recommended) and enter 'mvn spring-boot:run'. This will initialise the server and allocate a server port (8181 by default) to the application. This server port can be accessed by searching 'localport:8181' in your browser. (Warning: there is currently no way to terminate the application from command prompt. For the earlier releases, running the application through IntelliJ IDEA or Eclipse IDE is strongly recommended).
 
 Once the server is running, you can access the web application as a user. 
