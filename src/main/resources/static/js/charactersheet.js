@@ -46,11 +46,19 @@ const getCharacterSheets = () => {
         document.querySelector('#charisma').innerHTML = response.data[currentID].abilities[0].charisma;
 
 
-        let skilllist = response.data[currentID].skills[0].skillName;
-        for (let i = 0; i < response.data.length; i++) {
 
+        skillJson = response.data[currentID].skills
+        skillCount = Object.keys(skillJson).length;
+        console.log(skillCount);
+
+        for (let i = 0; i < skillCount; i++) {
+            let node = document.createElement("LI");
+            node.classList.add("skilllist");
+            let textnode = document.createTextNode(response.data[currentID].skills[i].skillName);
+            node.appendChild(textnode);
+            document.getElementById("myList").appendChild(node);
         }
-        console.log(skilllist.toString());
+
 
 
     })

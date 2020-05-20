@@ -105,7 +105,7 @@ public class SeleniumNavigationTests {
                 " pages can navigated using the buttons in this order.");
     }
 
-    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
+    @Test
     public void testMakerSheetHome() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();

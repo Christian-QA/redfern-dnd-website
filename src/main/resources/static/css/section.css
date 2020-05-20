@@ -41,3 +41,36 @@ section p {
     transform: translate(-50%, -50%);
     font-size: 18px;
 }
+
+/* Centered text */
+li.skilllist {
+    position: relative;
+    top: 30%;
+    left: 100%;
+    transform: translate(-17%, 50%);
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    width: 150px;
+    height: 45px;
+    margin-top: -15px;
+    margin-left: 60px
+}
+
+/* Centered text */
+p.skilllist {
+    position: relative;
+    top: 30%;
+    left: 100%;
+    transform: translate(-35%, 50%);
+    font-size: 24px;
+    text-decoration: underline;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    width: 150px;
+    height: 45px;
+    margin-top: -45px;
+    margin-left: 60px
+}
