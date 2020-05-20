@@ -15,7 +15,10 @@ const postCharacterSheet = () => {
         let skilllist = document.getElementById("skill").value;
     }
     */
-    
+    if (document.getElementById("acrobatics").checked = true) {
+        skill = document.getElementById("acrobatics").value;
+        stat = document.getElementById("acrobatics").name;
+    }
 
    axios({
     method: 'post',
@@ -44,8 +47,8 @@ const postCharacterSheet = () => {
                 "skills": [
                     {
                         "skillsId": 1,
-                        "skillName": "History",
-                        "statModifier": "Wisdom"
+                        "skillName": "${skill}",
+                        "statModifier": "${stat}"
                     }
                 ], 
                 "abilities": [
