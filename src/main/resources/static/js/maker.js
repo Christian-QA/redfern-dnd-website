@@ -16,8 +16,13 @@ const postCharacterSheet = () => {
     }
     */
     if (document.getElementById("acrobatics").checked = true) {
-        skill = document.getElementById("acrobatics").value;
-        stat = document.getElementById("acrobatics").name;
+        skilla = document.getElementById("acrobatics").value;
+        stata = document.getElementById("acrobatics").name;
+    }
+
+    if (document.getElementById("animal").checked = true) {
+        skillb = document.getElementById("animal").value;
+        statb = document.getElementById("animal").name;
     }
 
    axios({
@@ -47,8 +52,13 @@ const postCharacterSheet = () => {
                 "skills": [
                     {
                         "skillsId": 1,
-                        "skillName": "${skill}",
-                        "statModifier": "${stat}"
+                        "skillName": "${skilla}",
+                        "statModifier": "${stata}"
+                    },
+                    {
+                        "skillsId": 2,
+                        "skillName": "${skillb}",
+                        "statModifier": "${statb}"
                     }
                 ], 
                 "abilities": [
