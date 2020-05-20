@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 172, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 110.987 s <<< FAILURE! - in TestSuite
+testACharacterAbilityCreateRead(com.qa.mesadnd.selenium.SeleniumCrudTests)  Time elapsed: 6.256 s  <<< FAILURE!
+java.lang.AssertionError: expected [Character Maker] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.testACharacterAbilityCreateRead(SeleniumCrudTests.java:54)
+
+testBCharacterAbilityUpdate(com.qa.mesadnd.selenium.SeleniumCrudTests)  Time elapsed: 6.238 s  <<< FAILURE!
+java.lang.AssertionError: expected [Character Sheet] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.testBCharacterAbilityUpdate(SeleniumCrudTests.java:140)
+
+testCCharacterAbilityDelete(com.qa.mesadnd.selenium.SeleniumCrudTests)  Time elapsed: 6.23 s  <<< FAILURE!
+java.lang.AssertionError: expected [Character Sheet] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.testCCharacterAbilityDelete(SeleniumCrudTests.java:208)
+
+testCharacterMakerTitle(com.qa.mesadnd.selenium.SeleniumNavigationTests)  Time elapsed: 6.228 s  <<< FAILURE!
+java.lang.AssertionError: expected [Character Maker] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testCharacterMakerTitle(SeleniumNavigationTests.java:74)
+
+testCharacterSheetTitle(com.qa.mesadnd.selenium.SeleniumNavigationTests)  Time elapsed: 6.234 s  <<< FAILURE!
+java.lang.AssertionError: expected [Character Sheet] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testCharacterSheetTitle(SeleniumNavigationTests.java:62)
+
+testHomeSheetMaker(com.qa.mesadnd.selenium.SeleniumNavigationTests)  Time elapsed: 8.248 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#navSheet"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\BACKUP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52990}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cbb7836572455faefe29f05f0528360c
+*** Element info: {Using=id, value=navSheet}
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testHomeSheetMaker(SeleniumNavigationTests.java:87)
+
+testMakerSheetHome(com.qa.mesadnd.selenium.SeleniumNavigationTests)  Time elapsed: 8.245 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#navMaker"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\BACKUP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53026}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 55d7ab79c626c0eb2171cc1916b9a373
+*** Element info: {Using=id, value=navMaker}
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testMakerSheetHome(SeleniumNavigationTests.java:113)
+
+testMesaHomeTitle(com.qa.mesadnd.selenium.SeleniumNavigationTests)  Time elapsed: 6.235 s  <<< FAILURE!
+java.lang.AssertionError: expected [Mesa Home Page] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testMesaHomeTitle(SeleniumNavigationTests.java:50)
+

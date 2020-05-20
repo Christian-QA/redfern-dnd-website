@@ -23,7 +23,6 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-@TestPropertySource(locations= "classpath:test.properties")
 public class CharacterSheetControllerUnitTest {
 
     @InjectMocks
@@ -61,7 +60,7 @@ public class CharacterSheetControllerUnitTest {
     @Test
     public void getAllCharacterTest(){
         when(service.readCharacter ()).thenReturn(this.characterSheet.stream().map(this::mapToDTO).collect(Collectors.toList()));
-        assertFalse("No notes found", this.characterController.getAllCharacters().getBody().isEmpty());
+        assertFalse("No character found", this.characterController.getAllCharacters().getBody().isEmpty());
         verify(service, times(1)).readCharacter ();
     }
 

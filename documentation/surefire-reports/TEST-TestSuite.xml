@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="110.987" tests="172" errors="0" skipped="0" failures="8">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="G:\Backup Bob\Documents\Visual Code\redfern-dnd-website\target\test-classes;G:\Backup Bob\Documents\Visual Code\redfern-dnd-website\target\ChristianRedfern-SoftwareMarch16\WEB-INF\classes;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.2.0.RELEASE\spring-boot-starter-data-jpa-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.2.0.RELEASE\spring-boot-starter-aop-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-aop\5.2.0.RELEASE\spring-aop-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.2.0.RELEASE\spring-boot-starter-jdbc-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\zaxxer\HikariCP\3.4.1\HikariCP-3.4.1.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-jdbc\5.2.0.RELEASE\spring-jdbc-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\Backup Bob\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Backup Bob\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Backup Bob\.m2\repository\org\hibernate\hibernate-core\5.4.6.Final\hibernate-core-5.4.6.Final.jar;C:\Users\Backup Bob\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Backup Bob\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\Backup Bob\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Backup Bob\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\classmate\1.5.0\classmate-1.5.0.jar;C:\Users\Backup Bob\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\Backup Bob\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\Backup Bob\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar;C:\Users\Backup Bob\.m2\repository\org\glassfish\jaxb\txw2\2.3.2\txw2-2.3.2.jar;C:\Users\Backup Bob\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.8\istack-commons-runtime-3.0.8.jar;C:\Users\Backup Bob\.m2\repository\org\jvnet\staxex\stax-ex\1.8.1\stax-ex-1.8.1.jar;C:\Users\Backup Bob\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.16\FastInfoset-1.2.16.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\data\spring-data-jpa\2.2.0.RELEASE\spring-data-jpa-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\data\spring-data-commons\2.2.0.RELEASE\spring-data-commons-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-orm\5.2.0.RELEASE\spring-orm-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-context\5.2.0.RELEASE\spring-context-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-tx\5.2.0.RELEASE\spring-tx-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-beans\5.2.0.RELEASE\spring-beans-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-aspects\5.2.0.RELEASE\spring-aspects-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.2.0.RELEASE\spring-boot-starter-test-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter\2.2.0.RELEASE\spring-boot-starter-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot\2.2.0.RELEASE\spring-boot-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.2.0.RELEASE\spring-boot-autoconfigure-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.2.0.RELEASE\spring-boot-starter-logging-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Backup Bob\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Backup Bob\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.12.1\log4j-to-slf4j-2.12.1.jar;C:\Users\Backup Bob\.m2\repository\org\apache\logging\log4j\log4j-api\2.12.1\log4j-api-2.12.1.jar;C:\Users\Backup Bob\.m2\repository\org\slf4j\jul-to-slf4j\1.7.28\jul-to-slf4j-1.7.28.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-test\2.2.0.RELEASE\spring-boot-test-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.2.0.RELEASE\spring-boot-test-autoconfigure-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\Backup Bob\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\Backup Bob\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\Backup Bob\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Backup Bob\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\vintage\junit-vintage-engine\5.5.2\junit-vintage-engine-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Backup Bob\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Backup Bob\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Backup Bob\.m2\repository\org\mockito\mockito-junit-jupiter\3.1.0\mockito-junit-jupiter-3.1.0.jar;C:\Users\Backup Bob\.m2\repository\org\assertj\assertj-core\3.13.2\assertj-core-3.13.2.jar;C:\Users\Backup Bob\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Backup Bob\.m2\repository\org\mockito\mockito-core\3.1.0\mockito-core-3.1.0.jar;C:\Users\Backup Bob\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.1\byte-buddy-agent-1.10.1.jar;C:\Users\Backup Bob\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\Backup Bob\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Backup Bob\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-core\5.2.0.RELEASE\spring-core-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-jcl\5.2.0.RELEASE\spring-jcl-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-test\5.2.0.RELEASE\spring-test-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\xmlunit\xmlunit-core\2.6.3\xmlunit-core-2.6.3.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.2.0.RELEASE\spring-boot-starter-tomcat-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Backup Bob\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.27\tomcat-embed-core-9.0.27.jar;C:\Users\Backup Bob\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.27\tomcat-embed-el-9.0.27.jar;C:\Users\Backup Bob\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.27\tomcat-embed-websocket-9.0.27.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.2.0.RELEASE\spring-boot-starter-web-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.2.0.RELEASE\spring-boot-starter-json-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.0\jackson-databind-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.0\jackson-annotations-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.10.0\jackson-datatype-jdk8-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.0\jackson-datatype-jsr310-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.10.0\jackson-module-parameter-names-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-validation\2.2.0.RELEASE\spring-boot-starter-validation-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.1\jakarta.validation-api-2.0.1.jar;C:\Users\Backup Bob\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.17.Final\hibernate-validator-6.0.17.Final.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-web\5.2.0.RELEASE\spring-web-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-webmvc\5.2.0.RELEASE\spring-webmvc-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-expression\5.2.0.RELEASE\spring-expression-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\modelmapper\modelmapper\2.3.5\modelmapper-2.3.5.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-starter\1.0.0.RELEASE\spring-cloud-gcp-starter-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-core\1.0.0.RELEASE\spring-cloud-gcp-core-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\google\cloud\google-cloud-core\1.38.0\google-cloud-core-1.38.0.jar;C:\Users\Backup Bob\.m2\repository\joda-time\joda-time\2.10.4\joda-time-2.10.4.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\api-common\1.6.0\api-common-1.6.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\gax\1.29.0\gax-1.29.0.jar;C:\Users\Backup Bob\.m2\repository\org\threeten\threetenbp\1.3.3\threetenbp-1.3.3.jar;C:\Users\Backup Bob\.m2\repository\com\google\auth\google-auth-library-oauth2-http\0.9.1\google-auth-library-oauth2-http-0.9.1.jar;C:\Users\Backup Bob\.m2\repository\com\google\auth\google-auth-library-credentials\0.9.1\google-auth-library-credentials-0.9.1.jar;C:\Users\Backup Bob\.m2\repository\com\google\protobuf\protobuf-java-util\3.6.0\protobuf-java-util-3.6.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\protobuf\protobuf-java\3.6.0\protobuf-java-3.6.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\grpc\proto-google-common-protos\1.12.0\proto-google-common-protos-1.12.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\grpc\proto-google-iam-v1\0.12.0\proto-google-iam-v1-0.12.0.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-autoconfigure\1.0.0.RELEASE\spring-cloud-gcp-autoconfigure-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\slf4j\slf4j-api\1.7.28\slf4j-api-1.7.28.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-starter-sql-mysql\1.0.0.RELEASE\spring-cloud-gcp-starter-sql-mysql-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\Backup Bob\.m2\repository\com\google\cloud\sql\mysql-socket-factory\1.0.10\mysql-socket-factory-1.0.10.jar;C:\Users\Backup Bob\.m2\repository\com\google\cloud\sql\jdbc-socket-factory-core\1.0.10\jdbc-socket-factory-core-1.0.10.jar;C:\Users\Backup Bob\.m2\repository\com\google\apis\google-api-services-sqladmin\v1beta4-rev56-1.23.0\google-api-services-sqladmin-v1beta4-rev56-1.23.0.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-unixsocket\0.18\jnr-unixsocket-0.18.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-ffi\2.1.4\jnr-ffi-2.1.4.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jffi\1.2.15\jffi-1.2.15.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jffi\1.2.15\jffi-1.2.15-native.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-commons\5.0.3\asm-commons-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-analysis\5.0.3\asm-analysis-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-tree\5.0.3\asm-tree-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-util\5.0.3\asm-util-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-x86asm\1.0.2\jnr-x86asm-1.0.2.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-constants\0.9.8\jnr-constants-0.9.8.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-enxio\0.16\jnr-enxio-0.16.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-posix\3.0.35\jnr-posix-3.0.35.jar;C:\Users\Backup Bob\.m2\repository\com\google\appengine\appengine-api-1.0-sdk\1.9.71\appengine-api-1.0-sdk-1.9.71.jar;C:\Users\Backup Bob\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Users\Backup Bob\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar;C:\Users\Backup Bob\.m2\repository\com\google\appengine\appengine-testing\1.9.71\appengine-testing-1.9.71.jar;C:\Users\Backup Bob\.m2\repository\com\google\appengine\appengine-api-stubs\1.9.71\appengine-api-stubs-1.9.71.jar;C:\Users\Backup Bob\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\2.53.1\selenium-chrome-driver-2.53.1.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-support\2.53.1\selenium-support-2.53.1.jar;C:\Users\Backup Bob\.m2\repository\org\testng\testng\6.11\testng-6.11.jar;C:\Users\Backup Bob\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar;C:\Users\Backup Bob\.m2\repository\org\yaml\snakeyaml\1.25\snakeyaml-1.25.jar;C:\Users\Backup Bob\.m2\repository\com\relevantcodes\extentreports\2.41.2\extentreports-2.41.2.jar;C:\Users\Backup Bob\.m2\repository\org\jsoup\jsoup\1.8.3\jsoup-1.8.3.jar;C:\Users\Backup Bob\.m2\repository\org\xerial\sqlite-jdbc\3.28.0\sqlite-jdbc-3.28.0.jar;C:\Users\Backup Bob\.m2\repository\org\freemarker\freemarker\2.3.29\freemarker-2.3.29.jar;C:\Users\Backup Bob\.m2\repository\org\mongodb\mongodb-driver\3.11.1\mongodb-driver-3.11.1.jar;C:\Users\Backup Bob\.m2\repository\org\mongodb\bson\3.11.1\bson-3.11.1.jar;C:\Users\Backup Bob\.m2\repository\org\mongodb\mongodb-driver-core\3.11.1\mongodb-driver-core-3.11.1.jar;C:\Users\Backup Bob\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Backup Bob\.m2\repository\org\apache\poi\poi-ooxml\3.15\poi-ooxml-3.15.jar;C:\Users\Backup Bob\.m2\repository\org\apache\poi\poi\3.15\poi-3.15.jar;C:\Users\Backup Bob\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\Backup Bob\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\Backup Bob\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.15\poi-ooxml-schemas-3.15.jar;C:\Users\Backup Bob\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\Backup Bob\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\Backup Bob\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\net\bytebuddy\byte-buddy\1.10.1\byte-buddy-1.10.1.jar;C:\Users\Backup Bob\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Backup Bob\.m2\repository\com\squareup\okhttp3\okhttp\3.14.4\okhttp-3.14.4.jar;C:\Users\Backup Bob\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api-client\google-api-client\1.28.0\google-api-client-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\oauth-client\google-oauth-client\1.28.0\google-oauth-client-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\http-client\google-http-client\1.28.0\google-http-client-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\io\opencensus\opencensus-api\0.18.0\opencensus-api-0.18.0.jar;C:\Users\Backup Bob\.m2\repository\io\grpc\grpc-context\1.14.0\grpc-context-1.14.0.jar;C:\Users\Backup Bob\.m2\repository\io\opencensus\opencensus-contrib-http-util\0.18.0\opencensus-contrib-http-util-0.18.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\http-client\google-http-client-jackson2\1.28.0\google-http-client-jackson2-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.0\jackson-core-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\http-client\google-http-client-apache\2.0.0\google-http-client-apache-2.0.0.jar;C:\Users\Backup Bob\.m2\repository\org\apache\httpcomponents\httpclient\4.5.10\httpclient-4.5.10.jar;C:\Users\Backup Bob\.m2\repository\org\apache\httpcomponents\httpcore\4.4.12\httpcore-4.4.12.jar;C:\Users\Backup Bob\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Backup Bob\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Backup Bob\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Backup Bob\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="G:\Java\jdk-11.0.7\bin"/>
+    <property name="sun.java.command" value="C:\Users\BACKUP~1\AppData\Local\Temp\surefire1416815197109997043\surefirebooter694577736397958272.jar C:\Users\Backup Bob\AppData\Local\Temp\surefire1416815197109997043 2020-05-19T22-19-34_080-jvmRun1 surefire8342960302227998299tmp surefire_018215979884191559593tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="G:\Backup Bob\Documents\Visual Code\redfern-dnd-website\target\test-classes;G:\Backup Bob\Documents\Visual Code\redfern-dnd-website\target\ChristianRedfern-SoftwareMarch16\WEB-INF\classes;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.2.0.RELEASE\spring-boot-starter-data-jpa-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.2.0.RELEASE\spring-boot-starter-aop-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-aop\5.2.0.RELEASE\spring-aop-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.2.0.RELEASE\spring-boot-starter-jdbc-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\zaxxer\HikariCP\3.4.1\HikariCP-3.4.1.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-jdbc\5.2.0.RELEASE\spring-jdbc-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\Backup Bob\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Backup Bob\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Backup Bob\.m2\repository\org\hibernate\hibernate-core\5.4.6.Final\hibernate-core-5.4.6.Final.jar;C:\Users\Backup Bob\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Backup Bob\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\Backup Bob\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Backup Bob\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\classmate\1.5.0\classmate-1.5.0.jar;C:\Users\Backup Bob\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\Backup Bob\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\Backup Bob\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar;C:\Users\Backup Bob\.m2\repository\org\glassfish\jaxb\txw2\2.3.2\txw2-2.3.2.jar;C:\Users\Backup Bob\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.8\istack-commons-runtime-3.0.8.jar;C:\Users\Backup Bob\.m2\repository\org\jvnet\staxex\stax-ex\1.8.1\stax-ex-1.8.1.jar;C:\Users\Backup Bob\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.16\FastInfoset-1.2.16.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\data\spring-data-jpa\2.2.0.RELEASE\spring-data-jpa-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\data\spring-data-commons\2.2.0.RELEASE\spring-data-commons-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-orm\5.2.0.RELEASE\spring-orm-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-context\5.2.0.RELEASE\spring-context-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-tx\5.2.0.RELEASE\spring-tx-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-beans\5.2.0.RELEASE\spring-beans-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-aspects\5.2.0.RELEASE\spring-aspects-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.2.0.RELEASE\spring-boot-starter-test-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter\2.2.0.RELEASE\spring-boot-starter-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot\2.2.0.RELEASE\spring-boot-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.2.0.RELEASE\spring-boot-autoconfigure-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.2.0.RELEASE\spring-boot-starter-logging-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Backup Bob\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Backup Bob\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.12.1\log4j-to-slf4j-2.12.1.jar;C:\Users\Backup Bob\.m2\repository\org\apache\logging\log4j\log4j-api\2.12.1\log4j-api-2.12.1.jar;C:\Users\Backup Bob\.m2\repository\org\slf4j\jul-to-slf4j\1.7.28\jul-to-slf4j-1.7.28.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-test\2.2.0.RELEASE\spring-boot-test-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.2.0.RELEASE\spring-boot-test-autoconfigure-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\Backup Bob\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\Backup Bob\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\Backup Bob\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.2\junit-jupiter-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Backup Bob\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.2\junit-jupiter-params-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\junit\vintage\junit-vintage-engine\5.5.2\junit-vintage-engine-5.5.2.jar;C:\Users\Backup Bob\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Backup Bob\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Backup Bob\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Backup Bob\.m2\repository\org\mockito\mockito-junit-jupiter\3.1.0\mockito-junit-jupiter-3.1.0.jar;C:\Users\Backup Bob\.m2\repository\org\assertj\assertj-core\3.13.2\assertj-core-3.13.2.jar;C:\Users\Backup Bob\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Backup Bob\.m2\repository\org\mockito\mockito-core\3.1.0\mockito-core-3.1.0.jar;C:\Users\Backup Bob\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.1\byte-buddy-agent-1.10.1.jar;C:\Users\Backup Bob\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\Backup Bob\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Backup Bob\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-core\5.2.0.RELEASE\spring-core-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-jcl\5.2.0.RELEASE\spring-jcl-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-test\5.2.0.RELEASE\spring-test-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\xmlunit\xmlunit-core\2.6.3\xmlunit-core-2.6.3.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.2.0.RELEASE\spring-boot-starter-tomcat-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Backup Bob\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.27\tomcat-embed-core-9.0.27.jar;C:\Users\Backup Bob\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.27\tomcat-embed-el-9.0.27.jar;C:\Users\Backup Bob\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.27\tomcat-embed-websocket-9.0.27.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.2.0.RELEASE\spring-boot-starter-web-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.2.0.RELEASE\spring-boot-starter-json-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.0\jackson-databind-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.0\jackson-annotations-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.10.0\jackson-datatype-jdk8-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.0\jackson-datatype-jsr310-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.10.0\jackson-module-parameter-names-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\boot\spring-boot-starter-validation\2.2.0.RELEASE\spring-boot-starter-validation-2.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.1\jakarta.validation-api-2.0.1.jar;C:\Users\Backup Bob\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.17.Final\hibernate-validator-6.0.17.Final.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-web\5.2.0.RELEASE\spring-web-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-webmvc\5.2.0.RELEASE\spring-webmvc-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\spring-expression\5.2.0.RELEASE\spring-expression-5.2.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\modelmapper\modelmapper\2.3.5\modelmapper-2.3.5.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-starter\1.0.0.RELEASE\spring-cloud-gcp-starter-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-core\1.0.0.RELEASE\spring-cloud-gcp-core-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\com\google\cloud\google-cloud-core\1.38.0\google-cloud-core-1.38.0.jar;C:\Users\Backup Bob\.m2\repository\joda-time\joda-time\2.10.4\joda-time-2.10.4.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\api-common\1.6.0\api-common-1.6.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\gax\1.29.0\gax-1.29.0.jar;C:\Users\Backup Bob\.m2\repository\org\threeten\threetenbp\1.3.3\threetenbp-1.3.3.jar;C:\Users\Backup Bob\.m2\repository\com\google\auth\google-auth-library-oauth2-http\0.9.1\google-auth-library-oauth2-http-0.9.1.jar;C:\Users\Backup Bob\.m2\repository\com\google\auth\google-auth-library-credentials\0.9.1\google-auth-library-credentials-0.9.1.jar;C:\Users\Backup Bob\.m2\repository\com\google\protobuf\protobuf-java-util\3.6.0\protobuf-java-util-3.6.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\protobuf\protobuf-java\3.6.0\protobuf-java-3.6.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\grpc\proto-google-common-protos\1.12.0\proto-google-common-protos-1.12.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api\grpc\proto-google-iam-v1\0.12.0\proto-google-iam-v1-0.12.0.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-autoconfigure\1.0.0.RELEASE\spring-cloud-gcp-autoconfigure-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\org\slf4j\slf4j-api\1.7.28\slf4j-api-1.7.28.jar;C:\Users\Backup Bob\.m2\repository\org\springframework\cloud\spring-cloud-gcp-starter-sql-mysql\1.0.0.RELEASE\spring-cloud-gcp-starter-sql-mysql-1.0.0.RELEASE.jar;C:\Users\Backup Bob\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\Backup Bob\.m2\repository\com\google\cloud\sql\mysql-socket-factory\1.0.10\mysql-socket-factory-1.0.10.jar;C:\Users\Backup Bob\.m2\repository\com\google\cloud\sql\jdbc-socket-factory-core\1.0.10\jdbc-socket-factory-core-1.0.10.jar;C:\Users\Backup Bob\.m2\repository\com\google\apis\google-api-services-sqladmin\v1beta4-rev56-1.23.0\google-api-services-sqladmin-v1beta4-rev56-1.23.0.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-unixsocket\0.18\jnr-unixsocket-0.18.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-ffi\2.1.4\jnr-ffi-2.1.4.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jffi\1.2.15\jffi-1.2.15.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jffi\1.2.15\jffi-1.2.15-native.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-commons\5.0.3\asm-commons-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-analysis\5.0.3\asm-analysis-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-tree\5.0.3\asm-tree-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\org\ow2\asm\asm-util\5.0.3\asm-util-5.0.3.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-x86asm\1.0.2\jnr-x86asm-1.0.2.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-constants\0.9.8\jnr-constants-0.9.8.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-enxio\0.16\jnr-enxio-0.16.jar;C:\Users\Backup Bob\.m2\repository\com\github\jnr\jnr-posix\3.0.35\jnr-posix-3.0.35.jar;C:\Users\Backup Bob\.m2\repository\com\google\appengine\appengine-api-1.0-sdk\1.9.71\appengine-api-1.0-sdk-1.9.71.jar;C:\Users\Backup Bob\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Users\Backup Bob\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar;C:\Users\Backup Bob\.m2\repository\com\google\appengine\appengine-testing\1.9.71\appengine-testing-1.9.71.jar;C:\Users\Backup Bob\.m2\repository\com\google\appengine\appengine-api-stubs\1.9.71\appengine-api-stubs-1.9.71.jar;C:\Users\Backup Bob\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\2.53.1\selenium-chrome-driver-2.53.1.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-support\2.53.1\selenium-support-2.53.1.jar;C:\Users\Backup Bob\.m2\repository\org\testng\testng\6.11\testng-6.11.jar;C:\Users\Backup Bob\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar;C:\Users\Backup Bob\.m2\repository\org\yaml\snakeyaml\1.25\snakeyaml-1.25.jar;C:\Users\Backup Bob\.m2\repository\com\relevantcodes\extentreports\2.41.2\extentreports-2.41.2.jar;C:\Users\Backup Bob\.m2\repository\org\jsoup\jsoup\1.8.3\jsoup-1.8.3.jar;C:\Users\Backup Bob\.m2\repository\org\xerial\sqlite-jdbc\3.28.0\sqlite-jdbc-3.28.0.jar;C:\Users\Backup Bob\.m2\repository\org\freemarker\freemarker\2.3.29\freemarker-2.3.29.jar;C:\Users\Backup Bob\.m2\repository\org\mongodb\mongodb-driver\3.11.1\mongodb-driver-3.11.1.jar;C:\Users\Backup Bob\.m2\repository\org\mongodb\bson\3.11.1\bson-3.11.1.jar;C:\Users\Backup Bob\.m2\repository\org\mongodb\mongodb-driver-core\3.11.1\mongodb-driver-core-3.11.1.jar;C:\Users\Backup Bob\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Backup Bob\.m2\repository\org\apache\poi\poi-ooxml\3.15\poi-ooxml-3.15.jar;C:\Users\Backup Bob\.m2\repository\org\apache\poi\poi\3.15\poi-3.15.jar;C:\Users\Backup Bob\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\Backup Bob\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\Backup Bob\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.15\poi-ooxml-schemas-3.15.jar;C:\Users\Backup Bob\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\Backup Bob\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\Backup Bob\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Backup Bob\.m2\repository\net\bytebuddy\byte-buddy\1.10.1\byte-buddy-1.10.1.jar;C:\Users\Backup Bob\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Backup Bob\.m2\repository\com\squareup\okhttp3\okhttp\3.14.4\okhttp-3.14.4.jar;C:\Users\Backup Bob\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\api-client\google-api-client\1.28.0\google-api-client-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\oauth-client\google-oauth-client\1.28.0\google-oauth-client-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\http-client\google-http-client\1.28.0\google-http-client-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\io\opencensus\opencensus-api\0.18.0\opencensus-api-0.18.0.jar;C:\Users\Backup Bob\.m2\repository\io\grpc\grpc-context\1.14.0\grpc-context-1.14.0.jar;C:\Users\Backup Bob\.m2\repository\io\opencensus\opencensus-contrib-http-util\0.18.0\opencensus-contrib-http-util-0.18.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\http-client\google-http-client-jackson2\1.28.0\google-http-client-jackson2-1.28.0.jar;C:\Users\Backup Bob\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.0\jackson-core-2.10.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\http-client\google-http-client-apache\2.0.0\google-http-client-apache-2.0.0.jar;C:\Users\Backup Bob\.m2\repository\org\apache\httpcomponents\httpclient\4.5.10\httpclient-4.5.10.jar;C:\Users\Backup Bob\.m2\repository\org\apache\httpcomponents\httpcore\4.4.12\httpcore-4.4.12.jar;C:\Users\Backup Bob\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Backup Bob\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Backup Bob\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Backup Bob\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Backup Bob\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Backup Bob"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="G:\Java\jdk-11.0.7"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="G:\Backup Bob\Documents\Visual Code\redfern-dnd-website"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\BACKUP~1\AppData\Local\Temp\surefire1416815197109997043\surefirebooter694577736397958272.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
+    <property name="user.name" value="Backup Bob"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\Backup Bob\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\BACKUP~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="user.dir" value="G:\Backup Bob\Documents\Visual Code\redfern-dnd-website"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="G:\Java\jdk-11.0.7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Backup Bob\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Backup Bob\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Python38\Scripts;C:\Python38;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Java\jdk1.8.0_241;C:\VulkanSDK\1.1.82.1\Bin;C:\windows\system3;.;C:\program files (x86)\amd app\bin\x86_64;C:\program files (x86)\amd app\bin\x86;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\windowspowershell\v1.0;C:\program files (x86)\ati technologies\ati.ace\core-static;C:\windows\system32\openssh;C:\program files\git\cmd;C:\program files (x86)\nvidia corporation\physx\common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;G:\metasploit-framework\bin;G:\Java\jdk-11.0.7\bin;G:\Program Files (x86)\apache-maven-3.6.1\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;G:\Program Files (x86)\apache-maven-3.6.1\bin;C:\Users\Backup Bob\AppData\Roaming\npm;C:\Users\Backup Bob\AppData\Local\GitHubDesktop\bin;G:\Users\Backup Bob\AppData\Local\Programs\Microsoft VS Code\bin;G:\Java\jdk-11.0.7\bin;G:\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.7+8-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testACharacterAbilityCreateRead" classname="com.qa.mesadnd.selenium.SeleniumCrudTests" time="6.256">
+    <failure message="expected [Character Maker] but found [localhost]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Character Maker] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.testACharacterAbilityCreateRead(SeleniumCrudTests.java:54)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:19:37 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 8863
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:19:38 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.setUp(SeleniumCrudTests.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:19:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testBCharacterAbilityUpdate" classname="com.qa.mesadnd.selenium.SeleniumCrudTests" time="6.238">
+    <failure message="expected [Character Sheet] but found [localhost]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Character Sheet] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.testBCharacterAbilityUpdate(SeleniumCrudTests.java:140)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:19:47 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 9011
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:19:48 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.setUp(SeleniumCrudTests.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:19:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testCCharacterAbilityDelete" classname="com.qa.mesadnd.selenium.SeleniumCrudTests" time="6.23">
+    <failure message="expected [Character Sheet] but found [localhost]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Character Sheet] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.testCCharacterAbilityDelete(SeleniumCrudTests.java:208)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:19:57 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 28373
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:19:57 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumCrudTests.setUp(SeleniumCrudTests.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:20:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testCharacterMakerTitle" classname="com.qa.mesadnd.selenium.SeleniumNavigationTests" time="6.228">
+    <failure message="expected [Character Maker] but found [localhost]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Character Maker] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testCharacterMakerTitle(SeleniumNavigationTests.java:74)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:20:06 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 26116
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:20:06 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.setUp(SeleniumNavigationTests.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:20:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testCharacterSheetTitle" classname="com.qa.mesadnd.selenium.SeleniumNavigationTests" time="6.234">
+    <failure message="expected [Character Sheet] but found [localhost]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Character Sheet] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testCharacterSheetTitle(SeleniumNavigationTests.java:62)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:20:15 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 18005
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:20:16 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.setUp(SeleniumNavigationTests.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:20:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testHomeSheetMaker" classname="com.qa.mesadnd.selenium.SeleniumNavigationTests" time="8.248">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navSheet&quot;}&#10;  (Session info: chrome=81.0.4044.138)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-2EF6UIN&apos;, ip: &apos;169.254.57.70&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.7&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\BACKUP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52990}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: cbb7836572455faefe29f05f0528360c&#10;*** Element info: {Using=id, value=navSheet}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#navSheet"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\BACKUP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52990}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cbb7836572455faefe29f05f0528360c
+*** Element info: {Using=id, value=navSheet}
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testHomeSheetMaker(SeleniumNavigationTests.java:87)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:20:25 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 29032
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:20:25 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.setUp(SeleniumNavigationTests.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:20:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testMakerSheetHome" classname="com.qa.mesadnd.selenium.SeleniumNavigationTests" time="8.245">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navMaker&quot;}&#10;  (Session info: chrome=81.0.4044.138)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-2EF6UIN&apos;, ip: &apos;169.254.57.70&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.7&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\BACKUP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53026}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 55d7ab79c626c0eb2171cc1916b9a373&#10;*** Element info: {Using=id, value=navMaker}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#navMaker"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\BACKUP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53026}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 55d7ab79c626c0eb2171cc1916b9a373
+*** Element info: {Using=id, value=navMaker}
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testMakerSheetHome(SeleniumNavigationTests.java:113)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:20:36 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 18988
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:20:36 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.setUp(SeleniumNavigationTests.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:20:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testMesaHomeTitle" classname="com.qa.mesadnd.selenium.SeleniumNavigationTests" time="6.235">
+    <failure message="expected [Mesa Home Page] but found [localhost]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Mesa Home Page] but found [localhost]
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.testMesaHomeTitle(SeleniumNavigationTests.java:50)
+</failure>
+    <system-err><![CDATA[May 19, 2020 10:20:47 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 15874
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+May 19, 2020 10:20:48 PM org.openqa.selenium.json.JsonOutput lambda$new$14
+WARNING: Attempt to convert JsonElement from GSON. This functionality is deprecated. Diagnostic stacktrace follows
+org.openqa.selenium.json.JsonException: Stack trace to determine cause of warning
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2EF6UIN', ip: '169.254.57.70', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:145)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:330)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1002)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1505)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:100)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:94)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at com.qa.mesadnd.selenium.SeleniumNavigationTests.setUp(SeleniumNavigationTests.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+May 19, 2020 10:20:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="deleteAbilitiesTest on deleteAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest" time="1.287"/>
+  <testcase name="createAbilitiesTest on createAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest" time="0.321"/>
+  <testcase name="getAllAbilitiesTest on getAllAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest" time="0.327"/>
+  <testcase name="getAbilitiesByID on getAbilitiesByID(com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerIntegrationTest" time="0.309"/>
+  <testcase name="getAbilitiesByIDTest on getAbilitiesByIDTest(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerUnitTest" time="0.18"/>
+  <testcase name="createAbilitiesTest on createAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerUnitTest" time="0.003"/>
+  <testcase name="getAllAbilitiesTest on getAllAbilitiesTest(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerUnitTest" time="0.004"/>
+  <testcase name="deleteAbilitiesTestFalse on deleteAbilitiesTestFalse(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerUnitTest" time="0.003"/>
+  <testcase name="deleteSkillsTestTrue on deleteSkillsTestTrue(com.qa.mesadnd.controller.AbilitiesControllerUnitTest)" classname="com.qa.mesadnd.controller.AbilitiesControllerUnitTest" time="0.003"/>
+  <testcase name="deleteCharacterTest on deleteCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest" time="0.701"/>
+  <testcase name="createCharacterTest on createCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest" time="0.366"/>
+  <testcase name="getAllCharacterTest on getAllCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest" time="0.454"/>
+  <testcase name="getCharacterByID on getCharacterByID(com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerIntegrationTest" time="0.449"/>
+  <testcase name="createCharacterTest on createCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerUnitTest" time="0.039"/>
+  <testcase name="getAllCharacterTest on getAllCharacterTest(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerUnitTest" time="0.002"/>
+  <testcase name="deleteCharacterTestFalse on deleteCharacterTestFalse(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerUnitTest" time="0.002"/>
+  <testcase name="getCharacterByIDTest on getCharacterByIDTest(com.qa.mesadnd.controller.CharacterSheetControllerUnitTest)" classname="com.qa.mesadnd.controller.CharacterSheetControllerUnitTest" time="0.002"/>
+  <testcase name="createSkillsTest on createSkillsTest(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)" classname="com.qa.mesadnd.controller.SkillsControllerIntegrationTest" time="0.864"/>
+  <testcase name="getAllSkillsTest on getAllSkillsTest(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)" classname="com.qa.mesadnd.controller.SkillsControllerIntegrationTest" time="0.312"/>
+  <testcase name="deleteSkillsTest on deleteSkillsTest(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)" classname="com.qa.mesadnd.controller.SkillsControllerIntegrationTest" time="0.533"/>
+  <testcase name="getSkillsByID on getSkillsByID(com.qa.mesadnd.controller.SkillsControllerIntegrationTest)" classname="com.qa.mesadnd.controller.SkillsControllerIntegrationTest" time="0.265"/>
+  <testcase name="deleteSkillsTestFalse on deleteSkillsTestFalse(com.qa.mesadnd.controller.SkillsControllerUnitTest)" classname="com.qa.mesadnd.controller.SkillsControllerUnitTest" time="0.042"/>
+  <testcase name="createSkillsTest on createSkillsTest(com.qa.mesadnd.controller.SkillsControllerUnitTest)" classname="com.qa.mesadnd.controller.SkillsControllerUnitTest" time="0.002"/>
+  <testcase name="getSkillsByIDTest on getSkillsByIDTest(com.qa.mesadnd.controller.SkillsControllerUnitTest)" classname="com.qa.mesadnd.controller.SkillsControllerUnitTest" time="0.017"/>
+  <testcase name="getAllSkillsTest on getAllSkillsTest(com.qa.mesadnd.controller.SkillsControllerUnitTest)" classname="com.qa.mesadnd.controller.SkillsControllerUnitTest" time="0.002"/>
+  <testcase name="deleteSkillsTestTrue on deleteSkillsTestTrue(com.qa.mesadnd.controller.SkillsControllerUnitTest)" classname="com.qa.mesadnd.controller.SkillsControllerUnitTest" time="0.001"/>
+  <testcase name="checkEqualityBetweenDifferentObjects on checkEqualityBetweenDifferentObjects(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="checkEquality on checkEquality(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="abilitiesIDDifferent on abilitiesIDDifferent(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0.001"/>
+  <testcase name="dexterityNotEqual on dexterityNotEqual(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="nullId on nullId(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="equalsWithNull on equalsWithNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="wisdomNotEqual on wisdomNotEqual(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="wisdomNullButOtherWisdomNotNull on wisdomNullButOtherWisdomNotNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="dexterityNullButOtherDexterityNotNull on dexterityNullButOtherDexterityNotNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="constitutionNullButOtherConstitutionNotNull on constitutionNullButOtherConstitutionNotNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0.001"/>
+  <testcase name="equalsWithDifferentObject on equalsWithDifferentObject(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="charismaNotEqual on charismaNotEqual(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="settersTest on settersTest(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="strengthNotEqual on strengthNotEqual(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="strengthNullButOtherStrengthNotNull on strengthNullButOtherStrengthNotNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="intelligenceNullButOtherIntelligenceNotNull on intelligenceNullButOtherIntelligenceNotNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="createSkillsSheetWithId on createSkillsSheetWithId(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="intelligenceNotEqual on intelligenceNotEqual(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="hashCodeTestWithNull on hashCodeTestWithNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="charismaNullButOtherCharismaNotNull on charismaNullButOtherCharismaNotNull(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="constitutionNotEqual on constitutionNotEqual(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="otherIdDifferent on otherIdDifferent(com.qa.mesadnd.domain.AbilitiesTest)" classname="com.qa.mesadnd.domain.AbilitiesTest" time="0"/>
+  <testcase name="constructorWithoutId on constructorWithoutId(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0.001"/>
+  <testcase name="characterSheetNamesNotEqual on characterSheetNamesNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="checkEqualityBetweenDifferentObjects on checkEqualityBetweenDifferentObjects(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="checkEquality on checkEquality(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetNameNullButOtherNameNotNull on characterSheetNameNullButOtherNameNotNull(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetMaxHpNotEqual on characterSheetMaxHpNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetExpNotEqual on characterSheetExpNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="nullId on nullId(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0.001"/>
+  <testcase name="equalsWithNull on equalsWithNull(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetExpNullButOtherExpNotNull on characterSheetExpNullButOtherExpNotNull(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetMaxHpNullButOtherMaxHpNotNull on characterSheetMaxHpNullButOtherMaxHpNotNull(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetIDDifferent on characterSheetIDDifferent(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetCurrentHpNotEqual on characterSheetCurrentHpNotEqual(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="characterSheetCurrentHpNullButOtherCurrentHpNotNull on characterSheetCurrentHpNullButOtherCurrentHpNotNull(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="equalsWithDifferentObject on equalsWithDifferentObject(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="settersTest on settersTest(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="createCharacterSheetWithId on createCharacterSheetWithId(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="hashCodeTestWithNull on hashCodeTestWithNull(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="otherIdDifferent on otherIdDifferent(com.qa.mesadnd.domain.CharacterSheetTest)" classname="com.qa.mesadnd.domain.CharacterSheetTest" time="0"/>
+  <testcase name="skillsNamesNotEqual on skillsNamesNotEqual(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="skillModifierNullButOtherSkillModifierNotNull on skillModifierNullButOtherSkillModifierNotNull(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="skillModifierNotEqual on skillModifierNotEqual(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="checkEqualityBetweenDifferentObjects on checkEqualityBetweenDifferentObjects(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="checkEquality on checkEquality(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="nullId on nullId(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="equalsWithNull on equalsWithNull(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="skillsNameNullButOtherNameNotNull on skillsNameNullButOtherNameNotNull(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="characterSheetIDDifferent on characterSheetIDDifferent(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="equalsWithDifferentObject on equalsWithDifferentObject(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="settersTest on settersTest(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="createSkillsSheetWithId on createSkillsSheetWithId(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="hashCodeTestWithNull on hashCodeTestWithNull(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="otherIdDifferent on otherIdDifferent(com.qa.mesadnd.domain.SkillsUnitTest)" classname="com.qa.mesadnd.domain.SkillsUnitTest" time="0"/>
+  <testcase name="checkEqualityBetweenDifferentObjects on checkEqualityBetweenDifferentObjects(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="checkEquality on checkEquality(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="dexterityNotEqual on dexterityNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="nullId on nullId(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0.001"/>
+  <testcase name="equalsWithNull on equalsWithNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="wisdomNotEqual on wisdomNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="wisdomNullButOtherWisdomNotNull on wisdomNullButOtherWisdomNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="dexterityNullButOtherDexterityNotNull on dexterityNullButOtherDexterityNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="constitutionNullButOtherConstitutionNotNull on constitutionNullButOtherConstitutionNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="abilitiesDTOIDDifferent on abilitiesDTOIDDifferent(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="equalsWithDifferentObject on equalsWithDifferentObject(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="charismaNotEqual on charismaNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="settersTest on settersTest(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="strengthNotEqual on strengthNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="strengthNullButOtherStrengthNotNull on strengthNullButOtherStrengthNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0.001"/>
+  <testcase name="intelligenceNullButOtherIntelligenceNotNull on intelligenceNullButOtherIntelligenceNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="intelligenceNotEqual on intelligenceNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="createAbilitiesDTOWithId on createAbilitiesDTOWithId(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="hashCodeTestWithNull on hashCodeTestWithNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="charismaNullButOtherCharismaNotNull on charismaNullButOtherCharismaNotNull(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="constitutionNotEqual on constitutionNotEqual(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="otherIdDifferent on otherIdDifferent(com.qa.mesadnd.dto.AbilitiesDTOTest)" classname="com.qa.mesadnd.dto.AbilitiesDTOTest" time="0"/>
+  <testcase name="characterDTOIDDifferent on characterDTOIDDifferent(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTOCurrentHpNullButOtherCurrentHpNotNull on characterDTOCurrentHpNullButOtherCurrentHpNotNull(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="constructorWithoutId on constructorWithoutId(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="checkEqualityBetweenDifferentObjects on checkEqualityBetweenDifferentObjects(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="checkEquality on checkEquality(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="nullId on nullId(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0.001"/>
+  <testcase name="equalsWithNull on equalsWithNull(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTONamesNotEqual on characterDTONamesNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTOMaxHpNotEqual on characterDTOMaxHpNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTOExpNullButOtherExpNotNull on characterDTOExpNullButOtherExpNotNull(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="equalsWithDifferentObject on equalsWithDifferentObject(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTONameNullButOtherNameNotNull on characterDTONameNullButOtherNameNotNull(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="settersTest on settersTest(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTOExpNotEqual on characterDTOExpNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTOMaxHpNullButOtherMaxHpNotNull on characterDTOMaxHpNullButOtherMaxHpNotNull(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="createCharacterDTOWithId on createCharacterDTOWithId(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="hashCodeTestWithNull on hashCodeTestWithNull(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="otherIdDifferent on otherIdDifferent(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="characterDTOCurrentHpNotEqual on characterDTOCurrentHpNotEqual(com.qa.mesadnd.dto.CharacterDTOTest)" classname="com.qa.mesadnd.dto.CharacterDTOTest" time="0"/>
+  <testcase name="skillsNamesNotEqual on skillsNamesNotEqual(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="skillModifierNullButOtherSkillModifierNotNull on skillModifierNullButOtherSkillModifierNotNull(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="skillModifierNotEqual on skillModifierNotEqual(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="checkEqualityBetweenDifferentObjects on checkEqualityBetweenDifferentObjects(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="checkEquality on checkEquality(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="nullId on nullId(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="equalsWithNull on equalsWithNull(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="skillsNameNullButOtherNameNotNull on skillsNameNullButOtherNameNotNull(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="characterSheetIDDifferent on characterSheetIDDifferent(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="equalsWithDifferentObject on equalsWithDifferentObject(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="settersTest on settersTest(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="createSkillsSheetWithId on createSkillsSheetWithId(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="hashCodeTestWithNull on hashCodeTestWithNull(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="otherIdDifferent on otherIdDifferent(com.qa.mesadnd.dto.SkillsDTOTest)" classname="com.qa.mesadnd.dto.SkillsDTOTest" time="0"/>
+  <testcase name="shouldAnswerWithTrue on shouldAnswerWithTrue(com.qa.mesadnd.MesaDNDTest)" classname="com.qa.mesadnd.MesaDNDTest" time="3.642"/>
+  <testcase name="deleteAbilitiesTest on deleteAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)" classname="com.qa.mesadnd.service.AbilitiesServiceIntegrationTest" time="0.57"/>
+  <testcase name="findAbilitiesByIdTest on findAbilitiesByIdTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)" classname="com.qa.mesadnd.service.AbilitiesServiceIntegrationTest" time="0.253"/>
+  <testcase name="readAbilitiesTest on readAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)" classname="com.qa.mesadnd.service.AbilitiesServiceIntegrationTest" time="0.296"/>
+  <testcase name="createAbilitiesTest on createAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceIntegrationTest)" classname="com.qa.mesadnd.service.AbilitiesServiceIntegrationTest" time="0.246"/>
+  <testcase name="findAbilitiesByIdTest on findAbilitiesByIdTest(com.qa.mesadnd.service.AbilitiesServiceUnitTest)" classname="com.qa.mesadnd.service.AbilitiesServiceUnitTest" time="0.005"/>
+  <testcase name="deleteAbilitiesByNonExistingId on deleteAbilitiesByNonExistingId(com.qa.mesadnd.service.AbilitiesServiceUnitTest)" classname="com.qa.mesadnd.service.AbilitiesServiceUnitTest" time="0.002"/>
+  <testcase name="createAbilitiesTest on createAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceUnitTest)" classname="com.qa.mesadnd.service.AbilitiesServiceUnitTest" time="0.002"/>
+  <testcase name="getAllAbilitiesTest on getAllAbilitiesTest(com.qa.mesadnd.service.AbilitiesServiceUnitTest)" classname="com.qa.mesadnd.service.AbilitiesServiceUnitTest" time="0.002"/>
+  <testcase name="deleteAbilitiesByExistingId on deleteAbilitiesByExistingId(com.qa.mesadnd.service.AbilitiesServiceUnitTest)" classname="com.qa.mesadnd.service.AbilitiesServiceUnitTest" time="0"/>
+  <testcase name="readCharacterTest on readCharacterTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)" classname="com.qa.mesadnd.service.CharacterServiceIntegrationTest" time="0.503"/>
+  <testcase name="createCharacterTest on createCharacterTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)" classname="com.qa.mesadnd.service.CharacterServiceIntegrationTest" time="0.4"/>
+  <testcase name="deleteSkillsTest on deleteSkillsTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)" classname="com.qa.mesadnd.service.CharacterServiceIntegrationTest" time="0.613"/>
+  <testcase name="findCharacterByIdTest on findCharacterByIdTest(com.qa.mesadnd.service.CharacterServiceIntegrationTest)" classname="com.qa.mesadnd.service.CharacterServiceIntegrationTest" time="0.453"/>
+  <testcase name="deleteCharacterByNonExistingId on deleteCharacterByNonExistingId(com.qa.mesadnd.service.CharacterServiceUnitTest)" classname="com.qa.mesadnd.service.CharacterServiceUnitTest" time="0.002"/>
+  <testcase name="deleteCharacterByExistingId on deleteCharacterByExistingId(com.qa.mesadnd.service.CharacterServiceUnitTest)" classname="com.qa.mesadnd.service.CharacterServiceUnitTest" time="0.003"/>
+  <testcase name="createCharacterTest on createCharacterTest(com.qa.mesadnd.service.CharacterServiceUnitTest)" classname="com.qa.mesadnd.service.CharacterServiceUnitTest" time="0.003"/>
+  <testcase name="findCharacterByIdTest on findCharacterByIdTest(com.qa.mesadnd.service.CharacterServiceUnitTest)" classname="com.qa.mesadnd.service.CharacterServiceUnitTest" time="0.002"/>
+  <testcase name="getAllCharacterTest on getAllCharacterTest(com.qa.mesadnd.service.CharacterServiceUnitTest)" classname="com.qa.mesadnd.service.CharacterServiceUnitTest" time="0.002"/>
+  <testcase name="readSkillsTest on readSkillsTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)" classname="com.qa.mesadnd.service.SkillsServiceIntegrationTest" time="0.864"/>
+  <testcase name="createSkillsTest on createSkillsTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)" classname="com.qa.mesadnd.service.SkillsServiceIntegrationTest" time="0.24"/>
+  <testcase name="deleteSkillsTest on deleteSkillsTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)" classname="com.qa.mesadnd.service.SkillsServiceIntegrationTest" time="0.504"/>
+  <testcase name="findSkillsByIdTest on findSkillsByIdTest(com.qa.mesadnd.service.SkillsServiceIntegrationTest)" classname="com.qa.mesadnd.service.SkillsServiceIntegrationTest" time="0.246"/>
+  <testcase name="deleteSkillsByExistingId on deleteSkillsByExistingId(com.qa.mesadnd.service.SkillsServiceUnitTest)" classname="com.qa.mesadnd.service.SkillsServiceUnitTest" time="0.002"/>
+  <testcase name="createSkillsTest on createSkillsTest(com.qa.mesadnd.service.SkillsServiceUnitTest)" classname="com.qa.mesadnd.service.SkillsServiceUnitTest" time="0.003"/>
+  <testcase name="deleteSkillsByNonExistingId on deleteSkillsByNonExistingId(com.qa.mesadnd.service.SkillsServiceUnitTest)" classname="com.qa.mesadnd.service.SkillsServiceUnitTest" time="0.002"/>
+  <testcase name="getAllSkillsTest on getAllSkillsTest(com.qa.mesadnd.service.SkillsServiceUnitTest)" classname="com.qa.mesadnd.service.SkillsServiceUnitTest" time="0.001"/>
+  <testcase name="findSkillsByIdTest on findSkillsByIdTest(com.qa.mesadnd.service.SkillsServiceUnitTest)" classname="com.qa.mesadnd.service.SkillsServiceUnitTest" time="0.002"/>
+</testsuite>

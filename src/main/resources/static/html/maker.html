@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../images/site.webmanifest">
   </head>
   <body>
     <header>
@@ -14,10 +18,10 @@
     <nav>
       <div>
         <ul class="topnav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../html/character.html">Character Sheet</a></li>
-          <li><a class="active" href="../html/maker.html">Character Maker</a></li>
-          <li class="right"><a href="https://github.com/Christian-QA/redfern-dnd-website">About</a></li>
+          <li><a href="../index.html" id="navHome">Home</a></li>
+          <li><a href="../html/character.html" id="navSheet">Character Sheet</a></li>
+          <li><a class="active" href="../html/maker.html" id="navMaker">Character Maker</a></li>
+          <li class="right"><a href="https://github.com/Christian-QA/redfern-dnd-website" id="navAbout">About</a></li>
         </ul>
       </div>
       <link rel="stylesheet" href="../css/nav.css" />
@@ -47,24 +51,24 @@
           </section>
           <fieldset>      
             <legend>Skills</legend>   
-            <td><input type="checkbox" name="skill" id="skill" value="acrobatics"/>Acrobatics (Dexterity) || <td>
-            <td><input type="checkbox" name="skill" id="skill" value="animal"/>Animal Handling (Wisdom) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="arcana"/>Arcana (Intelligence) || </td><br>
-            <td><input type="checkbox" name="skill" id="skill" value="athletics"/>Athletics (Strength) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="deception"/>Deception (Charisma) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="history"/>History (Intelligence) || </td><br>
-            <td><input type="checkbox" name="skill" id="skill" value="insight"/>Insight (Wisdom) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="intimidation"/>Intimidation (Charisma) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="investigation"/>Investigation (Intelligence) || </td><br>
-            <td><input type="checkbox" name="skill" id="skill" value="medicine"/>Medicine (Wisdom) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="nature"/>Nature (Intelligence) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="perception"/>Perception (Wisdom) || </td><br>
-            <td><input type="checkbox" name="skill" id="skill" value="performance"/>Performance (Charisma) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="persuasion"/>Persuasion (Charisma) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="religion"/>Religion (Intelligence) || </td><br>
-            <td><input type="checkbox" name="skill" id="skill" value="sleight"/>Sleight of Hand (Dexterity) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="stealth"/>Stealth (Dexterity) || </td>
-            <td><input type="checkbox" name="skill" id="skill" value="survival"/>Survival (Wisdom)</td>
+            <td><input type="checkbox" name="Dexterity" id="acrobatics" value="Acrobatics"/>Acrobatics (Dexterity) || <td>
+            <td><input type="checkbox" name="Wisdom" id="animal" value="Animal Handling"/>Animal Handling (Wisdom) || </td>
+            <td><input type="checkbox" name="Intelligence" id="arcana" value="Arcana"/>Arcana (Intelligence) || </td><br>
+            <td><input type="checkbox" name="Strength" id="athletics" value="Athletics"/>Athletics (Strength) || </td>
+            <td><input type="checkbox" name="Charisma" id="deception" value="Deception"/>Deception (Charisma) || </td>
+            <td><input type="checkbox" name="Intelligence" id="history" value="History"/>History (Intelligence) || </td><br>
+            <td><input type="checkbox" name="Wisdom" id="insight" value="Insight"/>Insight (Wisdom) || </td>
+            <td><input type="checkbox" name="Charisma" id="intimidation" value="Intimidation"/>Intimidation (Charisma) || </td>
+            <td><input type="checkbox" name="Intelligence" id="investigation" value="Investigation"/>Investigation (Intelligence) || </td><br>
+            <td><input type="checkbox" name="Wisdom" id="medicine" value="Medicine"/>Medicine (Wisdom) || </td>
+            <td><input type="checkbox" name="Intelligence" id="nature" value="Nature"/>Nature (Intelligence) || </td>
+            <td><input type="checkbox" name="Wisdom" id="perception" value="Perception"/>Perception (Wisdom) || </td><br>
+            <td><input type="checkbox" name="Charisma" id="performance" value="Performance"/>Performance (Charisma) || </td>
+            <td><input type="checkbox" name="Charisma" id="persuasion" value="Persuasion"/>Persuasion (Charisma) || </td>
+            <td><input type="checkbox" name="Intelligence" id="religion" value="Religion"/>Religion (Intelligence) || </td><br>
+            <td><input type="checkbox" name="Dexterity" id="sleight" value="Sleight of Hand"/>Sleight of Hand (Dexterity) || </td>
+            <td><input type="checkbox" name="Dexterity" id="stealth" value="Stealth"/>Stealth (Dexterity) || </td>
+            <td><input type="checkbox" name="Wisdom" id="survival" value="Survival"/>Survival (Wisdom)</td>
           </fieldset>  
           <input type="button" value="Submit" id="postButton">
           <script src="../js/maker.js"></script>
