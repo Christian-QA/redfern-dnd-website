@@ -54,7 +54,7 @@ You can geta copy of the application in one of two ways:
 The app can be run on an App Engine on [GCP](https://console.cloud.google.com/). An App Engine already exists for this application to be accessed from other devices, though accessibility is subject to change for as long as the project remains in the pre-beta stages. 
 For now, a local or self-hosted GCP App Engine is the recommended option, and mandatory if you wish to develop this app further.
 
-To run the application on your local machine, use a terminal of your choice (Windows Command Prompt is recommended) and enter 'mvn spring-boot:run'. This will initialise the server and allocate a server port (8181 by default) to the application. This server port can be accessed by searching 'localport:8181' in your browser.
+To run the application on your local machine, use a terminal of your choice (Windows Command Prompt is recommended) and enter 'mvn spring-boot:run'. This will initialise the server and allocate a server port (8181 by default) to the application. This server port can be accessed by searching 'localport:8181' in your browser. (Warning: there is currently no way to terminate the application from command prompt. For the earlier releases, running the application through IntelliJ IDEA or Eclipse IDE is strongly recommended).
 
 Once the server is running, you can access the web application as a user. 
 Upon accessing the application on your browser, you will be taken to the Mesa Home Page (index.html) displays basic information about the application relating to the scenario it's based off. 
@@ -139,7 +139,7 @@ In the database, this table is called hibernate_sequence. This is a table create
 
 ## Running the Tests
 
-The project utilises three different tools for testing: JUnit for Unit Testing, JUnit with Mockito and TestNG with Selenium for Integration Testing, and SonarQube for Coding Style Tests.
+The project utilises three different tools for testing: JUnit for Unit Testing, JUnit with Mockito and TestNG with Selenium for Integration Testing, and SonarQube for Coding Style Tests. 
 
 ### Unit Tests
 
@@ -155,6 +155,8 @@ To test on JUnit (IntelliJ):
 ## Integration Tests
 
 Mockito is used to run integration tests by mocking user input, creating a map of possible inputs to test if they're consistently error-proofed. Mockito tests are run using JUnit alongside the basic unit tests, meaning they follow the same steps as unit tests.
+
+Selenium is used to run tests relating to the front-end. These are disabled by default as they currently cannot be built in Jenkins. To activate these, navigate to `\src\test\java\com\qa\mesadnd\selenium` from the root directory, open them with an editor of your choice (loading the root with IntelliJ IDEAand navigating to here is recommended), and remove `(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")` from after `@Test`. These tests will only work if the application is running, and is set to server port 8181. Solutions to this problem are being considered for future builds.
 
 ## Coding Style Tests
 
