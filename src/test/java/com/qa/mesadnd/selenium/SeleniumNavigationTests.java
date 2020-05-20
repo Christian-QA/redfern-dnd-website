@@ -1,16 +1,12 @@
 package com.qa.mesadnd.selenium;
 
 
-import com.qa.mesadnd.MesaDND;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import org.junit.runner.RunWith;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.springframework.boot.SpringApplication;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -19,7 +15,6 @@ import java.io.File;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
 public class SeleniumNavigationTests {
 
     WebDriver driver;

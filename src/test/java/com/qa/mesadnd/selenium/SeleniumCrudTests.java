@@ -1,19 +1,16 @@
 package com.qa.mesadnd.selenium;
 
-
-import com.qa.mesadnd.MesaDND;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.junit.FixMethodOrder;
-import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.springframework.test.context.junit4.SpringRunner;
+
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -22,7 +19,6 @@ import java.io.File;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.*;
 
-@RunWith(SpringRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SeleniumCrudTests {
 
