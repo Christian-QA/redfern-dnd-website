@@ -22,7 +22,6 @@ import java.io.File;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.*;
 
-@RunWith(SpringRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SeleniumCrudTests {
 
@@ -46,7 +45,6 @@ public class SeleniumCrudTests {
     public void setUp(){
         driver = new ChromeDriver ();
     }
-
 
     @Test
     public void testACharacterAbilityCreateRead() throws InterruptedException {

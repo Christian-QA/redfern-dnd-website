@@ -19,7 +19,6 @@ import java.io.File;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
 public class SeleniumNavigationTests {
 
     WebDriver driver;
@@ -43,7 +42,7 @@ public class SeleniumNavigationTests {
         driver = new ChromeDriver ();
     }
 
-    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
+    @Test(enabled = true)
     public void testMesaHomeTitle() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
@@ -55,7 +54,7 @@ public class SeleniumNavigationTests {
         test.log(LogStatus.PASS, "The page name is exactly the same");
     }
 
-    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
+    @Test(enabled = true)
     public void testCharacterSheetTitle() throws InterruptedException {
         test = report.startTest("Open to Character Sheet Page");
         driver.manage().window().maximize();
@@ -67,7 +66,7 @@ public class SeleniumNavigationTests {
         test.log(LogStatus.PASS, "The page name is exactly the same");
     }
 
-    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
+    @Test(enabled = true)
     public void testCharacterMakerTitle() throws InterruptedException {
         test = report.startTest("Open to Character Maker Page");
         driver.manage().window().maximize();
@@ -79,7 +78,7 @@ public class SeleniumNavigationTests {
         test.log(LogStatus.PASS, "The page name is exactly the same");
     }
 
-    @Test(enabled = false, description = "Disabled until 'server.port in use' issue is resolved")
+    @Test(enabled = true)
     public void testHomeSheetMaker() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
@@ -105,7 +104,7 @@ public class SeleniumNavigationTests {
                 " pages can navigated using the buttons in this order.");
     }
 
-    @Test
+    @Test(enabled = true)
     public void testMakerSheetHome() throws InterruptedException {
         test = report.startTest("Open to Mesa Home Page");
         driver.manage().window().maximize();
