@@ -13,7 +13,7 @@ The program's server can be run on a terminal of your choice, and has been teste
 Once 'Started MesaDND in 8.613 seconds (JVM running for 9.055)' appears in the terminal, you can access the application as a user by searching for the configured localport in a browser of your choice, though [Google Chrome](https://www.google.com/chrome/) is recommended.
 
 ## Disclaimer
-The project's development is in its alpha stage and is not yet ready for public release.
+The project's development is in its alpha stage and is not yet ready for public release. The current version is v0.1.5.
 
 ## Getting Started
 
