@@ -238,6 +238,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 - Nicholas Johnson - Software Trainer - [nickrstewarttds](https://github.com/nickrstewarttds)
 - Jordan Harrison - Software Trainer - [JHarry444](https://github.com/JHarry444)
 - Tadas Vaidotas - Software Trainer - [tvaidotas](https://github.com/tvaidotas)
+- Savannah Vaithilingam - Software Trainer - [savannahvaith](https://github.com/savannahvaith)
 - David Williams - Advice with Java - [DavidWilliamsQA](https://github.com/DavidWilliamsQA)
 - Caroline Strasenburgh - Advice with JavaScript - [CarolineS-QA](https://github.com/CarolineS-QA)
 - Korbinian Ring - Advice with Java - [KMRRingQA](https://github.com/KMRRingQA)
