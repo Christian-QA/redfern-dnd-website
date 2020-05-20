@@ -47,12 +47,12 @@ li.skilllist {
     position: relative;
     top: 30%;
     left: 100%;
-    transform: translate(-17%, 50%);
+    transform: translate(-5%, 50%);
     font-size: 16px;
     color: white;
     background-color: transparent;
     border-color: transparent;
-    width: 150px;
+    width: 350px;
     height: 45px;
     margin-top: -15px;
     margin-left: 60px

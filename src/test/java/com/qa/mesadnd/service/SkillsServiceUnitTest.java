@@ -21,7 +21,6 @@ import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
-@TestPropertySource(locations= "classpath:test.properties")
 public class SkillsServiceUnitTest {
 
     @InjectMocks
